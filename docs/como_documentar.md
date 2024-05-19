@@ -21,7 +21,6 @@ Ex.2:
 
   Da mesma forma siga o padrão para outros tipos de alterações
 
-![CPE1](img/comodocumentar-1.png)
 
   Na área amarela é possível identificar qual branch você está (No caso do exemplo é a main). Para trocar de branch ou criar uma nova você pode apertar na seta para baixo, selecionar a branch desejada ou escrever o nome da branch nova para ser criada no espaço de busca.
 
@@ -34,13 +33,13 @@ Ex.2:
   - Cada alteração em um ou vários arquivos devem ser commitadas, para garantir que o arquivo seja "salvo" no repositório do GitHub.
   - Para realizar os commits você deve:
 
-  ![CPE2](img/comodocumentar-1.png)
+
 
     1. Na área vermelha é possível selecionar o arquivo que você irá editar
     2. Na área azul você pode apertar no botão "code" para visualizar em código e no botão do lápis para editar
     3. No código você faz suas alterações da forma que preferir
 
-![CPE3](img/comodocumentar-2.png)
+
 
 
 ## 4. Realize um PR(Pull Request) da sua branch com a branch principal "main"
@@ -48,18 +47,18 @@ Ex.2:
 - Feito o(s) commit(s), deve ser feito o Pull Request para enviar para a branch "main" todas as alterações feitas.
 - Segue abaixo o passo a passo para realizar o processo:
 
-![CPE4](img/comodocumentar-3.png)
+
   
     1. Na área em azul, você irá entrar na aba para criação e vizualização das "Pull Requests" existentes, entre nela para dar continuidade ao processo.
     2. Na área em vermelho, 
 
-![CPE5](img/comodocumentar-4.png)
+
 
     1. tedskfdsjf
     2. sf,saflmsa
     3. fdsfjdkfgds
 
-![CPE6](img/comodocumentar-5.png)
+
 
     1. tedskfdsjf
     2. fdsfjdkfgds
