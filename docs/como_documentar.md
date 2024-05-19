@@ -28,7 +28,9 @@ Ex.2:
 
 ## 3. Confirme as alterações por meio de um commit ou mais de um.
 
-  Cada alteração em um ou vários arquivos devem ser commitadas, para garantir que o arquivo seja "salvo" no repositório do GitHub.
+  - Cada alteração em um ou vários arquivos devem ser commitadas, para garantir que o arquivo seja "salvo" no repositório do GitHub;
+  - Para realizar os commits você deve:
+  
 
 ## 4. Realize um PR(Pull Request) da sua branch com a branch principal "main"
  - lembrar de adicionar revisor e solicitar revisão rapidamente.
