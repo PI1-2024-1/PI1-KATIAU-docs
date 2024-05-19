@@ -39,5 +39,3 @@ Conheça a equipe por trás deste projeto:
 ## Contato
 
 Para mais informações sobre o projeto ou para entrar em contato com a equipe, sinta-se à vontade para enviar um email para [pedromiguel@gmail](mailto:trabalhos.pedromiguel@gmail.com).
-
-tESTE TESTE

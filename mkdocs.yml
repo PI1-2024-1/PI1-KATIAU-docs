@@ -2,9 +2,9 @@ site_name: KATIAU
 
 nav:
   - K.A.T.I.A.U ⚡: index.md
-  - Como documentar: como_documentar.md
+  - Como Documentar: como_documentar.md
   - Projeto Conceitual: Documentacao
-  - Atas: Atas\Reuniões
+  - Atas: Atas
   
 theme: readthedocs
 plugins:
