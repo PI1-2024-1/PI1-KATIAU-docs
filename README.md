@@ -8,7 +8,8 @@ Nome do Projeto: K.A.T.I.A.U (Kart de Alta Tecnologia Integrada, Autônoma e Ún
 ## Equipe
 
 | [<img src="https://avatars.githubusercontent.com/u/78875892?v=4" width=50>]()  | [<img src="https://avatars.githubusercontent.com/u/64806397?s=96&v=4" width=50>]() |
-|[João Eduardo Rabelo](https://github.com/JoaoEduardoP) | [Pedro Miguel dos Santos](https://github.com/pedroMADBR) |
+| :----------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+|              [João Eduardo Rabelo](https://github.com/JoaoEduardoP)            |               [Pedro Miguel dos Santos](https://github.com/pedroMADBR)             |
 
 
 ## Acesse nossa documentação e saiba mais: 
