@@ -25,7 +25,7 @@
 
 ### 5 - Sistema de movimento
 
-* **1 Regulador de Tensão XL 4015** - para regular a tensão em até 6V dada a entrada de 7.4;[Datasheet XL 4015](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/XL4015.PDF)
+* **1 Regulador de Tensão LM317** - para regular a tensão em até 6V dada a entrada de 7.4;[Datasheet XL 4015](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/XL4015.PDF)
 * **2 Motores de 6V com redutor e rodas**;[Site compra](link.com) **Colocar link**
 
 ### 6 - Bateria	
@@ -80,7 +80,16 @@
 * **Módulo Bluetooth Hc-06**: alimentação 5V, **Obs** Deve ser desligado quando estiver programando o arduino;
 * **Sensores Encoder**: alimentação 5V;
 * **Medidor de corrente ACS 712**: alimentação 5V;
-* **Regulador de Tensão XL 4015**: Tensão de entrada 7.4V, saída de 5V, deve ser regulada para atender à corrente dos Motores
+* **Regulador de Tensão LM317**: Tensão de entrada 7.4V, saída de 5V, deve ser regulada para atender à corrente dos Motores
 
 #### Dado como exemplo, deve ser revisado pela área de energia
 * **Baterias 18650**: Duas baterias em série totalizando 7.4V, pode ser alterada para outro arranjo de outras baterias com tensões entre 7 e 12V porque é o limite de entrada do arduino. 
+
+## Item emprestados do Felipe
+* 2 Motores 6V
+* 2 Discos encoder
+* 1 Hc06
+* 2 Rodas
+* 2 Baterias 18650
+* 1 Carregador das Baterias
+* 1 Suporte das Baterias
