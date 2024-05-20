@@ -6,6 +6,7 @@ Feito:
 
 Falta:
   na função de interrupção:
+    Distância percorrida
     Fazer cálculos de posição    (De acordo com o modelo cinemático do robô)
                       Velocidade  idem
                       Aceleração  idem
