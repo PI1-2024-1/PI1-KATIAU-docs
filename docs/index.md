@@ -18,23 +18,26 @@ Nosso projeto visa criar um carrinho robótico cujo nome é K.A.T.I.A.U (Kart de
 
 Conheça a equipe por trás deste projeto:
 
-- Arthur Fernandes (Engenharia de Software)
-- Brunna Louise (Engenharia de Software)
-- Bruno Araujo (Engenharia de Software)
-- Cauan Victor (Gerente de AeroEspacial e Automotiva)
-- Felipe Freire (Engenharia de Software)
-- Gabriel Avelino (Engenharia de Software)
-- Gabriel Marques (Engenharia de Software)
-- Gabriel Rocha (SubGerente do Projeto)
-- João Eduardo (Engenharia de Software)
-- Marcella Cristina (Engenheira Aeroespacial)
-- Mayratan (Gerente de Energia)
-- Pedro Miguel (Gerente do Projeto)
-- Pedro Augusto (Gerente de Eletrônica)
-- Raul Fragoso (Engenharia de Software)
-- Samuel Nogueira (Gerente de Software)
-- Thales Duarte (Engenharia de Software)
-- Felipe Freire (Engenharia de Software)
+
+|        Integrantes        |                 Setor               |
+|---------------------------|-------------------------------------|
+|Arthur Fernandes Alencar   | Engenharia de Software              |
+|Brunna Louise Martins      | Engenharia de Software              |
+|Bruno Vasconcelos Araujo   | Engenharia de Software              |
+|Cauan Victor Martins       | Gerente de AeroEspacial e Automotiva|
+|Felipe Freire              | Engenharia de Software              |
+|Gabriel Avelino            | Engenharia de Software              |
+|Gabriel Marques de Souza   | Engenharia de Software              |
+|Gabriel Rocha              | SubGerente do Projeto               |
+|João Eduardo Rabelo        | Engenharia de Software              |
+|Marcella Cristina          | Engenheira Aeroespacial             |
+|Mayratan                   | Gerente de Energia                  |
+|Pedro Miguel               | Gerente do Projeto                  |
+|Pedro Augusto Vieira       | Gerente de Eletrônica               |
+|Raul Fragoso               | Engenharia de Software              |
+|Samuel Nogueira Bacelar    | Gerente de Software                 |
+|Thales Duarte              | Engenharia de Software              |
+|Felipe Freire              | Engenharia de Software              |
 
 ## Contato
 
