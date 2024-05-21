@@ -2,7 +2,7 @@
 
 ___________________________________________________________________________________
 
-## Carcaterísticas Gerais
+## Características Gerais
 
 O projeto visa o desenvolvimento de um carrinho seguidor de linha que percorra
 três trilhas marcadas no chão, transportando um ovo de galinha ao longo desses trajetos
