@@ -8,6 +8,9 @@ Bem-vindo à página inicial do projeto integrador da matéria PI1 da Universida
 
 Nosso projeto visa criar um carrinho robótico cujo nome é K.A.T.I.A.U (Kart de Alta Tecnologia Integrada, Autônoma e Única), capaz de seguir uma linha destacada no chão de forma autônoma e em alta velocidade. Utilizamos tecnologias avançadas de controle e sensores para alcançar esse objetivo.
 
+### Visite nossa página em:
+[Clique aqui](https://github.com/PI1-2024-1/PI1-KATIAU-docs)
+
 ## Objetivos
 
 - Desenvolver um carrinho prototipado com alta velocidade e precisão para seguir uma linha.
