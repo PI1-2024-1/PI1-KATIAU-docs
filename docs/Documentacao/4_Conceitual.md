@@ -1,8 +1,8 @@
-# Projeto Conceitual
+# 4. Projeto Conceitual
 
 ___________________________________________________________________________________
 
-## Carcaterísticas Gerais
+## 4.1 Características Gerais
 
 O projeto visa o desenvolvimento de um carrinho seguidor de linha que percorra
 três trilhas marcadas no chão, transportando um ovo de galinha ao longo desses trajetos
@@ -21,6 +21,26 @@ Combinando as áreas da engenharia e testes rigorosos, o objetivo é criar um ca
 de linha que não apenas complete as trilhas no menor tempo possível, mas
 também transporte o ovo com segurança, demonstrando a eficácia da autonomia robótica
 em ambientes desafiadores.
+
+## 4.2 Estrutura
+
+## 4.3 Descrição de hardware
+
+## 4.4 Análise de consumo energético
+
+## 4.5 Descrição de Software
+
+
+### 4.5.5 Diagrama de Classes
+
+A imagem 1 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
+
+![Diagrama de Classes](img/diagrama_classes.png)
+<h6 align = "center"> Imagem 1: Diagrama de classes.
+<br> Autor: Brunna Louise
+<br>Fonte: Autor(es)</h6>
+
+
 
 ___________________________________________________________________________________
 
