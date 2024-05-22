@@ -3,6 +3,7 @@
 Presentes: Brunna, Bruno, Gabriel Avelino, Pedro Miguel (Redator)
 
 Pautas:
+
 - Revisão das tarefas para entrega 2
   - (13 - Arquitetura de Software): Gabriel Avelino
    - Foi tudo decidido em reunião falta preparar o texto

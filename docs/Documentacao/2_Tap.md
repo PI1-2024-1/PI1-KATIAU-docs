@@ -1,4 +1,4 @@
-# Termo de Abertura do Projeto
+# 2. Termo de Abertura do Projeto
 
 Este tópico representa o Termo de Abertura de Projeto (TAP) para o desenvolvimento do carrinho 
 seguidor de linha, como parte do Projeto Integrador de Engenharia 1 (PI1) da Faculdade UnB Gama (FGA).<br>
@@ -6,7 +6,7 @@ O objetivo deste TAP é estabelecer uma base sólida para a execução eficiente
 definindo seus objetivos, escopo, requisitos e diretrizes.
 ___________________________________________________________________________________
 
-## Dados do projeto
+## 2.1 Dados do projeto
 
 - Nome do Projeto: K.A.T.I.A.U
 - Data de abertura: 15/04/2024
@@ -30,13 +30,13 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________
 
-## Objetivos
+## 2.2 Objetivos
 
 O projeto do carrinho seguidor de linha estabelece 4 principais objetivos SMART
 (Específicos, Mensuráveis, Alcançáveis, Relevantes e Temporais) que guiarão suas ativi-
 dades e direcionarão seus esforços para alcançar resultados concretos e mensuráveis.
 
-### Trajetos Completos
+### 2.2.1 Trajetos Completos
 
 O primeiro objetivo do projeto é garantir que o carrinho seja capaz de percorrer
 completamente três trilhas marcadas no chão.<br> 
@@ -46,7 +46,7 @@ três trilhas definidas.<br>
 Este objetivo é mensurável pelo número de trilhas completadas com sucesso durante os testes
 e apresentações do carrinho.
 
-### Proteção do Ovo
+### 2.2.2 Proteção do Ovo
 
 O segundo objetivo concentra-se na integridade do ovo de galinha que o carrinho
 carregará durante os trajetos.<br> 
@@ -56,7 +56,7 @@ estável.<br>
 Isso será mensurado pela condição do ovo ao final de cada trajeto, verificando se
 permanece íntegro e sem danos significativos.
 
-### Desempenho Temporal
+### 2.2.3 Desempenho Temporal
 
 O terceiro objetivo do projeto é otimizar o tempo de percurso do carrinho.<br>
 Isso implica completar os trajetos no menor tempo possível, demonstrando eficiência 
@@ -64,7 +64,7 @@ e velocidade no deslocamento do carrinho.<br>
 Este objetivo é mensurável pelo tempo registrado para cada trajeto, 
 desde o início até a conclusão, durante os testes e competições.
 
-### Autonomia e Funcionalidade
+### 2.2.4 Autonomia e Funcionalidade
 
 O quarto objetivo do projeto é assegurar que o carrinho seja totalmente autônomo
 e operacional, sem a necessidade de controle externo durante os trajetos.<br>
@@ -75,7 +75,7 @@ e apresentações, verificando sua capacidade de funcionar de forma independente
 
 ___________________________________________________________________________________
 
-## Mercado-alvo
+## 2.3 Mercado-alvo
 
 O mercado-alvo do carrinho seguidor de linha abrange uma variedade de segmentos 
 e públicos potenciais. Instituições de ensino, incluindo escolas, universidades e centros
@@ -96,7 +96,7 @@ quanto no mercado comercial e de competições.
 
 ___________________________________________________________________________________
 
-## Requisitos
+## 2.4 Requisitos
 
 Os requisitos funcionais e não funcionais coletados para o desenvolvimento do
 carrinho seguidor de linha serão apresentados nas Tabelas 1 e 2 a seguir:
@@ -160,7 +160,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________
 
-## Justificativa
+## 2.5 Justificativa
 
 O projeto do carrinho seguidor de linha surge em um contexto de busca por solu-
 ções educacionais dinâmicas e eficazes, especialmente no campo da robótica e automação.<br>
@@ -181,7 +181,7 @@ a formação de profissionais capacitados e inovadores.
 
 ___________________________________________________________________________________
 
-## Indicadores
+## 2.6 Indicadores
 
 - Na região do Distrito Federal e arredores, foram identificados eventos significati-
 vos relacionados à área da robótica, como o "Festival SESI de Educação"e a "Competição
