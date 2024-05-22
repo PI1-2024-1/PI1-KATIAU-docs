@@ -2,6 +2,7 @@
 
 ___________________________________________________________________________________
 
+
 ## 4.1 Características Gerais
 
 O projeto visa o desenvolvimento de um carrinho seguidor de linha que percorra
@@ -39,8 +40,6 @@ A imagem 1 abaixo exibe o diagrama de classes proposto para o desenvolvimento da
 <h6 align = "center"> Imagem 1: Diagrama de classes.
 <br> Autor: Brunna Louise
 <br>Fonte: Autor(es)</h6>
-
-
 
 ___________________________________________________________________________________
 
