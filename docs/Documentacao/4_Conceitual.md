@@ -41,6 +41,27 @@ A imagem 1 abaixo exibe o diagrama de classes proposto para o desenvolvimento da
 <br>Fonte: Autor(es)</h6>
 
 
+### 4.5.6 Arquitetura do software
+
+A arquitetura do software é o elemento que define a organização e a comunicação
+entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
+visualizar os componentes e os relacionamentos entre eles em um sistema de software.
+
+![Diagrama da arquitetura](img/diagrama_arquitetura.png)
+<h6 align = "center"> Imagem 2: Diagrama da arquitetura.
+<br> Autor: Gabriel Avelino
+<br>Fonte: Autor(es)</h6>
+
+Os componentes podem ser divididos em:
+
+- **Front-end**: O ViteJs é um framework utilizado para criação de aplicações WEB de maneira ágil. Vai ser o responsável por mostrar
+os dados no dashboard para o usuário.
+
+- **Back-end**: Vai ser construído utilizando o web framework FastAPI para a manipulação dos dados e o banco de dados PostgresSQL para a persistência
+dos dados enviados pelo arduíno.
+
+- **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
+
 
 ___________________________________________________________________________________
 
