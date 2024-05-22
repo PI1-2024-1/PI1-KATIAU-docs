@@ -17,7 +17,7 @@
 // Constantes a serem alteradas posteriormente
 #define velb_Dir 255           // Velocidade Básica de PWM motor direito
 #define velb_Esq  255       // Velocidade Básica de PWM motor esquerdo
-#define Valor_Sensor 5      // Valor a ser comparado com os sensores
+#define Valor_Sensor 70      // Valor a ser comparado com os sensores
 #define Inc_Erro 1         // Incremento do erro para os casos do PID
 #define Num_Furos 20           // Número de furos do disco encoder
 #define Raio_Enc   13         // Valor do raio do disco encoder [mm]

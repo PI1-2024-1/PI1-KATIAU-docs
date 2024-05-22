@@ -2,6 +2,7 @@
 
 ___________________________________________________________________________________
 
+
 ## 4.1 Características Gerais
 
 O projeto visa o desenvolvimento de um carrinho seguidor de linha que percorra

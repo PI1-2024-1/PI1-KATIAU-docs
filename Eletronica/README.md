@@ -32,11 +32,11 @@
 #### Dado como exemplo, deve ser revisado pela área de energia
 * **2 Baterias Recarregáveis de 3.7 V 18650** - totalizando 7.4 V;
 	
-### 6 - Componentes Complementares
+### 7 - Componentes Complementares
 
 | Quantidade | Nome | Aplicação |
 | ---------- | ---- | --------- |
-| **6** | **Resistor 560 ohm** | **Sensores** |
+| **6** | **Resistor 100 ohm** | **Sensores** |
 | **4** | **Resistor 1k ohm** | **Sensores** |
 | **1** | **Resistor 3k3 ohm**  | **Comunicação** |
 | **1** | **Resistor 5k  ohm** | **Comunicação** |
@@ -93,3 +93,7 @@
 * 2 Baterias 18650
 * 1 Carregador das Baterias
 * 1 Suporte das Baterias
+
+## Tabela de preços
+
+Link: https://docs.google.com/spreadsheets/d/1sDdubN9efsVytDW5zOyZzP0-bHc8JpHvrAddTQ-esXk/edit?usp=sharing 
