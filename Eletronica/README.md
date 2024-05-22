@@ -36,7 +36,7 @@
 
 | Quantidade | Nome | Aplicação |
 | ---------- | ---- | --------- |
-| **6** | **Resistor 560 ohm** | **Sensores** |
+| **6** | **Resistor 100 ohm** | **Sensores** |
 | **4** | **Resistor 1k ohm** | **Sensores** |
 | **1** | **Resistor 3k3 ohm**  | **Comunicação** |
 | **1** | **Resistor 5k  ohm** | **Comunicação** |
