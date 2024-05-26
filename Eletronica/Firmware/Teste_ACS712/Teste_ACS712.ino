@@ -8,6 +8,8 @@ float P_ACS712 =0;
 float E_ACS712 =0;
 uint8_t count = 0;
 
+bool Count_INCE = true;
+float MM=0;
 float corrente = 0;
 float mediaADC = 0;
 void setup() {
@@ -19,7 +21,7 @@ void setup() {
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);*/
   pinMode(2, INPUT_PULLUP);    
-  attachInterrupt(digitalPinToInterrupt(2), Inc_EncE, RISING);     //O Sistema irá identificar uma interrupção quando o sinal vai de LOW para HIGH
+  attachInterrupt(digitalPinToInterrupt(2), Inc_EncE, HIGH);     //O Sistema irá identificar uma interrupção quando o sinal vai de LOW para HIGH
   
 }
 
@@ -58,8 +60,17 @@ void loop() {
   delay(200);*/
 }
 void Inc_EncE(void){
-  Serial.println("Interrupção");
-
+  detachInterrupt(digitalPinToInterrupt(2));
+  if(Count_INCE){
+    Serial.println("Interrupção");
+    MM = MM+(4.1);
+    Serial.println(MM);
+    Count_INCE = false;
+  }
+  else{
+    Count_INCE = true;
+  }
+  attachInterrupt(digitalPinToInterrupt(2), Inc_EncE, HIGH);
 
 
 
