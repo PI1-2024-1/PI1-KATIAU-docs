@@ -5,6 +5,7 @@ nav:
   - Como Documentar: como_documentar.md
   - Projeto Conceitual: Documentacao
   - Atas: Atas
+  - Eletrônica: Eletronica
 
 markdown_extensions:
   - pymdownx.arithmatex:

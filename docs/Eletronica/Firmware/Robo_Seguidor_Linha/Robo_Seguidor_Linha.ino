@@ -72,6 +72,9 @@ float A_ACS712 =0;
 float P_ACS712 =0;
 float E_ACS712 =0;
 
+bool Count_INCE = false;          // Booleanos para cálculo de deboucing das interrupções
+bool Count_INCD = false;  
+
 // Vars para transmissão de dados
 float Transmit[8];
 
@@ -85,9 +88,9 @@ void setup() {
 
   // Configurando Interrupções dos Encoders
   pinMode(EncE, INPUT_PULLUP);    
-  attachInterrupt(digitalPinToInterrupt(EncE), Inc_EncE, RISING);     //O Sistema irá identificar uma interrupção quando o sinal vai de LOW para HIGH
+  attachInterrupt(digitalPinToInterrupt(EncE), Inc_EncE, HIGH);     //O Sistema irá identificar uma interrupção quando o sinal vai de LOW para HIGH
   pinMode(EncD, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(EncD), Inc_EncE, RISING);
+  attachInterrupt(digitalPinToInterrupt(EncD), Inc_EncE, HIGH);
 
   //Configurando interrupção do Timer 
   Timer1.initialize(2000);
@@ -155,13 +158,30 @@ void Controle_PID(void){
 
 }
 
-// Funções de interrupção dos Encoders]
+// Funções de interrupção dos Encoders
 void Inc_EncE(void){
-  Enc_Esq = Enc_Esq+1;    // Para cada pulso somo os encoders
+  detachInterrupt(digitalPinToInterrupt(EncE));
+  if(Count_INCE){
+    Enc_Esq = Enc_Esq+1;    // Para cada pulso somo os encoders
+    Count_INCE = false;
+  }
+  else{
+    Count_INCE = true;
+  }
+  attachInterrupt(digitalPinToInterrupt(EncE), Inc_EncE, HIGH);
 }
 
 void Inc_EncD(void){
   Enc_Dir = Enc_Dir +1;
+    detachInterrupt(digitalPinToInterrupt(EncD));
+  if(Count_INCD){
+    Enc_Dir = Enc_Dir +1;    // Para cada pulso somo os encoders
+    Count_INCD = false;
+  }
+  else{
+    Count_INCD = true;
+  }
+  attachInterrupt(digitalPinToInterrupt(EncD), Inc_EncD, HIGH);
 }
 
 // Função de Interrupção dos Timers
@@ -195,7 +215,7 @@ void Int_200(void){
 
   // Valor do sensor de corrente
   A_ACS712 = analogRead(ACS712)-511.5;                                    // Pego o valor do ADC e Volto ao ponto zero
-  A_ACS712 = 5000 * A_ACS712/511.5;                                         // Valor da corrente em [mV]
+  A_ACS712 = 5000 * A_ACS712/511;                                         // Valor da corrente em [mA]
   P_ACS712 = A_ACS712 * V_Bat;                                            // valor da potência em [mW]
   E_ACS712 = P_ACS712 * 0.2;
 
@@ -207,15 +227,4 @@ void Int_200(void){
   for(uint8_t i =0; 1<8; i++){
     Serial.println(Transmit[i]);
   }
-  
-
-
-
-
-
-
-
-
-
-
 }
