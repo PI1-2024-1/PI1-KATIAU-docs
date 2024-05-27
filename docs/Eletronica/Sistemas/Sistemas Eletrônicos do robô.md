@@ -1,9 +1,7 @@
-# Aqui se encontram as informações referentes à área de Eletrônica
+# Informações sobre os sistemas eletrônicos do robô
 --------------------------------------------------------------------------
 ### Reuniões no discord às terças e quintas 18:00 de acordo com demanda
------------------------------------------------------------------------------
-## Informações sobre os sistemas eletrônicos do robô
-------------------------------------------------------------------------------
+
 ### 1 - Sistema de Controle
 
 * **1 Placa arduino uno R3** - comumente utilizada em projetos simplificados em robótica;
