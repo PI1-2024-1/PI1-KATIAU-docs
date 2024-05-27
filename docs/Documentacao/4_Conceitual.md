@@ -40,7 +40,7 @@ Para a análise do consumo energético do projeto foram identificados os itens e
 |Módulo Bluetooth Serial Rs232 Escravo Hc-06|5|35|0,175|1|
 |Sensor de velocidade módulo encoder|5|15|0,075|2|
 |Medidor de Corrente ACS 712|5|8|0,04|1|
-|Regulador de Tensão XL 4015|5|5000|25|1|
+|Regulador de Tensão LM 317|5|5000|25|1|
 |Motores de 6V com redutor e rodas|6|200|1,2|2|
 
 Multiplicou-se a corrente de operação pela tensão da fonte de alimentação, obtendo a potência de cada componente em watts (W), utilizando a fórmula:  $P = V \times i$, onde  $P$  é a potência em watts,  $V$  é a tensão em volts e  $i$  é a corrente em amperes. 
