@@ -61,26 +61,30 @@ Portanto, o tempo estimado de duração da bateria para este projeto do carrinho
 
 
 ## 4.5 Descrição de Software
+### 4.5.1 Diagrama do Processo de Negócio (BPNM)
+![Diagrama BPMN](img/BPMN%20PI1.png)
+<h6 align = "center"> Imagem 1: Diagrama de classes.
+<br> Autor: Samuel Nogueira e Thales Duarte
+<br>Fonte: Autor(es)</h6>
 
+### 4.5.2 Diagrama de Classes
 
-### 4.5.5 Diagrama de Classes
-
-A imagem 1 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
+A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
 
 ![Diagrama de Classes](img/diagrama_classes.png)
-<h6 align = "center"> Imagem 1: Diagrama de classes.
+<h6 align = "center"> Imagem 2: Diagrama de classes.
 <br> Autor: Brunna Louise
 <br>Fonte: Autor(es)</h6>
 
 
-### 4.5.6 Arquitetura do software
+### 4.5.3 Arquitetura do software
 
 A arquitetura do software é o elemento que define a organização e a comunicação
 entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
 visualizar os componentes e os relacionamentos entre eles em um sistema de software.
 
 ![Diagrama da arquitetura](img/diagrama_arquitetura.png)
-<h6 align = "center"> Imagem 2: Diagrama da arquitetura.
+<h6 align = "center"> Imagem 3: Diagrama da arquitetura.
 <br> Autor: Gabriel Avelino
 <br>Fonte: Autor(es)</h6>
 
