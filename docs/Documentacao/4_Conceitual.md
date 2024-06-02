@@ -61,13 +61,20 @@ Portanto, o tempo estimado de duração da bateria para este projeto do carrinho
 
 
 ## 4.5 Descrição de Software
+
 ### 4.5.1 Diagrama do Processo de Negócio (BPNM)
 ![Diagrama BPMN](img/BPMN%20PI1.png)
 <h6 align = "center"> Imagem 1: Diagrama de classes.
 <br> Autor: Samuel Nogueira e Thales Duarte
 <br>Fonte: Autor(es)</h6>
 
-### 4.5.2 Diagrama de Classes
+### 4.5.2 Lista de Casos de uso 
+
+### 4.5.3 Lista de Requisitos Não-Funcionais
+
+Disponível em [TAP](/docs/Documentacao/2_Tap.md)
+
+### 4.5.5 Diagrama de Classes
 
 A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
 
@@ -77,7 +84,7 @@ A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da
 <br>Fonte: Autor(es)</h6>
 
 
-### 4.5.3 Arquitetura do software
+### 4.5.6 Arquitetura do software
 
 A arquitetura do software é o elemento que define a organização e a comunicação
 entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
@@ -98,6 +105,29 @@ dos dados enviados pelo arduíno.
 
 - **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
 
+
+### 4.5.7 Descrição e Roteiro dos testes
+
+### Testes de unidade
+
+| Componente | Caso de teste                 | Descrição                                           |
+| ---------- | ----------------------------- | --------------------------------------------------- |
+| API        | Cálculo de velocidade         | Deve calcular a velocidade em um momento            |
+| API        | Cálculo de aceleração         | Deve calcular a aceleração em um momento            |
+| API        | Cálculo de consumo de bateria | Deve calcular o consumo de bateria em um momento    |
+| API        | Cálculo de distância          | Deve calcular a distância total percorrida          |
+| Front-end  | Visualização dos dados        | Deve ser possível visualizar os dados no dashboard. |
+
+
+### Testes de integração
+
+| Componente                  | Caso de teste                                     | Descrição                                                                                                                      |
+| --------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Módulo de conexão bluetooth | Certificar se dados estão sendo recebidos         | Deve receber um JSON com informações enviadas pelo carrinho                                                                    |
+| Modulo de conexão bluetooth | Certificar se dados estão sendo enviados para API | Deve enviar um JSON recebido via requisição HTTP para a API.                                                                   |
+| API                         | Certificar o recebimento e salvamento de dados    | Ao receber uma requisição HTTP de dados enviada pelo Módulo de conexão bluetooth, deve poder salvar os dados no banco de dados |
+| API                         | Certificar a disponibilização dos dados           | Testar a disponibilização dos dados                                                                                            |
+| Front-end                   | Verificar a visualização dos dados                | Deve ser possível visualizar os dados recebidos da requisição à API                                                            |
 
 ___________________________________________________________________________________
 

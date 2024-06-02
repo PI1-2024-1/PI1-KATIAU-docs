@@ -103,7 +103,7 @@ carrinho seguidor de linha serão apresentados nas Tabelas 1 e 2 a seguir:
 
 ___________________________________________________________________________________
 
-# Tabela 1
+### Tabela 1 - Requisitos Funcionais
 
 | Id do Requisito | Engenharia Relacionada | Descrição do Requisito |
 | ----- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -133,7 +133,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________
 
-# Tabela 2
+### Tabela 2 - Requisitos Não-Funcionais
 
 | Id do Requisito | Engenharia Relacionada | Descrição do Requisito |
 | ------------- | ------------- | ------------- |
