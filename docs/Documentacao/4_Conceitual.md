@@ -129,6 +129,10 @@ dos dados enviados pelo arduíno.
 | API                         | Certificar a disponibilização dos dados           | Testar a disponibilização dos dados                                                                                            |
 | Front-end                   | Verificar a visualização dos dados                | Deve ser possível visualizar os dados recebidos da requisição à API                                                            |
 
+
+### Roteiro de Testes
+
+
 ___________________________________________________________________________________
 
 ## Componentes a serem aprofundados
