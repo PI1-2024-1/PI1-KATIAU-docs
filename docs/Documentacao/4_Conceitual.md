@@ -116,6 +116,7 @@ dos dados enviados pelo arduíno.
 | API        | Cálculo de aceleração         | Deve calcular a aceleração em um momento            |
 | API        | Cálculo de consumo de bateria | Deve calcular o consumo de bateria em um momento    |
 | API        | Cálculo de distância          | Deve calcular a distância total percorrida          |
+| API        | Cálculo de trajetória          | Deve calcular a trajetória total percorrida          |
 | Front-end  | Visualização dos dados        | Deve ser possível visualizar os dados no dashboard. |
 
 
@@ -131,6 +132,29 @@ dos dados enviados pelo arduíno.
 
 
 ### Roteiro de Testes
+
+Pré - Requisito: Aplicação em funcionamento e com acesso disponível para realização dos testes. Também a instaçação no Carrinho dos componentes e sensores que enviaráo dados para a aplicação
+
+#### Testes de unidade:
+
+- Teste de velocidade
+    - Verifica-se o recebimento dos dados e cálculo da velocidade no sistema
+- Teste de Aceleração
+    - Verifica-se o recebimento dos dados e cálculo da aceleração no sistema
+- Teste do consumo de bateria
+    - Deve-se visualizar o dado de consumo no banco de dados
+    - Deve-se visualizar o consumo de bateria no dashboard
+- Teste da distância
+    - Verifica-se o recebimento dos dados e o cálculo da distância percorrida
+- Teste de trajetória
+    - Verifica-se o recebimento dos dados de coordenadas e cálculo da trajetória no espaçotempo
+- Teste de visualização
+    - Verifica-se a exibição de todos os dados já citados no Dashboard do projeto e com atualizações constantes
+
+### Testes de integração:
+
+
+
 
 
 ___________________________________________________________________________________
