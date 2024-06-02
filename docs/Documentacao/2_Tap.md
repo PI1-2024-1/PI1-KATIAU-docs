@@ -113,7 +113,8 @@ ________________________________________________________________________________
 | RF04  | Eletrônica          | O carrinho seguidor de linha deve possuir uma fonte <br> de energia confiável e durável para alimentar os motores, <br> os sensores e outros componentes eletrônicos do <br> carrinho durante toda a execução do percurso.                                                                                     |
 | RF05  | Eletrônica          | O carrinho seguidor de linha deve possuir um sistema de <br> medição dos dados de posição, velocidade e aceleração <br> do carrinho.     |
 | RF06  | Eletrônica          | O carrinho seguidor de linha deve possuir um sistema de <br> comunicação para facilitar a interação entre o <br> carrinho e a aplicação de análise de dados do carrinho. |
-| RF07  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a distância e a trajetória percorrida <br> pelo carrinho. |
+| RF07  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a distância percorrida <br> pelo carrinho. |
+| RF08  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a trajetória percorrida <br> pelo carrinho. |
 | RF08  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir o tempo de percurso do carrinho.                          |
 | RF09  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a velocidade e aceleração do carrinho.                    |
 | RF10  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve calcular e exibir o consumo de energia do <br> carrinho.         |
@@ -200,5 +201,14 @@ do Distrito Federal, segundo uma lista das maiores empresas do setor no Brasil.
 - Eventos e seminários voltados para a educação e tecnologia também foram
 identificados na região do Distrito Federal, como o SEEDF, realizado nos dias 17 e 19 de
 outubro de 2023, de forma híbrida, no auditório da Escola Técnica do Guará.
+
+___________________________________________________________________________________
+
+## Tabela 3 - Histórico de Revisão
+
+| Data  |             Descrição           |              Autor            |             Revisor           |
+|       |---------------------------------|-------------------------------|-------------------------------|
+| 02/05 | Criação do cronograma           | [Brunna Louise](https://github.com/brunna-martins) | [Pedro Miguel](https://github.com/pedroMADBR) |
+| 01/06 | Correção de RF de Software | [Pedro Miguel](https://github.com/pedroMADBR) | [Brunna Louise](https://github.com/brunna-martins) |
 
 ___________________________________________________________________________________
