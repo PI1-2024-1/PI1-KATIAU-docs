@@ -100,7 +100,10 @@ dos dados enviados pelo arduíno.
 
 ### 4.5.4 Lista de Casos de Uso
 
-## Lista de Casos de Uso
+
+A documentação de casos de uso fornece uma visão abrangente das diferentes interações entre usuários e sistema em um determinado contexto. A lista de casos de uso é uma parte essencial dessa documentação, pois descreve as principais funcionalidades que o sistema deve oferecer e os fluxos de eventos associados a cada uma delas.
+No caso do projeto, a lista de casos de uso descreve as principais operações que o usuário pode realizar e como o sistema deve responder a essas operações, cada caso de uso é composto por um conjunto de etapas que descrevem o fluxo principal de eventos, bem como possíveis fluxos alternativos em caso de condições excepcionais.
+
 
 ### Exibir a Distância Percorrida
 
@@ -270,6 +273,10 @@ Os critérios de avaliação devem ser claros e verificáveis para cada User Sto
 - Os dados de percursos anteriores devem ser exibidos em um gráfico.
 - Deve permitir a seleção e comparação de múltiplos percursos.
 - O gráfico deve mostrar detalhes como distância, tempo, velocidade e aceleração de percursos anteriores.
+
+
+![diagrama katiau](https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/140026699/22cf04af-cdcc-4bed-a4e6-2b97daf92b11)
+
 
 ## Backlog de Casos de Uso
 
