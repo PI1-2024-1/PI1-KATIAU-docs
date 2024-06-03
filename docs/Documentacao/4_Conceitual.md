@@ -328,24 +328,29 @@ Pré - Requisito: Aplicação em funcionamento e com acesso disponível para rea
 #### Testes de unidade:
 
 - Teste de velocidade
-    - Verifica-se o recebimento dos dados e cálculo da velocidade no sistema
+  - Verifica-se o recebimento dos dados e cálculo da velocidade no sistema
 - Teste de Aceleração
-    - Verifica-se o recebimento dos dados e cálculo da aceleração no sistema
+  - Verifica-se o recebimento dos dados e cálculo da aceleração no sistema
 - Teste do consumo de bateria
-    - Deve-se visualizar o dado de consumo no banco de dados
-    - Deve-se visualizar o consumo de bateria no dashboard
+  - Deve-se visualizar o dado de consumo no banco de dados
+  - Deve-se visualizar o consumo de bateria no dashboard
 - Teste da distância
-    - Verifica-se o recebimento dos dados e o cálculo da distância percorrida
+  - Verifica-se o recebimento dos dados e o cálculo da distância percorrida
 - Teste de trajetória
-    - Verifica-se o recebimento dos dados de coordenadas e cálculo da trajetória no espaçotempo
+  - Verifica-se o recebimento dos dados de coordenadas e cálculo da trajetória no espaçotempo
 - Teste de visualização
-    - Verifica-se a exibição de todos os dados já citados no Dashboard do projeto e com atualizações constantes
+  - Verifica-se a exibição de todos os dados já citados no Dashboard do projeto e com atualizações constantes
 
 ### Testes de integração:
 
-
-
-
+- Teste de módulo bluetooth
+  - Certificar se os dados estão sendo recebidos em um JSON com informações do carrinho
+- Teste de API
+  - Certificar o recebimento dos dados do carrinho por meio de uma requisição HTTP e um arquivo JSO
+- Teste de disponibilidade de dados
+  - certificar que os dados recebidos estão sendo disponibilizados para posterior trabalho do front-end
+- Teste de Front-end
+  - Verificar a visualização de dados para o usuário após recebimento dos dados via requisição da API
 
 ___________________________________________________________________________________
 
