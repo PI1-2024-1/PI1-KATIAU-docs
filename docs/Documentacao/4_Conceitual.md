@@ -25,6 +25,8 @@ em ambientes desafiadores.
 
 ## 4.2 Estrutura
 
+Decidimos que o ideal seria o menor CAD possível. Para isso, optou-se por ter duas bases, uma sobre a principal. O tamanho reduzido proporciona maior mobilidade. O ovo e a bateria serão posicionados na base superior, enquanto os componentes eletrônicos ficarão na base principal, abaixo. Os sensores serão colocados na parte frontal, o mais próximo possível do chão. Apenas duas rodas serão utilizadas, pois esse sistema é mais simples e prático, permitindo o movimento de virar através da diferença de velocidade entre as rodas. Os materiais serão impressos em 3D, utilizando PLA. O ovo será colocado em uma caixa, com todos os lados protegidos por isopor e espuma, garantindo proteção adequada, uma vez que o carrinho apenas seguirá uma linha e não sofrerá impactos que possam quebrar o ovo.
+
 ## 4.3 Descrição de hardware
 
 ### 4.3.1 Diagrama de blocos
