@@ -25,6 +25,39 @@ em ambientes desafiadores.
 
 ## 4.2 Estrutura
 
+### 4.2.1 Decisões de projeto
+
+Foi decidido que o ideal seria o menor CAD possível, por isso foi escolhido ter duas bases, uma em cima da principal. O tamanho menor serve para ele ter mais mobilidade. O ovo e a bateria foram escolhidos para ficar na base superior, enquanto os componentes eletrônicos ficarão na base principal, embaixo. Os sensores foram colocados na frente, o mais próximo possível do chão. Serão utilizadas apenas duas rodas, pois é um sistema mais fácil e prático, onde o movimento de virar será realizado através da diferença de velocidade entre as rodas. Os materiais serão impressos em 3D, utilizando PLA. O ovo será colocado numa caixa, onde todos os lados serão protegidos com isopor e espuma, garantindo proteção suficiente, já que o carrinho apenas seguirá uma linha e não sofrerá impactos que possam quebrar o ovo.
+
+### 4.2.2 Desenho técnico
+
+![Pag 1](https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/1664e3de-048a-4515-bc3e-177e2305cf93)
+<h6 align = "center"> Imagem 1: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+![Pag 2](https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/f1d4ec9a-c5bb-4117-9435-a8f367c0535f)
+<h6 align = "center"> Imagem 2: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+![Pag 3](https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/1254b565-e3c9-409e-88d8-3bf9f8b883c9)
+<h6 align = "center"> Imagem 3: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+![Pag 4](https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/b745ab31-8313-4e54-838b-8175e6e88327)
+<h6 align = "center"> Imagem 4: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+### 4.2.3 Modelo 3D
+
+![WhatsApp Image 2024-05-28 at 11 33 32 AM](https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/6c5cfeb6-6d9c-48e0-bc13-084545b6966e)
+<h6 align = "center"> Imagem 1: Modelo 3D.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
 ## 4.3 Descrição de hardware
 
 ### 4.3.1 Diagrama de blocos
