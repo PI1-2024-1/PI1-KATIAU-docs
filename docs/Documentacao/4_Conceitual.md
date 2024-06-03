@@ -27,6 +27,124 @@ em ambientes desafiadores.
 
 ## 4.3 Descrição de hardware
 
+### 4.3.1 Diagrama de blocos
+
+![Diagrama de blocos](https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/main/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Diagrama%20de%20Blocos%20-%20Eletrônica.png)
+
+### Observações  
+ 
+- Pode ser utilizado qualquer formato, se atentando à posição dos [sensores infravermelhos](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/TCRT5000.PDF) na parte dianteira, e dos sensores [encoder](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/Encoder.pdf) que devem estar juntos aos eixos de rotação dos motores;
+
+### 4.3.2 Lista de Materiais
+
+| Quantidade   | Material                                           |
+|---------------------|---------------------------------------------|
+| 1                   | Chassi                                      |
+| 1                   | Placa arduino uno R3                        |
+| 4                   | Sensores Ópticos Reflexivos TCRT-5000       |
+| 1                   | Módulo Bluetooth Serial Rs232 Escravo Hc-06 |
+| 2                   | Sensor de velocidade módulo encoder         |
+| 2                   | Discos módulo encoder                       |
+| 1                   | Medidor de Corrente ACS 712 (5A)            |
+| 1                   | Módulo DC-DC (LM317)                        |
+| 2                   | Motores de 6V com redutor                   |
+| 2                   | Rodas                                       |
+| 2                   | Baterias Recarregáveis de 3.7 V 18650       |
+| 4                   | Resistor 100 ohm 1/4W                       |
+| 4                   | Resistor 1k ohm 1/4W                        |
+| 1                   | Resistor 3k3 ohm 1/4W                       |
+| 1                   | Resistor 5k ohm 1/4W                        |
+| 1                   | Transistor BC547                            |
+| 2                   | Diodo 1N4007                                |
+| 1                   | Suporte para 2 Baterias 18650               |
+| 1                   | Placa Perfurada                             |
+| 2                   | Chaves/Interruptores                        |
+
+### 4.3.3 Esquemático
+
+![Diagrama de blocos](https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/docDescricaoHardware/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Esquemático%20K.A.T.I.A.U_page-0001.jpg)
+<h6 align = "center"> Imagem 1: Diagrama de blocos.
+<br>Autor: Pedro Zago
+<br>Fonte: Autor(es)</h6>
+
+### 4.3.4 Descrição dos componentes
+
+Este subtópico visa descrever os componentes com uma breve justificativa de sua utilização no projeto:
+
+#### Placa Arduino Uno R3
+Optamos por utilizar a placa Arduino Uno R3 devido à sua ampla utilização em projetos de robótica simplificados e sua facilidade de uso. A vasta documentação disponível e a grande comunidade de suporte tornam esta placa ideal para iniciantes, permitindo uma curva de aprendizado mais suave e uma implementação mais eficiente.
+
+#### Sensores Ópticos Reflexivos TCRT-5000
+Os sensores ópticos reflexivos TCRT-5000 foram escolhidos para detecção de objetos e medição de distâncias curtas. Eles são ideais para sistemas de posicionamento e contagem de rotações, proporcionando precisão e confiabilidade nas medições necessárias para o controle do robô.
+
+#### Módulo Bluetooth Serial RS232 Escravo HC-06
+O módulo Bluetooth HC-06 é essencial para a transmissão dos dados de medições do Arduino via Bluetooth. Esta capacidade facilita a criação e atualização de bancos de dados, permitindo o monitoramento remoto e a análise dos dados coletados pelo robô.
+
+#### Sensor de Velocidade Módulo Encoder
+O módulo encoder, que atua como um desacoplador óptico, é crucial para calcular a distância, velocidade e aceleração de objetos em movimento. Este componente é indispensável para o monitoramento preciso do movimento do robô, garantindo um controle eficiente.
+
+#### Discos Encoder para Medição com Módulo Encoder
+Utilizamos discos encoder em conjunto com o módulo encoder para medir a rotação das rodas. Estes discos proporcionam dados precisos de movimento, essenciais para a navegação e o controle do robô, permitindo cálculos exatos de deslocamento.
+
+#### Medidor de Corrente ACS 712
+O sensor de corrente ACS 712 foi escolhido por sua simplicidade de instalação, medindo a corrente elétrica sem a necessidade de circuitos adicionais complexos. Este sensor garante a monitorização eficaz do consumo de energia do robô.
+
+#### Regulador de Tensão LM317
+O regulador de tensão LM317 ajusta a tensão de entrada de 7.4V para um nível estável de até 6V, protegendo os componentes eletrônicos do projeto. Esta regulação é essencial para a estabilidade e segurança do sistema.
+
+#### Motores de 6V com Redutor e Rodas
+Os motores de 6V com redutores são responsáveis pela movimentação do robô, oferecendo torque e controle adequados. Estes motores garantem que o robô possa se mover com precisão e eficiência.
+
+#### Baterias Recarregáveis de 3.7V 18650
+Optamos pelas baterias recarregáveis de 3.7V 18650 devido à sua alta capacidade e durabilidade. Estas baterias fornecem energia confiável ao robô, permitindo longas operações sem necessidade de recarga frequente.
+
+#### Componentes Complementares
+
+#### Resistores
+* **Resistor 100 ohm** - Utilizados nos sensores.
+* **Resistor 1k ohm** - Utilizados nos sensores.
+* **Resistor 3k3 ohm** - Utilizados na comunicação.
+* **Resistor 5k1 ohm** - Utilizados na comunicação.
+
+#### Transistor e Diodo
+* **Transistor BC547** - Utilizado para o controle de movimento.
+* **Diodo 1N4007** - Utilizado para proteger o circuito de picos de tensão durante a operação dos motores.
+
+#### Suporte para Baterias e Placa Perfurada
+* **Suporte para 2 Baterias 18650** - Fornece suporte físico e conexões elétricas seguras para as baterias.
+* **Placa Perfurada** - Utilizada para a montagem e fixação dos componentes eletrônicos.
+
+#### Chaves/Interruptores
+* **Chaves/Interruptores** - Garantem a segurança do circuito, permitindo a ligação e desligamento seguro do sistema.
+
+## Firmware
+
+#### Sensores TCRT-5000
+Os sensores TCRT-5000 entregam tensões de 0 a 5V. É necessário calibrar uma variável que indique se o sensor está detectando a linha ou não, garantindo a precisão das leituras.
+
+#### Módulo Bluetooth HC-06
+A comunicação com o módulo Bluetooth HC-06 é realizada através da porta serial, simplificando a transmissão dos dados coletados pelo Arduino.
+
+#### Sensores de Velocidade Módulo Encoder
+Os sensores de velocidade enviam um pulso quando passam por um buraco no disco encoder, permitindo a contagem precisa das rotações.
+
+#### Discos Encoder de 20 Furos
+Cada furo do disco encoder corresponde a 3.92 mm de deslocamento, proporcionando medições detalhadas e precisas do movimento do robô.
+
+#### Motor 6V com Redutor
+O movimento do motor é controlado através de sinais PWM enviados pelas saídas definidas no esquemático, garantindo controle preciso da velocidade e direção.
+
+#### Medidor de Corrente ACS712
+O medidor de corrente ACS712 entrega uma tensão proporcional à corrente medida. Para calcular a corrente, uma variável calibrada é necessária. Correntes negativas também geram tensões positivas, exigindo uma consideração especial no cálculo.
+
+## Software
+
+Os dados são recebidos pelo software em forma de vetor `dados = [Enc direito; Enc esquerdo; velocidade; aceleração]`. O cálculo da posição relativa do robô é mais facilmente realizado no software do que no firmware. A cada período de comunicação, os valores do encoder são enviados, por exemplo:
+* **Enc direito = 2**
+* **Enc esquerdo = 4**
+
+Isso indica que o carrinho andou uma distância em linha reta e outra para a direita, permitindo o cálculo preciso do movimento e posição do robô.
+
 ## 4.4 Análise de consumo energético
 
 Para a análise do consumo energético do projeto foram identificados os itens eletrônicos  escolhidos para o carrinho, consultando as especificações técnicas dos componentes (corrente de operação e a tensão de funcionamento) que estão disponíveis nos datasheets de seus fabricantes, foi determinado o consumo de energia de cada peça durante sua operação. Os elementos e suas características elétricas foram listados na tabela abaixo:
