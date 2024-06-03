@@ -98,6 +98,191 @@ dos dados enviados pelo arduíno.
 
 - **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
 
+### 4.5.4 Lista de Casos de Uso
+
+## Lista de Casos de Uso
+
+### Exibir a Distância Percorrida
+
+**Fluxo Principal:**
+
+1. O usuário acessa a aplicação de análise de dados.
+2. O sistema solicita os dados do carrinho seguidor de linha.
+3. O sistema processa e calcula a distância percorrida.
+4. O sistema exibe a distância percorrida na interface do usuário.
+
+**Fluxo Alternativo:**
+
+- Falha na comunicação com o carrinho:
+  1. O sistema tenta acessar os dados do carrinho.
+  2. O sistema não consegue se comunicar com o carrinho.
+  3. O sistema exibe uma mensagem de erro informando que não foi possível obter os dados do carrinho.
+
+### Exibir a Trajetória Percorrida
+
+**Fluxo Principal:**
+
+1. O usuário acessa a aplicação de análise de dados.
+2. O sistema solicita os dados do carrinho seguidor de linha.
+3. O sistema processa os dados e gera a trajetória percorrida.
+4. O sistema exibe a trajetória percorrida na interface do usuário.
+
+**Fluxo Alternativo:**
+
+- Falha no processamento dos dados:
+  1. O sistema tenta processar os dados para gerar a trajetória.
+  2. O sistema detecta um erro nos dados recebidos.
+  3. O sistema exibe uma mensagem de erro informando que não foi possível processar a trajetória.
+
+### Exibir a Aceleração
+
+**Fluxo Principal:**
+
+1. O usuário acessa a aplicação de análise de dados.
+2. O sistema solicita os dados de aceleração do carrinho seguidor de linha.
+3. O sistema processa e calcula a aceleração.
+4. O sistema exibe a aceleração na interface do usuário.
+
+**Fluxo Alternativo:**
+
+- Dados de aceleração não disponíveis:
+  1. O sistema tenta acessar os dados de aceleração.
+  2. O sistema verifica que os dados de aceleração não estão disponíveis.
+  3. O sistema exibe uma mensagem de erro informando que os dados de aceleração não estão disponíveis.
+
+### Exibir o Consumo de Energia
+
+**Fluxo Principal:**
+
+1. O usuário acessa a aplicação de análise de dados.
+2. O sistema solicita os dados de consumo de energia do carrinho seguidor de linha.
+3. O sistema processa e calcula o consumo de energia.
+4. O sistema exibe o consumo de energia na interface do usuário.
+
+**Fluxo Alternativo:**
+
+- Erro no cálculo do consumo de energia:
+  1. O sistema tenta processar os dados de consumo de energia.
+  2. O sistema detecta um erro nos dados ou no cálculo.
+  3. O sistema exibe uma mensagem de erro informando que não foi possível calcular o consumo de energia.
+
+### Exibir a Velocidade
+
+**Fluxo Principal:**
+
+1. O usuário acessa a aplicação de análise de dados.
+2. O sistema solicita os dados de velocidade do carrinho seguidor de linha.
+3. O sistema processa e calcula a velocidade.
+4. O sistema exibe a velocidade na interface do usuário.
+
+**Fluxo Alternativo:**
+
+- Dados de velocidade inconsistentes:
+  1. O sistema tenta acessar os dados de velocidade.
+  2. O sistema verifica que os dados de velocidade estão inconsistentes ou incompletos.
+  3. O sistema exibe uma mensagem de erro informando que os dados de velocidade são inconsistentes.
+
+### Exibir Histórico de Percursos
+
+**Fluxo Principal:**
+
+1. O usuário acessa a aplicação de análise de dados.
+2. O usuário seleciona a opção para visualizar o histórico de percursos.
+3. O sistema recupera o histórico de percursos do banco de dados.
+4. O sistema exibe o histórico de percursos na interface do usuário.
+
+**Fluxo Alternativo:**
+
+- Histórico de percursos indisponível:
+  1. O sistema tenta recuperar o histórico de percursos.
+  2. O sistema verifica que o histórico de percursos não está disponível.
+  3. O sistema exibe uma mensagem de erro informando que o histórico de percursos não pode ser exibido.
+
+## Temas
+
+### Cálculos dos Dados
+
+Este tema inclui todas as features relacionadas ao processamento e cálculo dos dados do carrinho.
+
+**Features:**
+
+- Processamento da distância percorrida
+- Cálculo da trajetória
+- Cálculo da velocidade
+- Cálculo da aceleração
+- Cálculo do consumo de bateria
+
+### Dashboard e Exibição
+
+Este tema abrange todas as features relacionadas à visualização e exibição dos dados processados na interface do usuário.
+
+**Features:**
+
+- Exibição da distância percorrida
+- Exibição da trajetória percorrida
+- Exibição da velocidade em tempo real
+- Exibição da aceleração em tempo real
+- Exibição do consumo de bateria em tempo real
+- Exibição dos dados de percursos anteriores
+
+## Critérios de Avaliação
+
+Os critérios de avaliação devem ser claros e verificáveis para cada User Story. Eles determinam se a User Story foi implementada corretamente.
+
+### Exibir Trajetória Percorrida (US01)
+
+- Deve ser exibido em um gráfico com precisão de até 1 metro.
+- O gráfico deve atualizar automaticamente conforme novos dados são recebidos.
+- A trajetória deve ser claramente distinguível com linhas contínuas.
+
+### Exibir Distância Percorrida (US02)
+
+- A distância deve ser exibida em um gráfico.
+- Deve mostrar a distância total percorrida.
+- O gráfico deve permitir a visualização de distâncias de percursos anteriores para comparação.
+
+### Exibir Tempo de Percurso (US03)
+
+- O tempo de percurso deve ser exibido em um gráfico.
+- Deve mostrar o tempo total de cada percurso.
+- O gráfico deve permitir a comparação do tempo de diferentes percursos.
+
+### Exibir Velocidade em Tempo Real (US04)
+
+- A velocidade deve ser exibida em um gráfico em tempo real.
+- A atualização deve ocorrer a cada segundo.
+- Deve permitir a comparação da velocidade ao longo do percurso.
+
+### Exibir Aceleração em Tempo Real (US05)
+
+- A aceleração deve ser exibida em um gráfico em tempo real.
+- A atualização deve ocorrer a cada segundo.
+- Deve permitir a comparação da aceleração ao longo do percurso.
+
+### Exibir Consumo de Bateria em Tempo Real (US06)
+
+- O consumo de bateria deve ser exibido em vários gráficos como um dashboard.
+- Deve mostrar o consumo instantâneo e acumulado.
+- O dashboard deve permitir a visualização do consumo de bateria em diferentes percursos.
+
+### Exibir Dados de Percursos Anteriores (US07)
+
+- Os dados de percursos anteriores devem ser exibidos em um gráfico.
+- Deve permitir a seleção e comparação de múltiplos percursos.
+- O gráfico deve mostrar detalhes como distância, tempo, velocidade e aceleração de percursos anteriores.
+
+## Backlog de Casos de Uso
+
+| Épico                  | Temas                           | Numero da US | Título da US               | Critérios                                                                                       |
+|------------------------|---------------------------------|---------------|----------------------------|-------------------------------------------------------------------------------------------------|
+| EP01: Gestão de dados  | Visualização de dados do percurso | US01          | Exibir Trajetória Percorrida | Deve ser exibido em um gráfico com precisão de até 1 metro. O gráfico deve atualizar automaticamente conforme novos dados são recebidos. A trajetória deve ser claramente distinguível com linhas contínuas. |
+| EP01: Gestão de dados  | Visualização de dados do percurso | US02          | Exibir Distância Percorrida  | Deve ser exibido em um gráfico. Deve mostrar a distância total percorrida. O gráfico deve permitir a visualização de distâncias de percursos anteriores para comparação.                  |
+| EP01: Gestão de dados  | Visualização de dados do percurso | US03          | Exibir Tempo de Percurso     | Deve ser exibido em um gráfico. Deve mostrar o tempo total de cada percurso. O gráfico deve permitir a comparação do tempo de diferentes percursos.                                            |
+| EP01: Gestão de dados  | Visualização de dados do percurso | US04          | Exibir Velocidade em Tempo Real | Deve ser exibido em um gráfico em tempo real. A atualização deve ocorrer a cada segundo. Deve permitir a comparação da velocidade ao longo do percurso.                                    |
+| EP01: Gestão de dados  | Visualização de dados do percurso | US05          | Exibir Aceleração em Tempo Real | Deve ser exibido em um gráfico em tempo real. A atualização deve ocorrer a cada segundo. Deve permitir a comparação da aceleração ao longo do percurso.                                     |
+| EP01: Gestão de dados  | Visualização de dados do percurso | US06          | Exibir Consumo de Bateria em Tempo Real | Deve ser exibido em vários gráficos como um dashboard. Deve mostrar o consumo instantâneo e acumulado. O dashboard deve permitir a visualização do consumo de bateria em diferentes percursos. |
+| EP01: Gestão de dados  | Visualização de dados do percurso | US07          | Exibir Dados de Percursos Anteriores | Deve ser exibido em um gráfico. Deve permitir a seleção e comparação de múltiplos percursos. O gráfico deve mostrar detalhes como distância, tempo, velocidade e aceleração de percursos anteriores. |
+
 
 ___________________________________________________________________________________
 
