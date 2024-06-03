@@ -211,44 +211,14 @@ $$Tempo = \frac{C_{bateria}}{i} \to Tempo = \frac{4,4}{0,6} \simeq 7,3h$$
 Portanto, o tempo estimado de duração da bateria para este projeto do carrinho seguidor de linha é de aproximadamente 7,3 horas. Essa é uma estimativa do tempo de operação contínua do carrinho antes que a bateria precise ser recarregada.
 
 ## 4.5 Descrição de Software
+
 ### 4.5.1 Diagrama do Processo de Negócio (BPNM)
 ![Diagrama BPMN](img/BPMN%20PI1.png)
 <h6 align = "center"> Imagem 1: Diagrama de classes.
 <br> Autor: Samuel Nogueira e Thales Duarte
 <br>Fonte: Autor(es)</h6>
 
-### 4.5.2 Diagrama de Classes
-
-A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
-
-![Diagrama de Classes](img/diagrama_classes.png)
-<h6 align = "center"> Imagem 2: Diagrama de classes.
-<br> Autor: Brunna Louise
-<br>Fonte: Autor(es)</h6>
-
-
-### 4.5.3 Arquitetura do software
-
-A arquitetura do software é o elemento que define a organização e a comunicação
-entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
-visualizar os componentes e os relacionamentos entre eles em um sistema de software.
-
-![Diagrama da arquitetura](img/diagrama_arquitetura.png)
-<h6 align = "center"> Imagem 3: Diagrama da arquitetura.
-<br> Autor: Gabriel Avelino
-<br>Fonte: Autor(es)</h6>
-
-Os componentes podem ser divididos em:
-
-- **Front-end**: O ViteJs é um framework utilizado para criação de aplicações WEB de maneira ágil. Vai ser o responsável por mostrar
-os dados no dashboard para o usuário.
-
-- **Back-end**: Vai ser construído utilizando o web framework FastAPI para a manipulação dos dados e o banco de dados PostgresSQL para a persistência
-dos dados enviados pelo arduíno.
-
-- **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
-
-### 4.5.4 Lista de Casos de Uso
+### 4.5.2 Lista de Casos de uso 
 
 
 A documentação de casos de uso fornece uma visão abrangente das diferentes interações entre usuários e sistema em um determinado contexto. A lista de casos de uso é uma parte essencial dessa documentação, pois descreve as principais funcionalidades que o sistema deve oferecer e os fluxos de eventos associados a cada uma delas.
@@ -440,6 +410,98 @@ Os critérios de avaliação devem ser claros e verificáveis para cada User Sto
 | EP01: Gestão de dados  | Visualização de dados do percurso | US06          | Exibir Consumo de Bateria em Tempo Real | Deve ser exibido em vários gráficos como um dashboard. Deve mostrar o consumo instantâneo e acumulado. O dashboard deve permitir a visualização do consumo de bateria em diferentes percursos. |
 | EP01: Gestão de dados  | Visualização de dados do percurso | US07          | Exibir Dados de Percursos Anteriores | Deve ser exibido em um gráfico. Deve permitir a seleção e comparação de múltiplos percursos. O gráfico deve mostrar detalhes como distância, tempo, velocidade e aceleração de percursos anteriores. |
 
+
+
+### 4.5.3 Lista de Requisitos Não-Funcionais
+
+Disponível em [TAP](/docs/Documentacao/2_Tap.md)
+
+### 4.5.5 Diagrama de Classes
+
+A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
+
+![Diagrama de Classes](img/diagrama_classes.png)
+<h6 align = "center"> Imagem 2: Diagrama de classes.
+<br> Autor: Brunna Louise
+<br>Fonte: Autor(es)</h6>
+
+
+### 4.5.6 Arquitetura do software
+
+A arquitetura do software é o elemento que define a organização e a comunicação
+entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
+visualizar os componentes e os relacionamentos entre eles em um sistema de software.
+
+![Diagrama da arquitetura](img/diagrama_arquitetura.png)
+<h6 align = "center"> Imagem 3: Diagrama da arquitetura.
+<br> Autor: Gabriel Avelino
+<br>Fonte: Autor(es)</h6>
+
+Os componentes podem ser divididos em:
+
+- **Front-end**: O ViteJs é um framework utilizado para criação de aplicações WEB de maneira ágil. Vai ser o responsável por mostrar
+os dados no dashboard para o usuário.
+
+- **Back-end**: Vai ser construído utilizando o web framework FastAPI para a manipulação dos dados e o banco de dados PostgresSQL para a persistência
+dos dados enviados pelo arduíno.
+
+- **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
+
+### 4.5.7 Descrição e Roteiro dos testes
+
+### Testes de unidade
+
+| Componente | Caso de teste                 | Descrição                                           |
+| ---------- | ----------------------------- | --------------------------------------------------- |
+| API        | Cálculo de velocidade         | Deve calcular a velocidade em um momento            |
+| API        | Cálculo de aceleração         | Deve calcular a aceleração em um momento            |
+| API        | Cálculo de consumo de bateria | Deve calcular o consumo de bateria em um momento    |
+| API        | Cálculo de distância          | Deve calcular a distância total percorrida          |
+| API        | Cálculo de trajetória          | Deve calcular a trajetória total percorrida          |
+| Front-end  | Visualização dos dados        | Deve ser possível visualizar os dados no dashboard. |
+
+
+### Testes de integração
+
+| Componente                  | Caso de teste                                     | Descrição                                                                                                                      |
+| --------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Módulo de conexão bluetooth | Certificar se dados estão sendo recebidos         | Deve receber um JSON com informações enviadas pelo carrinho                                                                    |
+| Modulo de conexão bluetooth | Certificar se dados estão sendo enviados para API | Deve enviar um JSON recebido via requisição HTTP para a API.                                                                   |
+| API                         | Certificar o recebimento e salvamento de dados    | Ao receber uma requisição HTTP de dados enviada pelo Módulo de conexão bluetooth, deve poder salvar os dados no banco de dados |
+| API                         | Certificar a disponibilização dos dados           | Testar a disponibilização dos dados                                                                                            |
+| Front-end                   | Verificar a visualização dos dados                | Deve ser possível visualizar os dados recebidos da requisição à API                                                            |
+
+
+### Roteiro de Testes
+
+Pré - Requisito: Aplicação em funcionamento e com acesso disponível para realização dos testes. Também a instaçação no Carrinho dos componentes e sensores que enviaráo dados para a aplicação
+
+#### Testes de unidade:
+
+- Teste de velocidade
+  - Verifica-se o recebimento dos dados e cálculo da velocidade no sistema
+- Teste de Aceleração
+  - Verifica-se o recebimento dos dados e cálculo da aceleração no sistema
+- Teste do consumo de bateria
+  - Deve-se visualizar o dado de consumo no banco de dados
+  - Deve-se visualizar o consumo de bateria no dashboard
+- Teste da distância
+  - Verifica-se o recebimento dos dados e o cálculo da distância percorrida
+- Teste de trajetória
+  - Verifica-se o recebimento dos dados de coordenadas e cálculo da trajetória no espaçotempo
+- Teste de visualização
+  - Verifica-se a exibição de todos os dados já citados no Dashboard do projeto e com atualizações constantes
+
+### Testes de integração:
+
+- Teste de módulo bluetooth
+  - Certificar se os dados estão sendo recebidos em um JSON com informações do carrinho
+- Teste de API
+  - Certificar o recebimento dos dados do carrinho por meio de uma requisição HTTP e um arquivo JSO
+- Teste de disponibilidade de dados
+  - certificar que os dados recebidos estão sendo disponibilizados para posterior trabalho do front-end
+- Teste de Front-end
+  - Verificar a visualização de dados para o usuário após recebimento dos dados via requisição da API
 
 ___________________________________________________________________________________
 
