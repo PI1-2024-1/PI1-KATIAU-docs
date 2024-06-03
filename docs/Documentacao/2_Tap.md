@@ -113,23 +113,24 @@ ________________________________________________________________________________
 | RF04  | Eletrônica          | O carrinho seguidor de linha deve possuir uma fonte <br> de energia confiável e durável para alimentar os motores, <br> os sensores e outros componentes eletrônicos do <br> carrinho durante toda a execução do percurso.                                                                                     |
 | RF05  | Eletrônica          | O carrinho seguidor de linha deve possuir um sistema de <br> medição dos dados de posição, velocidade e aceleração <br> do carrinho.     |
 | RF06  | Eletrônica          | O carrinho seguidor de linha deve possuir um sistema de <br> comunicação para facilitar a interação entre o <br> carrinho e a aplicação de análise de dados do carrinho. |
-| RF07  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a distância e a trajetória percorrida <br> pelo carrinho. |
-| RF08  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir o tempo de percurso do carrinho.                          |
-| RF09  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a velocidade e aceleração do carrinho.                    |
-| RF10  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve calcular e exibir o consumo de energia do <br> carrinho.         |
-| RF11  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir um dashboard com gráficos e dados <br> tratados.          |
-| RF12  | Software            | O usuário, ao interagir com a aplicação de análise de <br> dados do carrinho seguidor de linha, deve ser capaz de <br> visualizar um histórico dos dados coletados na aplicação,<br> permitindo a análise de longo do tempo.                                                                                  |
-| RF13  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve ser capaz <br> de comportar todos os componentes eletrônicos.                             |
-| RF14  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve ser capaz <br> de carregar um ovo sem danifica-lo.                                        |
-| RF15  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve possuir <br> rodas capazes de se movimentar em todas as direções.                         |
-| RF16  | AeroEspacial        | A estrutura do carrinho seguidor de linha não deve <br> possuir mecanismo de sucção.                                                     |
-| RF17  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve manter <br> sua integridade durante todo o percurso.                                      |
-| RF18  | AeroEspacial        | A estrutura do carrinho seguidor de linha não deve <br> inclinar.                                                                        |
-| RF19  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve manter <br> seus sensores próximos ao solo em todo o percurso.                            |
-| RF20  | AeroEspacial        | A estrutura do carrinho seguidor de linha não deve <br> possuir peso suficiente para o carrinho ficar estático ou <br> não possuir torque para sair da inércia.                                                                                                                                                    |
-| RF21  | Energia, Eletrônica | O carrinho seguidor de linha deve preferencialmente <br> possuir uma bateria recarregável. Assim, o carrinho <br> poderá ser recarregado quando a energia estiver baixa,<br> garantindo que esteja sempre pronto para operar.                                                                                     |
-| RF22  | Energia, Eletrônica | O carrinho seguidor de linha deve possuir um sistema de <br> monitoramento da carga da bateria que forneça <br> feedback em tempo real sobre o nível de energia <br> disponível,  permitindo  que o usuário ou o sistema de <br> controle tomem medidas preventivas, como recarregar a <br> bateria se necessário.                                                                                                                                                              |
-| RF23  | Energia             | O carrinho seguidor de linha deve possuir um sistema de <br> gestão de energia eficiente que distribua a energia de <br> forma otimizada para os diferentes componentes do <br> carrinho, priorizando o funcionamento dos motores e <br> dos sensores essenciais.                                                 |
+| RF07  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a distância percorrida <br> pelo carrinho. |
+| RF08  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a trajetória percorrida <br> pelo carrinho. |
+| RF09  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir o tempo de percurso do carrinho.                          |
+| RF10  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir a velocidade e aceleração do carrinho.                    |
+| RF11  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve calcular e exibir o consumo de energia do <br> carrinho.         |
+| RF12  | Software            | A aplicação de análise de dados do carrinho seguidor de <br> linha deve exibir um dashboard com gráficos e dados <br> tratados.          |
+| RF13  | Software            | O usuário, ao interagir com a aplicação de análise de <br> dados do carrinho seguidor de linha, deve ser capaz de <br> visualizar um histórico dos dados coletados na aplicação,<br> permitindo a análise de longo do tempo.                                                                                  |
+| RF14  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve ser capaz <br> de comportar todos os componentes eletrônicos.                             |
+| RF15  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve ser capaz <br> de carregar um ovo sem danifica-lo.                                        |
+| RF16  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve possuir <br> rodas capazes de se movimentar em todas as direções.                         |
+| RF17  | AeroEspacial        | A estrutura do carrinho seguidor de linha não deve <br> possuir mecanismo de sucção.                                                     |
+| RF18  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve manter <br> sua integridade durante todo o percurso.                                      |
+| RF19  | AeroEspacial        | A estrutura do carrinho seguidor de linha não deve <br> inclinar.                                                                        |
+| RF20  | AeroEspacial        | A estrutura do carrinho seguidor de linha deve manter <br> seus sensores próximos ao solo em todo o percurso.                            |
+| RF21  | AeroEspacial        | A estrutura do carrinho seguidor de linha não deve <br> possuir peso suficiente para o carrinho ficar estático ou <br> não possuir torque para sair da inércia.                                                                                                                                                    |
+| RF22  | Energia, Eletrônica | O carrinho seguidor de linha deve preferencialmente <br> possuir uma bateria recarregável. Assim, o carrinho <br> poderá ser recarregado quando a energia estiver baixa,<br> garantindo que esteja sempre pronto para operar.                                                                                     |
+| RF23  | Energia, Eletrônica | O carrinho seguidor de linha deve possuir um sistema de <br> monitoramento da carga da bateria que forneça <br> feedback em tempo real sobre o nível de energia <br> disponível,  permitindo  que o usuário ou o sistema de <br> controle tomem medidas preventivas, como recarregar a <br> bateria se necessário.                                                                                                                                                              |
+| RF24  | Energia             | O carrinho seguidor de linha deve possuir um sistema de <br> gestão de energia eficiente que distribua a energia de <br> forma otimizada para os diferentes componentes do <br> carrinho, priorizando o funcionamento dos motores e <br> dos sensores essenciais.                                                 |
 
 ___________________________________________________________________________________
 
@@ -200,5 +201,14 @@ do Distrito Federal, segundo uma lista das maiores empresas do setor no Brasil.
 - Eventos e seminários voltados para a educação e tecnologia também foram
 identificados na região do Distrito Federal, como o SEEDF, realizado nos dias 17 e 19 de
 outubro de 2023, de forma híbrida, no auditório da Escola Técnica do Guará.
+
+___________________________________________________________________________________
+
+## Tabela 3 - Histórico de Revisão
+
+| Data  |             Descrição           |              Autor            |             Revisor           |
+|       |---------------------------------|-------------------------------|-------------------------------|
+| 02/05 | Criação do cronograma           | [Brunna Louise](https://github.com/brunna-martins) | [Pedro Miguel](https://github.com/pedroMADBR) |
+| 01/06 | Correção de RF de Software | [Pedro Miguel](https://github.com/pedroMADBR) | [Brunna Louise](https://github.com/brunna-martins) |
 
 ___________________________________________________________________________________

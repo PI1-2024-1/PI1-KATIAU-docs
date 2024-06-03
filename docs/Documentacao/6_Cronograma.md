@@ -44,25 +44,24 @@ ________________________________________________________________________________
 | ------------------------------------- | ----- | ----- | ----- | ----- | ------------------- | ------------------- |
 | 21 - Diagrama de Classes              | 13/05 | 20/05 | 16/05 | 20/05 | 16 e 17             |Sub-grupo Software   |
 | 22 - BPNM                             | 13/05 | 20/05 |       |       | 16 e 17             |Sub-grupo Software   |
-| 23 - Diagrama de Estudo de Máquina    | 13/05 | 20/05 |       |       |                     |Sub-grupo Software   |
-| 24 - Diagrama de Blocos               | 13/05 | 20/05 | 13/05 |       |                     |Sub-grupo Eletronica |
-| 25 - Lista de Materiais               | 13/05 | 20/05 | 13/05 |       | 10, 12 e 15         |Sub-Gerentes         |
-| 22 - Modelo final da estrutura        | 20/05 | 29/05 |       |       | 14,15 e 17          |Sub-grupo Estrutura  | 
-| 24 - Confecção do Relatório           | 13/05 | 15/05 |       |       | 11, 17 e 23         |Sub-grupo overleaf   |
-| 25 - Compra de Materiais              | 20/05 | 15/06 |       |       | 23                  |Sub-Gerentes         |
-| 26 - Descrição dos testes             | 20/05 | 27/05 |       |       |                     |Sub-grupo Software   |   
-| 27 - Testes de Intregridade Estrutural| 20/05 | 01/06 |       |       | 13, 15 e 25         |Sub-grupo eletrônica |
-| 28 - Testes do Sistema de Telemetria  | 20/05 | 01/06 |       |       | 19 e 26             |Sub-grupo eletrônica |
-| 29 - Montagem do Chassi               | 20/05 | 01/06 |       |       | 26 e 12             |Sub-grupo eletrônica |
-| 30 - Confecção de Relatório           | 20/05 | 02/06 |       |       | 20, 21, 22, 23 e 24 |Sub-grupo overleaf   |
-| 31 - Entrega da Documentação II       | 03/06 | 03/06 |       |       | 28 e 29             |Gerente Geral        |
-| 32 - Integração dos Sistemas          | 03/06 | 05/06 |       |       | 24 e 25             |Sub-grupo eletrônica |
-| 33 - Início da Produção do Vídeo      | 05/06 | 10/06 |       |       |                     |Sub-grupo vídeo      |
-| 34 - Testes de Telemetria             | 10/06 | 17/06 |       |       | 28                  |Sub-grupo eletrônica |
-| 35 - Finalização da Integração        | 17/06 | 24/06 |       |       | 31                  |Sub-grupo eletrônica |
-| 36 - Finalização do Vídeo             | 24/06 | 30/06 |       |       | 32, 33 e 34         |Sub-grupo vídeo      |
-| 37 - Finalização do Relatório         | 24/06 | 31/06 |       |       | 29                  |Sub-grupo overleaf   |
-| 38 - Apresentação do Trabalho         | 01/07 | 01/07 |       |       |                     |Todos Integrantes    |
+| 23 - Diagrama de Blocos               | 13/05 | 20/05 | 13/05 |       |                     |Sub-grupo Eletronica |
+| 24 - Lista de Materiais               | 13/05 | 20/05 | 13/05 |       | 10, 12 e 15         |Sub-Gerentes         |
+| 25 - Modelo final da estrutura        | 20/05 | 29/05 |       |       | 14,15 e 17          |Sub-grupo Estrutura  | 
+| 26 - Confecção do Relatório           | 13/05 | 15/05 |       |       | 11, 17 e 23         |Sub-grupo overleaf   |
+| 27 - Compra de Materiais              | 20/05 | 15/06 |       |       | 23                  |Sub-Gerentes         |
+| 28 - Descrição dos testes             | 20/05 | 27/05 |       |       |                     |Sub-grupo Software   |   
+| 29 - Testes de Intregridade Estrutural| 20/05 | 01/06 |       |       | 13, 15 e 25         |Sub-grupo eletrônica |
+| 30 - Testes do Sistema de Telemetria  | 20/05 | 01/06 |       |       | 19 e 26             |Sub-grupo eletrônica |
+| 31 - Montagem do Chassi               | 20/05 | 01/06 |       |       | 26 e 12             |Sub-grupo eletrônica |
+| 32 - Confecção de Relatório           | 20/05 | 02/06 |       |       | 20, 21, 22, 23 e 24 |Sub-grupo overleaf   |
+| 33 - Entrega da Documentação II       | 03/06 | 03/06 |       |       | 28 e 29             |Gerente Geral        |
+| 34 - Integração dos Sistemas          | 03/06 | 05/06 |       |       | 24 e 25             |Sub-grupo eletrônica |
+| 35 - Início da Produção do Vídeo      | 05/06 | 10/06 |       |       |                     |Sub-grupo vídeo      |
+| 36 - Testes de Telemetria             | 10/06 | 17/06 |       |       | 28                  |Sub-grupo eletrônica |
+| 37 - Finalização da Integração        | 17/06 | 24/06 |       |       | 31                  |Sub-grupo eletrônica |
+| 38 - Finalização do Vídeo             | 24/06 | 30/06 |       |       | 32, 33 e 34         |Sub-grupo vídeo      |
+| 39 - Finalização do Relatório         | 24/06 | 31/06 |       |       | 29                  |Sub-grupo overleaf   |
+| 40 - Apresentação do Trabalho         | 01/07 | 01/07 |       |       |                     |Todos Integrantes    |
 
 ___________________________________________________________________________________
 
@@ -82,5 +81,6 @@ ________________________________________________________________________________
 |       |---------------------------------|-------------------------------|-------------------------------|
 | 02/05 | Criação do cronograma           | [Felipe Freire](https://github.com/FelipeFreire-gf) | [Pedro Miguel](https://github.com/pedroMADBR) |
 | 20/05 | Correção e atualização de datas | [Pedro Miguel](https://github.com/pedroMADBR) |[Gabriel Rocha](https://github.com/GabrielG-Rocha) |
+| 01/06 | Correção da numeração | [Pedro Miguel](https://github.com/pedroMADBR) | [Gabriel Rocha](https://github.com/GabrielG-Rocha) |
 
 ___________________________________________________________________________________
