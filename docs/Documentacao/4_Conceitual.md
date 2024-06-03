@@ -33,32 +33,31 @@ Para a análise do consumo energético do projeto foram identificados os itens e
 
 <h6 align = "center"> Características elétricas dos componentes eletrônicos.</h6>
 
-|**Componentes**|**Tensão (V)**|**Corrente (mA)**|**Potência (W)**|**Quantidade**|
+|**Componentes**|**Tensão (V)**|**Corrente (A)**|**Potência (W)**|**Quantidade**|
 |:-------------:|:------------:|:---------------:|:--------------:|:------------:|
-|Placa arduino uno R3|7,4|50 |0,35|1|
-|Sensores Ópticos Reflexivos TCRT-5000|5|60|0,3|4|
-|Módulo Bluetooth Serial Rs232 Escravo Hc-06|5|35|0,175|1|
-|Sensor de velocidade módulo encoder|5|15|0,075|2|
-|Medidor de Corrente ACS 712|5|8|0,04|1|
-|Regulador de Tensão XL 4015|5|5000|25|1|
-|Motores de 6V com redutor e rodas|6|200|1,2|2|
+|Placa arduino uno R3                       |7,4|0,05 |0,37 |1|
+|Sensores Ópticos Reflexivos TCRT-5000      |5  |0,06 |0,3  |4|
+|Módulo Bluetooth Serial Rs232 Escravo Hc-06|5  |0,035|0,175|1|
+|Sensor de velocidade módulo encoder        |5  |0,015|0,075|2|
+|Medidor de Corrente ACS 712                |5  |0,008|0,04 |1|
+|Regulador de Tensão LM 317                 |7,4|0,01 |0,074|1|
+|Motores de 6V com redutor e rodas          |6  |0,2  |1,2  |2|
 
 Multiplicou-se a corrente de operação pela tensão da fonte de alimentação, obtendo a potência de cada componente em watts (W), utilizando a fórmula:  $P = V \times i$, onde  $P$  é a potência em watts,  $V$  é a tensão em volts e  $i$  é a corrente em amperes. 
 
 Tendo os valores das potências de cada peça, podemos saber o consumo de energia total do carrinho fazendo a soma das potências de todas as peças, com a soma obteve-se o valor de 
- $29,315$  watts. Este valor serve como uma referência importante para dimensionar a fonte de alimentação necessária e garantir um funcionamento eficiente do carrinho.
+ $4,409$  watts. Este valor serve como uma referência importante para dimensionar a fonte de alimentação necessária e garantir um funcionamento eficiente do carrinho.
 
 Para o cálculo da corrente requerida pelo carrinho, utilizamos a tensão de  $7,4 V$, que atende todos os componentes, e a soma das potências obtida no cálculo anterior na seguinte relação matemática:
 
-$$P = v \times i \to i = \frac {29,315} {7,4} \simeq 3,96 A$$
+$$P = v \times i \to i = \frac {4,409} {7,4} \simeq 0,6 A$$
 
-Com os dados de consumo de energia total do carrinho e a capacidade da bateria, podemos calcular o tempo estimado de duração da bateria escolhida para o projeto. Estamos usando duas baterias recarregáveis  18650 ​​de 3,7 V, totalizando 7,4 V, com capacidade de 6800 mAh ( 6,8 Ah).
+Com os dados de consumo de energia total do carrinho e a capacidade da bateria, podemos calcular o tempo estimado de duração da bateria escolhida para o projeto. Estamos usando duas baterias recarregáveis 18650 de 3,7 V, totalizando 7,4 V, cada bateria tem capacidade de 2200 mAh, portanto com as duas baterias temos capacidade de 4400 mAh ( 4,4 Ah).
 O tempo de duração da bateria pode ser calculado dividindo a energia total da bateria pelo consumo de energia total do carrinho: 
 
-$$Tempo = \frac{C_{bateria}}{i} \to Tempo = \frac{6,8}{3,96} \simeq 1,7h$$
+$$Tempo = \frac{C_{bateria}}{i} \to Tempo = \frac{4,4}{0,6} \simeq 7,3h$$
 
-Portanto, o tempo estimado de duração da bateria para este projeto do carrinho seguidor de linha é de aproximadamente 1,7 horas. Essa é uma estimativa do tempo de operação contínua do carrinho antes que a bateria precise ser recarregada. 
-
+Portanto, o tempo estimado de duração da bateria para este projeto do carrinho seguidor de linha é de aproximadamente 7,3 horas. Essa é uma estimativa do tempo de operação contínua do carrinho antes que a bateria precise ser recarregada.
 
 ## 4.5 Descrição de Software
 ### 4.5.1 Diagrama do Processo de Negócio (BPNM)
