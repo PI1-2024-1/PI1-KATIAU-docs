@@ -62,15 +62,52 @@ Este subtópico visa descrever os materiais utilizados na confecção do carrinh
 | 1                   | Placa Perfurada                             |
 | 2                   | Chaves/Interruptores                        |
 
-
-
-
-### 4.3.2 Esquemático
+### 4.3.3 Esquemático
 
 ![Diagrama de blocos](https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/docDescricaoHardware/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Esquemático%20K.A.T.I.A.U_page-0001.jpg)
 <h6 align = "center"> Imagem 1: Diagrama de blocos.
 <br>Autor: Pedro Zago
 <br>Fonte: Autor(es)</h6>
+
+### 4.3.4 Descrição dos componentes
+
+* **Placa Arduino Uno R3** - amplamente utilizada em projetos de robótica simplificados, ideal para iniciantes devido à sua facilidade de uso e vasta documentação disponível.
+* **Sensores Ópticos Reflexivos TCRT-5000** - utilizados para detecção de objetos e medição de distâncias curtas, ideais para sistemas de posicionamento e contagem de rotações.
+* **Módulo Bluetooth Serial RS232 Escravo HC-06** - converte os dados de medições do Arduino e os transmite via Bluetooth, facilitando a criação e atualização de bancos de dados.
+* **Sensor de Velocidade Módulo Encoder** - desacoplador óptico que permite calcular a distância, velocidade e aceleração de objetos em movimento, essencial para monitoramento preciso.
+* **Discos Encoder para Medição com Módulo Encoder** - utilizados em conjunto com o módulo encoder para medir a rotação das rodas, proporcionando dados precisos de movimento.
+* **Medidor de Corrente ACS 712** - sensor de corrente invasivo que mede a corrente elétrica sem a necessidade de circuitos adicionais complexos, garantindo simplicidade na instalação.
+* **Regulador de Tensão LM317** - ajusta a tensão de entrada de 7.4V para um nível estável de até 6V, protegendo os componentes eletrônicos do projeto.
+* **Motores de 6V com Redutor e Rodas** - motores equipados com redutores, responsáveis pela movimentação do robô, oferecendo torque e controle adequados.
+* **Baterias Recarregáveis de 3.7V 18650** - fornecem energia ao carrinho robô, conhecidas por sua alta capacidade e durabilidade, permitindo longas operações sem necessidade de recarga frequente.
+
+#### Componentes Complementares
+
+| Quantidade | Nome | Aplicação |
+| ---------- | ---- | --------- |
+| **2** | **Resistor 100ohm** | **Sensores** |
+| **4** | **Resistor 1k ohm** | **Sensores** |
+| **1** | **Resistor 3k3 ohm**  | **Comunicação** |
+| **1** | **Resistor 5k1  ohm** | **Comunicação** |
+| **2** | **Transistor BC547**  | **Movimento** |
+| **2** | **Diodo 1N4007** | **Movimento** |
+| **1** | **Suporte para 2 Baterias 18650** | **Bateria** |
+| **1** | **Placa Perfurada** |**Montagem** |
+| **2** | **Chaves/Interruptores** | **Segurança do circuito** |  
+
+#### Firmware
+
+* **Sensores TCRT-5000**: os sensores entregam tensões de 0 a 5V, deve-se calibrar uma variável que indica se está na linha ou não;
+* **Módulo Bluetooth Hc-06**: Só é necessário o envio pela porta serial;
+* **Sensores de Velocidade módulo encoder**: Envia um pulso quando passa por um buraco no disco encoder;
+* **Discos encoder 20 furos**: cada furo corresponde a 3.92 [mm]. 
+* **Motor 6V com redutor**: Para movimento do motor deve-se enviar o sinal PWM pelas saídas definidas no esquemático;
+* **Medidor de corrente  ACS712**: Entrega uma tensão, que para o cálculo da corrente, deve ter uma variável calibrada. Correntes negativas também geram tensões positivas;
+
+#### Software
+
+* **Os dados serão recebidos por software em forma de vetor dados = [Enc direito; Enc esquerdo; velocidade; aceleração] o cálculo da posição relativa do robô é mais fácilmente calculado em software do que em firmware, assim a cada período de comunicação serão enviados os valores do encoder daquele período, por exemplo:**   
+  	* Enc direito = 2; Enc esquerdo = 4; sabe-se que o carrinho andou uma distância em linha reta e outra  para a  direita;
 
 ## 4.4 Análise de consumo energético
 
