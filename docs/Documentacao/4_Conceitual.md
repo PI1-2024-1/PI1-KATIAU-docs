@@ -27,6 +27,18 @@ em ambientes desafiadores.
 
 ## 4.3 Descrição de hardware
 
+### 4.3.1 Diagrama de blocos
+
+![Diagrama de blocos](https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/main/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Diagrama%20de%20Blocos%20-%20Eletrônica.png)
+
+### Observações  
+ 
+- Pode ser utilizado qualquer formato, se atentando à posição dos [sensores infravermelhos](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/TCRT5000.PDF) na parte dianteira, e dos sensores [encoder](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/Encoder.pdf) que devem estar juntos aos eixos de rotação dos motores;
+
+### 4.3.1 Lista de Materiais
+
+### 4.3.1 Esquemático
+
 ## 4.4 Análise de consumo energético
 
 Para a análise do consumo energético do projeto foram identificados os itens eletrônicos  escolhidos para o carrinho, consultando as especificações técnicas dos componentes (corrente de operação e a tensão de funcionamento) que estão disponíveis nos datasheets de seus fabricantes, foi determinado o consumo de energia de cada peça durante sua operação. Os elementos e suas características elétricas foram listados na tabela abaixo:
