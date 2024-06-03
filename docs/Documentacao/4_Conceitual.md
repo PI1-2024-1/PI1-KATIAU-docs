@@ -69,43 +69,6 @@ Portanto, o tempo estimado de duração da bateria para este projeto do carrinho
 
 ### 4.5.2 Lista de Casos de uso 
 
-### 4.5.3 Lista de Requisitos Não-Funcionais
-
-Disponível em [TAP](/docs/Documentacao/2_Tap.md)
-
-### 4.5.5 Diagrama de Classes
-
-A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
-
-![Diagrama de Classes](img/diagrama_classes.png)
-<h6 align = "center"> Imagem 2: Diagrama de classes.
-<br> Autor: Brunna Louise
-<br>Fonte: Autor(es)</h6>
-
-
-### 4.5.6 Arquitetura do software
-
-A arquitetura do software é o elemento que define a organização e a comunicação
-entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
-visualizar os componentes e os relacionamentos entre eles em um sistema de software.
-
-![Diagrama da arquitetura](img/diagrama_arquitetura.png)
-<h6 align = "center"> Imagem 3: Diagrama da arquitetura.
-<br> Autor: Gabriel Avelino
-<br>Fonte: Autor(es)</h6>
-
-Os componentes podem ser divididos em:
-
-- **Front-end**: O ViteJs é um framework utilizado para criação de aplicações WEB de maneira ágil. Vai ser o responsável por mostrar
-os dados no dashboard para o usuário.
-
-- **Back-end**: Vai ser construído utilizando o web framework FastAPI para a manipulação dos dados e o banco de dados PostgresSQL para a persistência
-dos dados enviados pelo arduíno.
-
-- **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
-
-### 4.5.4 Lista de Casos de Uso
-
 
 A documentação de casos de uso fornece uma visão abrangente das diferentes interações entre usuários e sistema em um determinado contexto. A lista de casos de uso é uma parte essencial dessa documentação, pois descreve as principais funcionalidades que o sistema deve oferecer e os fluxos de eventos associados a cada uma delas.
 No caso do projeto, a lista de casos de uso descreve as principais operações que o usuário pode realizar e como o sistema deve responder a essas operações, cada caso de uso é composto por um conjunto de etapas que descrevem o fluxo principal de eventos, bem como possíveis fluxos alternativos em caso de condições excepcionais.
@@ -296,6 +259,42 @@ Os critérios de avaliação devem ser claros e verificáveis para cada User Sto
 | EP01: Gestão de dados  | Visualização de dados do percurso | US06          | Exibir Consumo de Bateria em Tempo Real | Deve ser exibido em vários gráficos como um dashboard. Deve mostrar o consumo instantâneo e acumulado. O dashboard deve permitir a visualização do consumo de bateria em diferentes percursos. |
 | EP01: Gestão de dados  | Visualização de dados do percurso | US07          | Exibir Dados de Percursos Anteriores | Deve ser exibido em um gráfico. Deve permitir a seleção e comparação de múltiplos percursos. O gráfico deve mostrar detalhes como distância, tempo, velocidade e aceleração de percursos anteriores. |
 
+
+
+### 4.5.3 Lista de Requisitos Não-Funcionais
+
+Disponível em [TAP](/docs/Documentacao/2_Tap.md)
+
+### 4.5.5 Diagrama de Classes
+
+A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
+
+![Diagrama de Classes](img/diagrama_classes.png)
+<h6 align = "center"> Imagem 2: Diagrama de classes.
+<br> Autor: Brunna Louise
+<br>Fonte: Autor(es)</h6>
+
+
+### 4.5.6 Arquitetura do software
+
+A arquitetura do software é o elemento que define a organização e a comunicação
+entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
+visualizar os componentes e os relacionamentos entre eles em um sistema de software.
+
+![Diagrama da arquitetura](img/diagrama_arquitetura.png)
+<h6 align = "center"> Imagem 3: Diagrama da arquitetura.
+<br> Autor: Gabriel Avelino
+<br>Fonte: Autor(es)</h6>
+
+Os componentes podem ser divididos em:
+
+- **Front-end**: O ViteJs é um framework utilizado para criação de aplicações WEB de maneira ágil. Vai ser o responsável por mostrar
+os dados no dashboard para o usuário.
+
+- **Back-end**: Vai ser construído utilizando o web framework FastAPI para a manipulação dos dados e o banco de dados PostgresSQL para a persistência
+dos dados enviados pelo arduíno.
+
+- **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
 
 ### 4.5.7 Descrição e Roteiro dos testes
 
