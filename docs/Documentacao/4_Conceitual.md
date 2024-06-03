@@ -37,8 +37,6 @@ em ambientes desafiadores.
 
 ### 4.3.2 Lista de Materiais
 
-Este subtópico visa descrever os materiais utilizados na confecção do carrinho:
-
 | Quantidade   | Material                                           |
 |---------------------|---------------------------------------------|
 | 1                   | Chassi                                      |
@@ -71,43 +69,81 @@ Este subtópico visa descrever os materiais utilizados na confecção do carrinh
 
 ### 4.3.4 Descrição dos componentes
 
-* **Placa Arduino Uno R3** - amplamente utilizada em projetos de robótica simplificados, ideal para iniciantes devido à sua facilidade de uso e vasta documentação disponível.
-* **Sensores Ópticos Reflexivos TCRT-5000** - utilizados para detecção de objetos e medição de distâncias curtas, ideais para sistemas de posicionamento e contagem de rotações.
-* **Módulo Bluetooth Serial RS232 Escravo HC-06** - converte os dados de medições do Arduino e os transmite via Bluetooth, facilitando a criação e atualização de bancos de dados.
-* **Sensor de Velocidade Módulo Encoder** - desacoplador óptico que permite calcular a distância, velocidade e aceleração de objetos em movimento, essencial para monitoramento preciso.
-* **Discos Encoder para Medição com Módulo Encoder** - utilizados em conjunto com o módulo encoder para medir a rotação das rodas, proporcionando dados precisos de movimento.
-* **Medidor de Corrente ACS 712** - sensor de corrente invasivo que mede a corrente elétrica sem a necessidade de circuitos adicionais complexos, garantindo simplicidade na instalação.
-* **Regulador de Tensão LM317** - ajusta a tensão de entrada de 7.4V para um nível estável de até 6V, protegendo os componentes eletrônicos do projeto.
-* **Motores de 6V com Redutor e Rodas** - motores equipados com redutores, responsáveis pela movimentação do robô, oferecendo torque e controle adequados.
-* **Baterias Recarregáveis de 3.7V 18650** - fornecem energia ao carrinho robô, conhecidas por sua alta capacidade e durabilidade, permitindo longas operações sem necessidade de recarga frequente.
+Este subtópico visa descrever os componentes com uma breve justificativa de sua utilização no projeto:
+
+#### Placa Arduino Uno R3
+Optamos por utilizar a placa Arduino Uno R3 devido à sua ampla utilização em projetos de robótica simplificados e sua facilidade de uso. A vasta documentação disponível e a grande comunidade de suporte tornam esta placa ideal para iniciantes, permitindo uma curva de aprendizado mais suave e uma implementação mais eficiente.
+
+#### Sensores Ópticos Reflexivos TCRT-5000
+Os sensores ópticos reflexivos TCRT-5000 foram escolhidos para detecção de objetos e medição de distâncias curtas. Eles são ideais para sistemas de posicionamento e contagem de rotações, proporcionando precisão e confiabilidade nas medições necessárias para o controle do robô.
+
+#### Módulo Bluetooth Serial RS232 Escravo HC-06
+O módulo Bluetooth HC-06 é essencial para a transmissão dos dados de medições do Arduino via Bluetooth. Esta capacidade facilita a criação e atualização de bancos de dados, permitindo o monitoramento remoto e a análise dos dados coletados pelo robô.
+
+#### Sensor de Velocidade Módulo Encoder
+O módulo encoder, que atua como um desacoplador óptico, é crucial para calcular a distância, velocidade e aceleração de objetos em movimento. Este componente é indispensável para o monitoramento preciso do movimento do robô, garantindo um controle eficiente.
+
+#### Discos Encoder para Medição com Módulo Encoder
+Utilizamos discos encoder em conjunto com o módulo encoder para medir a rotação das rodas. Estes discos proporcionam dados precisos de movimento, essenciais para a navegação e o controle do robô, permitindo cálculos exatos de deslocamento.
+
+#### Medidor de Corrente ACS 712
+O sensor de corrente ACS 712 foi escolhido por sua simplicidade de instalação, medindo a corrente elétrica sem a necessidade de circuitos adicionais complexos. Este sensor garante a monitorização eficaz do consumo de energia do robô.
+
+#### Regulador de Tensão LM317
+O regulador de tensão LM317 ajusta a tensão de entrada de 7.4V para um nível estável de até 6V, protegendo os componentes eletrônicos do projeto. Esta regulação é essencial para a estabilidade e segurança do sistema.
+
+#### Motores de 6V com Redutor e Rodas
+Os motores de 6V com redutores são responsáveis pela movimentação do robô, oferecendo torque e controle adequados. Estes motores garantem que o robô possa se mover com precisão e eficiência.
+
+#### Baterias Recarregáveis de 3.7V 18650
+Optamos pelas baterias recarregáveis de 3.7V 18650 devido à sua alta capacidade e durabilidade. Estas baterias fornecem energia confiável ao robô, permitindo longas operações sem necessidade de recarga frequente.
 
 #### Componentes Complementares
 
-| Quantidade | Nome | Aplicação |
-| ---------- | ---- | --------- |
-| **2** | **Resistor 100ohm** | **Sensores** |
-| **4** | **Resistor 1k ohm** | **Sensores** |
-| **1** | **Resistor 3k3 ohm**  | **Comunicação** |
-| **1** | **Resistor 5k1  ohm** | **Comunicação** |
-| **2** | **Transistor BC547**  | **Movimento** |
-| **2** | **Diodo 1N4007** | **Movimento** |
-| **1** | **Suporte para 2 Baterias 18650** | **Bateria** |
-| **1** | **Placa Perfurada** |**Montagem** |
-| **2** | **Chaves/Interruptores** | **Segurança do circuito** |  
+#### Resistores
+* **Resistor 100 ohm** - Utilizados nos sensores.
+* **Resistor 1k ohm** - Utilizados nos sensores.
+* **Resistor 3k3 ohm** - Utilizados na comunicação.
+* **Resistor 5k1 ohm** - Utilizados na comunicação.
 
-#### Firmware
+#### Transistor e Diodo
+* **Transistor BC547** - Utilizado para o controle de movimento.
+* **Diodo 1N4007** - Utilizado para proteger o circuito de picos de tensão durante a operação dos motores.
 
-* **Sensores TCRT-5000**: os sensores entregam tensões de 0 a 5V, deve-se calibrar uma variável que indica se está na linha ou não;
-* **Módulo Bluetooth Hc-06**: Só é necessário o envio pela porta serial;
-* **Sensores de Velocidade módulo encoder**: Envia um pulso quando passa por um buraco no disco encoder;
-* **Discos encoder 20 furos**: cada furo corresponde a 3.92 [mm]. 
-* **Motor 6V com redutor**: Para movimento do motor deve-se enviar o sinal PWM pelas saídas definidas no esquemático;
-* **Medidor de corrente  ACS712**: Entrega uma tensão, que para o cálculo da corrente, deve ter uma variável calibrada. Correntes negativas também geram tensões positivas;
+#### Suporte para Baterias e Placa Perfurada
+* **Suporte para 2 Baterias 18650** - Fornece suporte físico e conexões elétricas seguras para as baterias.
+* **Placa Perfurada** - Utilizada para a montagem e fixação dos componentes eletrônicos.
 
-#### Software
+#### Chaves/Interruptores
+* **Chaves/Interruptores** - Garantem a segurança do circuito, permitindo a ligação e desligamento seguro do sistema.
 
-* **Os dados serão recebidos por software em forma de vetor dados = [Enc direito; Enc esquerdo; velocidade; aceleração] o cálculo da posição relativa do robô é mais fácilmente calculado em software do que em firmware, assim a cada período de comunicação serão enviados os valores do encoder daquele período, por exemplo:**   
-  	* Enc direito = 2; Enc esquerdo = 4; sabe-se que o carrinho andou uma distância em linha reta e outra  para a  direita;
+## Firmware
+
+#### Sensores TCRT-5000
+Os sensores TCRT-5000 entregam tensões de 0 a 5V. É necessário calibrar uma variável que indique se o sensor está detectando a linha ou não, garantindo a precisão das leituras.
+
+#### Módulo Bluetooth HC-06
+A comunicação com o módulo Bluetooth HC-06 é realizada através da porta serial, simplificando a transmissão dos dados coletados pelo Arduino.
+
+#### Sensores de Velocidade Módulo Encoder
+Os sensores de velocidade enviam um pulso quando passam por um buraco no disco encoder, permitindo a contagem precisa das rotações.
+
+#### Discos Encoder de 20 Furos
+Cada furo do disco encoder corresponde a 3.92 mm de deslocamento, proporcionando medições detalhadas e precisas do movimento do robô.
+
+#### Motor 6V com Redutor
+O movimento do motor é controlado através de sinais PWM enviados pelas saídas definidas no esquemático, garantindo controle preciso da velocidade e direção.
+
+#### Medidor de Corrente ACS712
+O medidor de corrente ACS712 entrega uma tensão proporcional à corrente medida. Para calcular a corrente, uma variável calibrada é necessária. Correntes negativas também geram tensões positivas, exigindo uma consideração especial no cálculo.
+
+## Software
+
+Os dados são recebidos pelo software em forma de vetor `dados = [Enc direito; Enc esquerdo; velocidade; aceleração]`. O cálculo da posição relativa do robô é mais facilmente realizado no software do que no firmware. A cada período de comunicação, os valores do encoder são enviados, por exemplo:
+* **Enc direito = 2**
+* **Enc esquerdo = 4**
+
+Isso indica que o carrinho andou uma distância em linha reta e outra para a direita, permitindo o cálculo preciso do movimento e posição do robô.
 
 ## 4.4 Análise de consumo energético
 
