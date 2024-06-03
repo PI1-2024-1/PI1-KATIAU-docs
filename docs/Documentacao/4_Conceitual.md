@@ -35,9 +35,42 @@ em ambientes desafiadores.
  
 - Pode ser utilizado qualquer formato, se atentando à posição dos [sensores infravermelhos](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/TCRT5000.PDF) na parte dianteira, e dos sensores [encoder](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/Encoder.pdf) que devem estar juntos aos eixos de rotação dos motores;
 
-### 4.3.1 Lista de Materiais
+### 4.3.2 Lista de Materiais
 
-### 4.3.1 Esquemático
+Este subtópico visa descrever os materiais utilizados na confecção do carrinho:
+
+| Quantidade   | Material                                           |
+|---------------------|---------------------------------------------|
+| 1                   | Chassi                                      |
+| 1                   | Placa arduino uno R3                        |
+| 4                   | Sensores Ópticos Reflexivos TCRT-5000       |
+| 1                   | Módulo Bluetooth Serial Rs232 Escravo Hc-06 |
+| 2                   | Sensor de velocidade módulo encoder         |
+| 2                   | Discos módulo encoder                       |
+| 1                   | Medidor de Corrente ACS 712 (5A)            |
+| 1                   | Módulo DC-DC (LM317)                        |
+| 2                   | Motores de 6V com redutor                   |
+| 2                   | Rodas                                       |
+| 2                   | Baterias Recarregáveis de 3.7 V 18650       |
+| 4                   | Resistor 100 ohm 1/4W                       |
+| 4                   | Resistor 1k ohm 1/4W                        |
+| 1                   | Resistor 3k3 ohm 1/4W                       |
+| 1                   | Resistor 5k ohm 1/4W                        |
+| 1                   | Transistor BC547                            |
+| 2                   | Diodo 1N4007                                |
+| 1                   | Suporte para 2 Baterias 18650               |
+| 1                   | Placa Perfurada                             |
+| 2                   | Chaves/Interruptores                        |
+
+
+
+
+### 4.3.2 Esquemático
+
+![Diagrama de blocos](https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/docDescricaoHardware/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Esquemático%20K.A.T.I.A.U_page-0001.jpg)
+<h6 align = "center"> Imagem 1: Diagrama de blocos.
+<br>Autor: Pedro Zago
+<br>Fonte: Autor(es)</h6>
 
 ## 4.4 Análise de consumo energético
 
