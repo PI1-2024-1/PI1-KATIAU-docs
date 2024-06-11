@@ -2,7 +2,7 @@
 
 Local: Sala S2
 Horário: 16h05 às 16h40
-Presentes: Arthur, Cauan, Felipe Freire, Gabriel Rocha, Joao Pedro Rabelo, Marcella, Pedro Miguel(Redator) e Pedro Zago
+Presentes: Arthur, Cauan, Felipe Freire, Gabriel Rocha, Joao Eduardo Rabelo, Marcella, Pedro Miguel(Redator) e Pedro Zago
 
 ## Pautas: 
 
