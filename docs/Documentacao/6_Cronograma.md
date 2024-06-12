@@ -49,7 +49,7 @@ ________________________________________________________________________________
 | 25 - Modelo final da estrutura        | 20/05 | 29/05 | 27/05 | 29/05 | 14, 15, 17 e 24     |Sub-grupo Estrutura  | 
 | 26 - Confecção do Relatório           | 13/05 | 15/05 | 13/05 | 03/06 | 9 a 25              |Sub-grupo overleaf   |
 | 27 - Compra de Materiais              | 20/05 | 15/06 | 20/05 |       | 24                  | Gerentes            |
-| 28 - Descrição dos testes de software | 04/06 | 11/06 |       |       |                     |Sub-grupo Software   | 
+| 28 - Descrição dos testes de software | 04/06 | 11/06 | 18/05 | 25/05 |                     |Sub-grupo Software   | 
 | 29 - Entrega da Documentação II       | 03/06 | 03/06 | 03/06 | 03/06 | 26                  |Gerente Geral        |
 | 30 - Desenvolvimento de software      | 05/06 | 19/06 |       |       | 19, 20, 21, 22 e 28 | Sub-grupo Software  |
 | 31 - Montagem do Chassi               | 10/06 | 17/06 |       |       | 25 e 27             |Sub-grupo Estrutura  | 
@@ -84,10 +84,11 @@ ________________________________________________________________________________
 ## Tabela 11 – Histórico de Revisão
 
 | Data  |             Descrição           |              Autor            |             Revisor           |
-|       |---------------------------------|-------------------------------|-------------------------------|
+|-------|---------------------------------|-------------------------------|-------------------------------|
 | 02/05 | Criação do cronograma           | [Felipe Freire](https://github.com/FelipeFreire-gf) | [Pedro Miguel](https://github.com/pedroMADBR) |
 | 20/05 | Correção e atualização de datas | [Pedro Miguel](https://github.com/pedroMADBR) |[Gabriel Rocha](https://github.com/GabrielG-Rocha) |
 | 01/06 | Correção da numeração | [Pedro Miguel](https://github.com/pedroMADBR) | [Gabriel Rocha](https://github.com/GabrielG-Rocha) |
 | 03/06 | Atualização do cronograma | [Pedro Miguel](https://github.com/pedroMADBR) | [Gabriel Avelino](https://github.com/gabrielavelino) |
+| 11/06 | Atualização de tarefas | [Pedro Miguel](https://github.com/pedroMADBR) | [Gabriel Rocha](https://github.com/GabrielG-Rocha) |
 
 ___________________________________________________________________________________
