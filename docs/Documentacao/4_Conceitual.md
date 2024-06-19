@@ -508,8 +508,7 @@ ________________________________________________________________________________
 ## Componentes a serem aprofundados
 
 - Estruturas:
-    - O carrinho deve ser construído com materiais leves, mas robustos,
-    capazes de suportar os rigores da corrida sem comprometer a integridade do ovo.<br>
+    - Antes de realizarmos a impressão 3D, fizemos um esboço em isopor para termos certeza de que as medidas estavam corretas, de acordo com a parte eletrônica. Após verificarmos as medidas usando o isopor, imprimimos a peça em 3D, com material PLA. Com base em pesquisas feitas na internet, verificamos que o PLA é um material que suporta grandes cargas estáticas; porém, ele não apresenta grandes deformações antes do rompimento, sendo pouco dúctil. O PLA também possui a melhor dureza superficial em comparação com materiais como o ABS e o PETG, ou seja, é o material que mais suporta desgaste superficial ou atrito. E como nosso carrinho será arrastado na frente, ou seja, não possuirá roda frontal, o PLA é um bom material para essa ocasião.<br>
 
 - Coleta e Transmissão de Dados: 
     - É fundamental garantir a transmissão de
