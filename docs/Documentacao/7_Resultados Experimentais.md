@@ -68,7 +68,7 @@ Configuração do Sistema:
 - Repetido o procedimento sobre uma superfície marrom.
 - Realizado o calculo das unidades ADC para cada medição utilizando a fórmula:
  
-inserir aqui
+$$ADC = \frac{V}{\frac{5}{1023}}$$
 
 Teste de Detecção:
 
