@@ -1,11 +1,11 @@
-#Reunião Geral - (26/06/2024)
+# Reunião Geral - (26/06/2024)
 
 Horário: 16h25 às 16h48
 Local: Sala S2
 Presentes: Arthur Alencar, Brunna Martins, Bruno Vasconcelos, Cauan Martins, Gabriel Avelino, Gabriel Rocha (redator),
 João Eduardo Rabelo, Samuel Nogueira, Pedro Miguel e Pedro Zago.
 
-##Pautas:
+## Pautas:
 
 - Correções da Avaliação 2
 

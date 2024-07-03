@@ -1,11 +1,11 @@
-#Reunião Geral (19/06/2024)
+# Reunião Geral - (19/06/2024)
 
 Horário: 16h15 às 16h48
 Local: Sala S2
 Presentes: Arthur Alencar, Brunna Martins, Bruno Vasconcelos, Cauan Martins, Felipe Freire, Gabriel Avelino, Gabriel Marques, Gabriel Rocha,
 João Eduardo Rabelo, Marcella Cristina, Pedro Miguel(Redator) e Pedro Zago.
 
-##Pautas:
+## Pautas:
 
 - Revisão do cronograma
   - Atividade 33: Adiada para dia 26/06 pela justificativa de que a área de eletrônica ficou com acumulo de tarefas
