@@ -1,6 +1,8 @@
 #include <TimerOne.h>
 #include <math.h>
 #include "Robo_Seguidor_Linha.h"
+#include <ArduinoJson.h>
+#include "string.h"
 
 // Defines importantes
 // Portas
@@ -15,47 +17,29 @@
 #define Sensor4 A4
 
 // Constantes a serem alteradas posteriormente
-#define velb_Dir 255           // Velocidade Básica de PWM motor direito
-#define velb_Esq  255       // Velocidade Básica de PWM motor esquerdo
-#define Valor_Sensor 70      // Valor a ser comparado com os sensores
-#define Inc_Erro 1         // Incremento do erro para os casos do PID
+#define velb_Dir 120           // Velocidade Básica de PWM motor direito
+#define velb_Esq  110       // Velocidade Básica de PWM motor esquerdo
+#define Valor_Sensor 20      // Valor a ser comparado com os sensores
+#define Inc_Erro 5         // Incremento do erro para os casos do PID
 #define Num_Furos 20           // Número de furos do disco encoder
-#define Raio_Enc   13         // Valor do raio do disco encoder [mm]
-#define Met_L 10              // Metade da largura do robô em [cm]
-#define V_Bat 7.4             // Tensão da bateria
+#define Raio_Enc   1.3         // Valor do raio do disco encoder [mm]
+#define Met_L 8.75              // Metade da largura do robô em [cm]
+#define V_Bat 8.00             // Tensão da bateria
 
-enum{
-  Distancia,
-  PosX,
-  PosY,
-  Velocidade,
-  Aceleracao,
-  Corrente,
-  Potencia,
-  Energia,
-  Max,
-};  
 
 // Vars para pid
-int kp = 35;              // Cte de PID proporção
-int ki = 0;               // Cte de PID integral
-int kd = 35;              // Cte de PID derivativo
-int Erro = 0;
-int Erro_Anterior;
-int I;                    // Incrementos do PID
-int P;
-int D;
-int PID;
-float Vel_Esq;          //Velocidade dos motores
-float Vel_Dir;          //  == 
 bool sensor[4];           // Vars que representam os sensores de linha
+uint8_t Cont_Par = 0;
+int8_t Erro = 0;
+
+uint16_t sensor_value[4] = {24, 73, 84, 150};
 
 // Vars das leituras dos Encoders
-uint8_t Enc_Dir = 0;
-uint8_t Enc_Esq = 0;
+uint16_t Enc_Dir = 0;
+uint16_t Enc_Esq = 0;
 
 //Vars para cálculos
-float Circun = 2*3.14*Raio_Enc;     // CircunferÊncia do disco encoder caso r= 13 Circun=88.4 [mm]
+const float Dist_Furos = 2 *3.14*Raio_Enc/Num_Furos;      // CircunferÊncia do disco encoder caso r= 13 Circun=88.4 [cm]
 uint16_t Dist = 0;                       // Distância percorrida [cm]
 uint16_t Dist_Anterior =0;                // DistÂncia anterior
 float Vel =   0.0;                    // Velocidade tangencial [cm/s]
@@ -75,8 +59,9 @@ float E_ACS712 =0;
 bool Count_INCE = false;          // Booleanos para cálculo de deboucing das interrupções
 bool Count_INCD = false;  
 
-// Vars para transmissão de dados
-float Transmit[8];
+//Inicializando objeto JSON
+StaticJsonDocument<200>jsonDoc;
+
 
 void setup() {
   //Configurando Serial
@@ -86,28 +71,37 @@ void setup() {
   pinMode(M1, OUTPUT);   // Colocando as saídas do PWM
   pinMode(M2, OUTPUT);
 
+  // Calibrando sensores de linha
+  Calibrate();
+
   // Configurando Interrupções dos Encoders
   pinMode(EncE, INPUT_PULLUP);    
   attachInterrupt(digitalPinToInterrupt(EncE), Inc_EncE, HIGH);     //O Sistema irá identificar uma interrupção quando o sinal vai de LOW para HIGH
   pinMode(EncD, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(EncD), Inc_EncE, HIGH);
 
+
+  // O robô só começará a andar quando recebero char R por Serial
+  while(!Serial.available()){};
+
   //Configurando interrupção do Timer 
-  Timer1.initialize(2000);
-  Timer1.attachInterrupt(Int_200);
+  Timer1.initialize(2000000);
+  Timer1.attachInterrupt(Int_500, 2000000);
 
   // O robô só começará a andar quando recebero char R por Serial
   uint8_t n =0;
-  Serial.println('Envie R');
-  while(n < 1){
+  //Serial.println('Envie R');
+  /*while(n < 1){
     if(Serial.read()== 'R'){n=1;}
-  }
+  }*/
     analogWrite(M1,velb_Esq);
     analogWrite(M2,velb_Dir);
+
+
 }
 void loop(){
   Get_Sensor();
-  Controle_PID();
+  Erro_C();
 }
 
 //Funções de Controle Movimento
@@ -123,38 +117,14 @@ void Get_Sensor(void){
   }
 }
 
-void Controle_PID(void){
+void Erro_C(void){
   // Atricuindo Erro
-  if((sensor[0]==LOW) && (sensor[1]==LOW) && (sensor[2]==LOW) && (sensor[3]==HIGH)){ Erro = 3 * Inc_Erro;}                        // Atribuo um valor de erro para cada ocasião dos sensores
-  else if((sensor[0]==LOW) && (sensor[1]==LOW) && (sensor[2]==HIGH) && (sensor[3]==HIGH)){ Erro = 2 * Inc_Erro;}
-  else if((sensor[0]==LOW) && (sensor[1]==HIGH) && (sensor[2]==HIGH) && (sensor[3]==HIGH)) {Erro = Inc_Erro;}
-  else if((sensor[0]==LOW) && (sensor[1]==HIGH) && (sensor[2]==HIGH) && (sensor[3]==LOW)) {Erro = 0;}
-  else if((sensor[0]==HIGH) && (sensor[1]==HIGH) && (sensor[2]==HIGH) && (sensor[3]==LOW)) {Erro = -1 * Inc_Erro;}
-  else if((sensor[0]==HIGH) && (sensor[1]==HIGH) && (sensor[2]==LOW) && (sensor[3]==LOW)) {Erro = -2 * Inc_Erro;}
-  else if((sensor[0]==HIGH) && (sensor[1]==LOW) && (sensor[2]==LOW) && (sensor[3]==LOW)) {Erro = -3 * Inc_Erro;}
-
-  // Calculando PID
-  if(Erro == 0){I = 0;}        
-  P = Erro;
-  I = I + Erro;
-  if(I>255){I= 255;}
-  else if(I<-255){I=-255;}
-  D = Erro - Erro_Anterior;
-  PID = kp*P+ki*I+kd*D;
-
-  //Mandando PID para motores
-  if(PID>=0){
-    Vel_Esq = velb_Esq;
-    Vel_Dir = Vel_Dir - PID;
-    analogWrite(M1,Vel_Esq);
-    analogWrite(M2,Vel_Dir);
-  }
-  else{
-    Vel_Esq = Vel_Esq+PID;
-    Vel_Dir = velb_Dir;
-    analogWrite(M1,Vel_Esq);
-    analogWrite(M2,Vel_Dir);
-  }
+  if((sensor[0]==LOW) && (sensor[3]==LOW)){ Erro = 0;}                        // Atribuo um valor de erro para cada ocasião dos sensores
+  else if((sensor[0]==LOW) && (sensor[3]==HIGH)){ Erro = 1;}
+  else if((sensor[0]==HIGH) && (sensor[3]==LOW)) {Erro = -1;}
+  else if((sensor[0]==HIGH) && (sensor[1]==HIGH) && (sensor[2]==HIGH) && (sensor[3]==HIGH)) {Parada();}
+  //Serial.println(Erro);
+  Controle();
 
 }
 
@@ -172,8 +142,7 @@ void Inc_EncE(void){
 }
 
 void Inc_EncD(void){
-  Enc_Dir = Enc_Dir +1;
-    detachInterrupt(digitalPinToInterrupt(EncD));
+  detachInterrupt(digitalPinToInterrupt(EncD));
   if(Count_INCD){
     Enc_Dir = Enc_Dir +1;    // Para cada pulso somo os encoders
     Count_INCD = false;
@@ -186,45 +155,92 @@ void Inc_EncD(void){
 
 // Função de Interrupção dos Timers
 
-void Int_200(void){
+void Int_500(void){
   // Valores absolutos
-  Dist =  ((Enc_Dir+Enc_Esq)/2)*Circun/(10*Num_Furos);               // Calculando a distância percorrida em cm
-  Vel =   Dist/0.2;                                                      // Calculando a velocidade tangencial a 200 ms
+  Dist =  ((Enc_Dir+Enc_Esq)/2)*Dist_Furos/10;               // Calculando a distância percorrida em cm
+  Vel =   Dist/2;                                                      // Calculando a velocidade tangencial a 2000 ms em cm/s
   Dist_Anterior = Dist + Dist_Anterior;                                        // DistÂncia total
-  Acel = (Vel-Vel_Anterior)/0.2;            
+  Acel = (Vel-Vel_Anterior)/2;            
   Vel_Anterior = Vel;  
-
-  Transmit[Distancia] = Dist_Anterior;
-  Transmit[Velocidade] = Vel;
-  Transmit[Aceleracao] = Acel;
+  jsonDoc["distTotal"] = Dist_Anterior;
+  jsonDoc["velocidade"] =  Vel;
+  jsonDoc["aceleracao"] = Acel;
 
 
   //Valores da cinemática
-  Dist_Dif_Enc= (Enc_Dir-Enc_Esq)*Circun/(10*Num_Furos);                // Agora se obtem a distÂncia percorrida na difÊncia das rodas, pode ser positivo ou negativo
-  Teta = atan(Dist_Dif_Enc/Met_L);
+  Dist_Dif_Enc= (Enc_Dir-Enc_Esq)*Dist_Furos/10;                // Agora se obtem a distÂncia percorrida na diferençaa das rodas, pode ser positivo ou negativo
+  Teta = atan2(Dist_Dif_Enc,Met_L);
   Vel_X = cos(Teta) * Vel;                                              // Calcula-se a componente da velocidade no eixo X              
   Vel_Y = sin(Teta) * Vel;                                              // Calcula-se a componente da velocidade no eixo Y
 
-  Pos_X = Pos_X + (Vel_X*0.2);                                          // Calcula-se a posição total no eixo X  
-  Pos_Y = Pos_Y + (Vel_Y*0.2);                                          // Calcula-se a posição total no eixo Y
-  Transmit[PosX] = Pos_X;
-  Transmit[PosY] = Pos_Y;   
+  Pos_X = Pos_X + (Vel_X*2);                                          // Calcula-se a posição total no eixo X  
+  Pos_Y = Pos_Y + (Vel_Y*2);                                          // Calcula-se a posição total no eixo Y
+  jsonDoc["posX"] = Pos_X;
+  jsonDoc["posY"] = Pos_Y;   
 
   Enc_Dir =0;                                                           //Zero o s encoders para próximos calculos
   Enc_Esq =0;
 
   // Valor do sensor de corrente
-  A_ACS712 = analogRead(ACS712)-511.5;                                    // Pego o valor do ADC e Volto ao ponto zero
-  A_ACS712 = 5000 * A_ACS712/511;                                         // Valor da corrente em [mA]
-  P_ACS712 = A_ACS712 * V_Bat;                                            // valor da potência em [mW]
-  E_ACS712 = P_ACS712 * 0.2;
+  A_ACS712 = fabs((analogRead(ACS712)-511.5)*2.638);                                    // Pego o valor do ADC e Volto ao ponto zero
+  P_ACS712 = fabs(A_ACS712 * V_Bat/1000);                                            // valor da potência em [W]
+  E_ACS712 = fabs(P_ACS712 * 2);                                                        // Energia em Joules
+  jsonDoc["corrente"]= A_ACS712;
+  jsonDoc["potencia"]= P_ACS712;
+  jsonDoc["energia"] = E_ACS712;
 
-  Transmit[Corrente] = A_ACS712;
-  Transmit[Potencia] = P_ACS712;
-  Transmit[Energia] = E_ACS712;
+  char jsonStr[200];
+  serializeJson(jsonDoc, jsonStr);
+  Serial.println(jsonStr);
+}
 
-  // Enviando os dados pelo serial
-  for(uint8_t i =0; 1<8; i++){
-    Serial.println(Transmit[i]);
+void Calibrate(void){
+  uint16_t min[4] , max[4];
+  uint16_t val = 0;
+  for(size_t i = 0; i<4; i++){
+    min[i] = analogRead(A1+i);
+    max[i] = analogRead(A1+i);
+  }
+  analogWrite(M1, 255);
+  for(size_t i = 0; i<30000; i++){
+    for(size_t n = 0; n<4; n++){
+      val = analogRead(A1 + n);
+      if(val>max[n]){
+        max[n] = val;
+      }
+      if(val<min[n]){
+        min[n] = val;
+      }
+    }
+  }
+  for(size_t i = 0; i<4; i++){
+    sensor_value[i] = (min[i] + max[i])/2;
+  }
+  analogWrite(M1, 0);
+  analogWrite(M2, 0); 
+}
+
+void Parada(void){
+  if(Cont_Par == 150){
+    analogWrite(M1, 0);
+    analogWrite(M2, 0);
+    Serial.println("{\"evento\":\"Fim\"}");
+    while(1){}
+  }
+  Cont_Par +=1;
+}
+
+void Controle(void){
+  if(Erro==0){
+    analogWrite(M1, velb_Esq);
+    analogWrite(M2, velb_Dir);
+  }
+  else if(Erro>0 ){
+    analogWrite(M1, 175);
+    analogWrite(M2,0);
+  }
+  else if(Erro < 0){
+    analogWrite(M1, 0);
+    analogWrite(M2, 175);
   }
 }
