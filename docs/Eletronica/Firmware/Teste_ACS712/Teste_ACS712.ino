@@ -1,85 +1,49 @@
-
-#define V_Bat 7.4
-#define ACS712 A0
-
+#define EncE 2              // Porta onde estão conectados os encoders
+#define EncD 3
+#define M1 5               // Porta do motor Esquerdo M1
+#define M2 6               // Porta do motor direito M2
+#define ACS712 A0           // Porta analógica do sensor de corrente
+#define Sensor1 A1         // Portas analógicas do sensores de linha
+#define Sensor2 A2
+#define Sensor3 A3
+#define Sensor4 A4
+#define V_Bat 8
 
 float A_ACS712 =0;
-float P_ACS712 =0;
-float E_ACS712 =0;
-uint8_t count = 0;
+uint8_t cont = 1;
+uint16_t analog = 0;
+float v = 0;
 
-bool Count_INCE = true;
-float MM=0;
-float corrente = 0;
-float mediaADC = 0;
 void setup() {
   Serial.begin(9600);
-  /*pinMode(EncE, INPUT_PULLUP);    
-  attachInterrupt(digitalPinToInterrupt(EncE), Inc_EncE, RISING);     //O Sistema irá identificar uma interrupção quando o sinal vai de LOW para HIGH
-  pinMode(EncD, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(EncD), Inc_EncE, RISING);
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);*/
-  pinMode(2, INPUT_PULLUP);    
-  attachInterrupt(digitalPinToInterrupt(2), Inc_EncE, HIGH);     //O Sistema irá identificar uma interrupção quando o sinal vai de LOW para HIGH
-  
+  pinMode(M1, OUTPUT);
+  pinMode(M2, OUTPUT);
+  analogWrite(M1,255);
+  analogWrite(M2,255);
+
 }
 
 void loop() {
 
- /* Serial.println("Sensor A");
-  Serial.println(analogRead(A1));
-  Serial.println("Sensor B");
-  Serial.println(analogRead(A2));
-  Serial.println("Sensor C");
-  Serial.println(analogRead(A3));
-  Serial.println("Sensor D");
-  Serial.println(analogRead(A4));
-  delay(1000);*/
-
-  /*analogWrite(5, count);
-  analogWrite(6, count);
-  Serial.println(count);
-  count++;
-  delay(100);*/
-
-  /*mediaADC = 0;
-  for(size_t i = 0; i< 1000 ; i++){
-    mediaADC = mediaADC + analogRead(A0);
+  analog = analogRead(ACS712);
+  v = analog * 0.0049;
+  A_ACS712 = fabs(((analog-2.5)*1000)/185);                                    // Pego o valor do ADC e Volto ao ponto zero
+  Serial.print("ADC: ");
+  Serial.println(analog);  
+  Serial.print("Tensão: ");
+  Serial.println(v);  
+  Serial.print("Corrente: ");
+  Serial.println(A_ACS712);  
+  if(cont == 0){
+    analogWrite(M1,cont);
+    analogWrite(M2,cont);
   }
-  mediaADC = mediaADC/1000;
-  Serial.println(mediaADC);
-  
-  Serial.println("Valor geral ADC");
-  Serial.println(mediaADC);
-  Serial.println("Tensão no ADC");
-  Serial.println(mediaADC*(0.005));
-  //MediaCorrente();
-  Serial.println("valor da Corrente em mA");
-  Serial.println(mediaADC = 5000*(mediaADC-511.5)/511.5); 
-  delay(200);*/
-}
-void Inc_EncE(void){
-  detachInterrupt(digitalPinToInterrupt(2));
-  if(Count_INCE){
-    Serial.println("Interrupção");
-    MM = MM+(4.1);
-    Serial.println(MM);
-    Count_INCE = false;
+  if(cont== 255){
+    analogWrite(M1,cont);
+    analogWrite(M2,cont);
   }
-  else{
-    Count_INCE = true;
-  }
-  attachInterrupt(digitalPinToInterrupt(2), Inc_EncE, HIGH);
-
+  delay(200);
 
 
 }
-void MediaCorrente(void){
-  corrente = 0;
-  for(uint8_t i = 0; i<100; i++ ){
-    corrente = corrente + analogRead(A0);
-  }
-  corrente = corrente/100;
-  corrente = 5000*(corrente-511)/511;
-}
+
