@@ -16,7 +16,7 @@ ________________________________________________________________________________
 ##### 7.1.5 Precisão e Acurácia das Medidas 
 
 
-### 7.2 Experimentos da Extrutura
+### 7.2 Experimentos da Estrutura
 
 ##### 7.2.1 Hipoteses Levantadas
 
