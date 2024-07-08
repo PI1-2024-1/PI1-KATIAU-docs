@@ -1,7 +1,7 @@
-# 7. Resultados Experimentais
+## 7. Resultados Experimentais
 ___________________________________________________________________________________
 
-## 7.1 Características Gerais
+### 7.1 Características Gerais
 
  Introduzir os principais pontos deste capítulo. Cada experimento deve conter explicações completas que garantam sua repetibilidade:
 
@@ -67,7 +67,7 @@ A uniformidade da superfície e a estabilidade do carrinho durante o movimento t
 
 #### 7.3.4 Materiais e Métodos
 
-##### Materiais:
+##### Materiais
 
 - Chassi do carrinho.
 - Sensores de linha (4 unidades).
@@ -75,7 +75,7 @@ A uniformidade da superfície e a estabilidade do carrinho durante o movimento t
 - Multímetro.
 - Baterias de alimentação (7V).
 
-##### Métodos:
+##### Métodos
 
 ###### Configuração do Sistema:
 
@@ -131,7 +131,7 @@ Tensão dos Sensores em Superfície Marrom:
 
 #### 7.4.4 Materiais e Métodos
 
-##### Materiais:
+##### Materiais
 
 - Carrinho seguidor de linha completo
 - Multímetro para medições de corrente e tensão
@@ -139,7 +139,7 @@ Tensão dos Sensores em Superfície Marrom:
 - Resistores de precisão para calibração
 - Software de registro de dados
 
-##### Métodos:
+##### Métodos
 
 ###### Configuração Inicial:
 
@@ -153,7 +153,7 @@ Tensão dos Sensores em Superfície Marrom:
 - Conduzir o carrinho em um percurso fixo, registrando a corrente e a tensão ao longo do tempo.
 - Repetir o experimento com diferentes configurações de peso e distribuição dos sensores para avaliar o impacto no consumo energético.
 
-##### Análise dos Dados:
+###### Análise dos Dados
 
 - Calcular o consumo energético total em diferentes condições utilizando a fórmula:
 
@@ -163,17 +163,17 @@ $$Energia = ∫𝑉(𝑡)⋅𝐼(𝑡) 𝑑𝑡 $$
 
 #### 7.4.5 Precisão e Acurácia das Medidas 
 
-##### Precisão das Medições de Corrente:
+##### Precisão das Medições de Corrente
 
 Utilização de resistores de precisão e multímetros calibrados para garantir medições exatas de corrente.
 Verificação das leituras através de múltiplas medições e calibração dos instrumentos de medição.
 
-##### Precisão das Medições de Tensão:
+##### Precisão das Medições de Tensão
 
 Utilização de multímetros digitais de alta precisão para medir a tensão em diferentes pontos do circuito.
 Realização de medições em diferentes condições de carga para validar a consistência dos resultados.
 
-##### Análise de Dados:
+##### Análise de Dados
 
 Utilização de software de registro de dados para garantir a precisão na aquisição e análise das medições.
 Comparação dos resultados com dados teóricos e medições anteriores para validar a acurácia dos experimentos.
