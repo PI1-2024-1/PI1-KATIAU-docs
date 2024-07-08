@@ -64,7 +64,7 @@ Foi decidido que o ideal seria o menor CAD possível, por isso foi escolhido ter
 
 ![Diagrama de blocos](https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/main/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Diagrama%20de%20Blocos%20-%20Eletrônica.png)
 
-### Observações  
+#### Observações  
  
 - Pode ser utilizado qualquer formato, se atentando à posição dos [sensores infravermelhos](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/TCRT5000.PDF) na parte dianteira, e dos sensores [encoder](https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/Encoder.pdf) que devem estar juntos aos eixos de rotação dos motores;
 
@@ -150,27 +150,27 @@ Optamos pelas baterias recarregáveis de 3.7V 18650 devido à sua alta capacidad
 #### Chaves/Interruptores
 * **Chaves/Interruptores** - Garantem a segurança do circuito, permitindo a ligação e desligamento seguro do sistema.
 
-## Firmware
+#### Firmwares
 
-#### Sensores TCRT-5000
+##### Sensores TCRT-5000
 Os sensores TCRT-5000 entregam tensões de 0 a 5V. É necessário calibrar uma variável que indique se o sensor está detectando a linha ou não, garantindo a precisão das leituras.
 
-#### Módulo Bluetooth HC-06
+##### Módulo Bluetooth HC-06
 A comunicação com o módulo Bluetooth HC-06 é realizada através da porta serial, simplificando a transmissão dos dados coletados pelo Arduino.
 
-#### Sensores de Velocidade Módulo Encoder
+##### Sensores de Velocidade Módulo Encoder
 Os sensores de velocidade enviam um pulso quando passam por um buraco no disco encoder, permitindo a contagem precisa das rotações.
 
-#### Discos Encoder de 20 Furos
+##### Discos Encoder de 20 Furos
 Cada furo do disco encoder corresponde a 3.92 mm de deslocamento, proporcionando medições detalhadas e precisas do movimento do robô.
 
-#### Motor 6V com Redutor
+##### Motor 6V com Redutor
 O movimento do motor é controlado através de sinais PWM enviados pelas saídas definidas no esquemático, garantindo controle preciso da velocidade e direção.
 
-#### Medidor de Corrente ACS712
+##### Medidor de Corrente ACS712
 O medidor de corrente ACS712 entrega uma tensão proporcional à corrente medida. Para calcular a corrente, uma variável calibrada é necessária. Correntes negativas também geram tensões positivas, exigindo uma consideração especial no cálculo.
 
-## Software
+#### Software
 
 Os dados são recebidos pelo software em forma de vetor `dados = [Enc direito; Enc esquerdo; velocidade; aceleração]`. O cálculo da posição relativa do robô é mais facilmente realizado no software do que no firmware. A cada período de comunicação, os valores do encoder são enviados, por exemplo:
 * **Enc direito = 2**
@@ -225,7 +225,7 @@ A documentação de casos de uso fornece uma visão abrangente das diferentes in
 No caso do projeto, a lista de casos de uso descreve as principais operações que o usuário pode realizar e como o sistema deve responder a essas operações, cada caso de uso é composto por um conjunto de etapas que descrevem o fluxo principal de eventos, bem como possíveis fluxos alternativos em caso de condições excepcionais.
 
 
-### Exibir a Distância Percorrida
+#### Exibir a Distância Percorrida
 
 **Fluxo Principal:**
 
@@ -241,7 +241,7 @@ No caso do projeto, a lista de casos de uso descreve as principais operações q
   2. O sistema não consegue se comunicar com o carrinho.
   3. O sistema exibe uma mensagem de erro informando que não foi possível obter os dados do carrinho.
 
-### Exibir a Trajetória Percorrida
+#### Exibir a Trajetória Percorrida
 
 **Fluxo Principal:**
 
@@ -257,7 +257,7 @@ No caso do projeto, a lista de casos de uso descreve as principais operações q
   2. O sistema detecta um erro nos dados recebidos.
   3. O sistema exibe uma mensagem de erro informando que não foi possível processar a trajetória.
 
-### Exibir a Aceleração
+#### Exibir a Aceleração
 
 **Fluxo Principal:**
 
@@ -273,7 +273,7 @@ No caso do projeto, a lista de casos de uso descreve as principais operações q
   2. O sistema verifica que os dados de aceleração não estão disponíveis.
   3. O sistema exibe uma mensagem de erro informando que os dados de aceleração não estão disponíveis.
 
-### Exibir o Consumo de Energia
+#### Exibir o Consumo de Energia
 
 **Fluxo Principal:**
 
@@ -289,7 +289,7 @@ No caso do projeto, a lista de casos de uso descreve as principais operações q
   2. O sistema detecta um erro nos dados ou no cálculo.
   3. O sistema exibe uma mensagem de erro informando que não foi possível calcular o consumo de energia.
 
-### Exibir a Velocidade
+#### Exibir a Velocidade
 
 **Fluxo Principal:**
 
@@ -305,7 +305,7 @@ No caso do projeto, a lista de casos de uso descreve as principais operações q
   2. O sistema verifica que os dados de velocidade estão inconsistentes ou incompletos.
   3. O sistema exibe uma mensagem de erro informando que os dados de velocidade são inconsistentes.
 
-### Exibir Histórico de Percursos
+#### Exibir Histórico de Percursos
 
 **Fluxo Principal:**
 
@@ -321,9 +321,9 @@ No caso do projeto, a lista de casos de uso descreve as principais operações q
   2. O sistema verifica que o histórico de percursos não está disponível.
   3. O sistema exibe uma mensagem de erro informando que o histórico de percursos não pode ser exibido.
 
-## Temas
+#### Temas
 
-### Cálculos dos Dados
+##### Cálculos dos Dados
 
 Este tema inclui todas as features relacionadas ao processamento e cálculo dos dados do carrinho.
 
@@ -335,7 +335,7 @@ Este tema inclui todas as features relacionadas ao processamento e cálculo dos 
 - Cálculo da aceleração
 - Cálculo do consumo de bateria
 
-### Dashboard e Exibição
+##### Dashboard e Exibição
 
 Este tema abrange todas as features relacionadas à visualização e exibição dos dados processados na interface do usuário.
 
@@ -348,47 +348,47 @@ Este tema abrange todas as features relacionadas à visualização e exibição 
 - Exibição do consumo de bateria em tempo real
 - Exibição dos dados de percursos anteriores
 
-## Critérios de Avaliação
+#### Critérios de Avaliação
 
 Os critérios de avaliação devem ser claros e verificáveis para cada User Story. Eles determinam se a User Story foi implementada corretamente.
 
-### Exibir Trajetória Percorrida (US01)
+##### Exibir Trajetória Percorrida (US01)
 
 - Deve ser exibido em um gráfico com precisão de até 1 metro.
 - O gráfico deve atualizar automaticamente conforme novos dados são recebidos.
 - A trajetória deve ser claramente distinguível com linhas contínuas.
 
-### Exibir Distância Percorrida (US02)
+##### Exibir Distância Percorrida (US02)
 
 - A distância deve ser exibida em um gráfico.
 - Deve mostrar a distância total percorrida.
 - O gráfico deve permitir a visualização de distâncias de percursos anteriores para comparação.
 
-### Exibir Tempo de Percurso (US03)
+##### Exibir Tempo de Percurso (US03)
 
 - O tempo de percurso deve ser exibido em um gráfico.
 - Deve mostrar o tempo total de cada percurso.
 - O gráfico deve permitir a comparação do tempo de diferentes percursos.
 
-### Exibir Velocidade em Tempo Real (US04)
+##### Exibir Velocidade em Tempo Real (US04)
 
 - A velocidade deve ser exibida em um gráfico em tempo real.
 - A atualização deve ocorrer a cada segundo.
 - Deve permitir a comparação da velocidade ao longo do percurso.
 
-### Exibir Aceleração em Tempo Real (US05)
+##### Exibir Aceleração em Tempo Real (US05)
 
 - A aceleração deve ser exibida em um gráfico em tempo real.
 - A atualização deve ocorrer a cada segundo.
 - Deve permitir a comparação da aceleração ao longo do percurso.
 
-### Exibir Consumo de Bateria em Tempo Real (US06)
+##### Exibir Consumo de Bateria em Tempo Real (US06)
 
 - O consumo de bateria deve ser exibido em vários gráficos como um dashboard.
 - Deve mostrar o consumo instantâneo e acumulado.
 - O dashboard deve permitir a visualização do consumo de bateria em diferentes percursos.
 
-### Exibir Dados de Percursos Anteriores (US07)
+##### Exibir Dados de Percursos Anteriores (US07)
 
 - Os dados de percursos anteriores devem ser exibidos em um gráfico.
 - Deve permitir a seleção e comparação de múltiplos percursos.
@@ -398,7 +398,7 @@ Os critérios de avaliação devem ser claros e verificáveis para cada User Sto
 ![diagrama katiau](https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/140026699/22cf04af-cdcc-4bed-a4e6-2b97daf92b11)
 
 
-## Backlog de Casos de Uso
+#### Backlog de Casos de Uso
 
 | Épico                  | Temas                           | Numero da US | Título da US               | Critérios                                                                                       |
 |------------------------|---------------------------------|---------------|----------------------------|-------------------------------------------------------------------------------------------------|
@@ -414,9 +414,9 @@ Os critérios de avaliação devem ser claros e verificáveis para cada User Sto
 
 ### 4.5.3 Lista de Requisitos Não-Funcionais
 
-Disponível em [TAP](/docs/Documentacao/2_Tap.md)
+Disponível em [TAP](https://pi1-2024-1.github.io/PI1-KATIAU-docs/Documentacao/2_Tap/)
 
-### 4.5.5 Diagrama de Classes
+### 4.5.4 Diagrama de Classes
 
 A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br>
 
@@ -426,7 +426,7 @@ A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da
 <br>Fonte: Autor(es)</h6>
 
 
-### 4.5.6 Arquitetura do software
+### 4.5.5 Arquitetura do software
 
 A arquitetura do software é o elemento que define a organização e a comunicação
 entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
@@ -447,9 +447,9 @@ dos dados enviados pelo arduíno.
 
 - **Comunicação bluetooth**: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.
 
-### 4.5.7 Descrição e Roteiro dos testes
+### 4.5.6 Descrição e Roteiro dos testes
 
-### Testes de unidade
+#### Testes de unidade
 
 | Componente | Caso de teste                 | Descrição                                           |
 | ---------- | ----------------------------- | --------------------------------------------------- |
@@ -461,7 +461,7 @@ dos dados enviados pelo arduíno.
 | Front-end  | Visualização dos dados        | Deve ser possível visualizar os dados no dashboard. |
 
 
-### Testes de integração
+#### Testes de integração
 
 | Componente                  | Caso de teste                                     | Descrição                                                                                                                      |
 | --------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -472,7 +472,7 @@ dos dados enviados pelo arduíno.
 | Front-end                   | Verificar a visualização dos dados                | Deve ser possível visualizar os dados recebidos da requisição à API                                                            |
 
 
-### Roteiro de Testes
+#### Roteiro de Testes
 
 Pré - Requisito: Aplicação em funcionamento e com acesso disponível para realização dos testes. Também a instaçação no Carrinho dos componentes e sensores que enviaráo dados para a aplicação
 
@@ -492,7 +492,7 @@ Pré - Requisito: Aplicação em funcionamento e com acesso disponível para rea
 - Teste de visualização
   - Verifica-se a exibição de todos os dados já citados no Dashboard do projeto e com atualizações constantes
 
-### Testes de integração:
+#### Testes de integração:
 
 - Teste de módulo bluetooth
   - Certificar se os dados estão sendo recebidos em um JSON com informações do carrinho
@@ -505,7 +505,7 @@ Pré - Requisito: Aplicação em funcionamento e com acesso disponível para rea
 
 ___________________________________________________________________________________
 
-## Componentes a serem aprofundados
+### Componentes a serem aprofundados
 
 - Estruturas:
     - O carrinho deve ser construído com materiais leves, mas robustos,
