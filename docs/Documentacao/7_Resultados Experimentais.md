@@ -314,15 +314,38 @@ Comparação dos resultados com dados teóricos e medições anteriores para val
 
 ### 7.5 Experimentos de Software
 
-#### 7.5.1 Hipoteses Levantadas
+O software é responsável por receber dados em tempo real do carrinho, processá-los e exibi-los de forma clara e precisa no dashboard. A avaliação do software é essencial para garantir que os dados apresentados sejam corretos e atualizados de forma eficiente, permitindo um monitoramento efetivo do desempenho do carrinho. Os experimentos descritos a seguir visam validar as hipóteses iniciais, analisar as condições de contorno, definir os resultados esperados, descrever os materiais e métodos utilizados, e avaliar a precisão e acurácia das medidas obtidas.
 
-#### 7.5.2 Condições de Contorno
+##### 7.5.1 Hipoteses Levantadas
+- O software irá exibir os dados do carrinho em tempo real, e os gráficos serão atualizados com precisão.
+
+##### 7.5.2 Condições de Contorno
+- Latência máxima aceitável para a atualização dos dados, compatibilidade com diferentes resoluções de tela, capacidade de processamento dos dados.
 
 #### 7.5.3 Resultados Esperados
 
-#### 7.5.4 Materiais e Métodos
+- Atualização em tempo real com intervalos de 1 segundo, exibição correta dos dados de posição e velocidade do carrinho.
 
-#### 7.5.5 Precisão e Acurácia das Medidas 
+##### 7.5.4 Materiais e Métodos
+
+As tecnologias utilizadas para realizar o experimento são:
+- JavaScript e Python;
+- ViteJs e FastAPI;
+- Biblioteca ChartJs e Axios;
+- React;
+- Biblioteca Vitest.
+
+O experimento foi feito pelos métodos:
+- Os dados são cadastrados no banco por meio de uma \textit{Thread} em paralelo;
+- Recebimento dos dados pelo Front-end;
+- Utilizar Hooks do React para atualização dos dados em intervalos de tempos;
+- Testes unitários tanto no Front-enb quanto no Back-end.
+
+##### 7.5.5 Precisão e Acurácia das Medidas 
+
+- Os dados são enviados em 100ms pelo hardware;
+- Os dados são armazenados em 1s pelo Back-End;
+- Os dados são exibidos em 1s pelo Front-End.
 
 ### 7.6 Experimentos de Integração
 
