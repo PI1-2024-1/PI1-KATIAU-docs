@@ -26,8 +26,13 @@ ________________________________________________________________________________
 - Posicionar os sensores na parte frontal do carrinho, o mais próximo possível do chão, para otimizar a função de seguir a linha.
 
 ##### 7.2.2 Condições de Contorno
+- Por não possuir uma roda dianteira, provavelmente o carrinho perca velocidade devido ao atrito.
+- Posicionamos os sensores em locais onde não houvesse influência do sol e afete a leitura.
 
 ##### 7.2.3 Resultados Esperados
+- Imprimimos o carrinho com o PLA e esta estrutura cuidadosamente planejada visa otimizar a funcionalidade e a proteção dos componentes do carrinho seguidor de linha, garantindo um desempenho eficiente e seguro. As propriedades do PLA tornam-no um material adequado para impressão 3D, oferecendo a combinação certa de rigidez, resistência, preço e leveza para o projeto.
+- Esperamos que o carrinho faça o percuso da forma mais rápida devido ao seu tamanho.
+- Ao imprimir, a base superior se encaixasse na base inferior. No entanto, antes de colocar os componentes, percebemos que não ocorreria o encaixe. Portanto, lixamos a peça para que se ajustasse perfeitamente à base inferior, facilitando assim as manutenções caso necessário.
 
 ##### 7.2.4 Materiais e Métodos
 - Os materiais para a construção das bases e outras partes do carrinho serão impressos em 3D, utilizando o filamento PLA (ácido polilático). O PLA foi escolhido pelo baixo custo e por suas propriedades mecânicas adequadas para este tipo de aplicação, sendo elas:
@@ -42,10 +47,8 @@ Resistência à Tração: 5,92x10⁷ Pa. Esta resistência à tração máxima m
 
 Para garantir a proteção do ovo, ele será colocado em uma caixa cujas laterais estarão revestidas com isopor e espuma. Esta proteção é considerada suficiente, pois o carrinho seguirá uma linha pré-determinada e não estará sujeito a impactos significativos que possam causar danos ao ovo.
 
-Esta estrutura cuidadosamente planejada visa otimizar a funcionalidade e a proteção dos componentes do carrinho seguidor de linha, garantindo um desempenho eficiente e seguro. As propriedades do PLA tornam-no um material adequado para impressão 3D, oferecendo a combinação certa de rigidez, resistência, preço e leveza para o projeto.
-
 ##### 7.2.5 Precisão e Acurácia das Medidas 
-
+- Tivemos um erro ao imprimir a peça 3D, pois a base superior deveria se encaixar na base inferior, mas erramos na medida e ela não encaixou corretamente. Para solucionar, improvisamos lixando a peça, o que permitiu um encaixe perfeito.
 
 ### 7.3 Experimentos de Hardware
 
