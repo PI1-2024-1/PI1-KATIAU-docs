@@ -22,7 +22,7 @@
 #define Valor_Sensor 20      // Valor a ser comparado com os sensores
 #define Inc_Erro 5         // Incremento do erro para os casos do PID
 #define Num_Furos 20           // Número de furos do disco encoder
-#define Raio_Enc   1.3         // Valor do raio do disco encoder [mm]
+#define Raio_Enc   1.3         // Valor do raio do disco encoder [cm]
 #define Met_L 8.75              // Metade da largura do robô em [cm]
 #define V_Bat 8.00             // Tensão da bateria
 
@@ -40,8 +40,8 @@ uint16_t Enc_Esq = 0;
 
 //Vars para cálculos
 const float Dist_Furos = 2 *3.14*Raio_Enc/Num_Furos;      // CircunferÊncia do disco encoder caso r= 13 Circun=88.4 [cm]
-uint16_t Dist = 0;                       // Distância percorrida [cm]
-uint16_t Dist_Anterior =0;                // DistÂncia anterior
+float Dist = 0;                       // Distância percorrida [cm]
+float Dist_Anterior = 0;                // DistÂncia anterior
 float Vel =   0.0;                    // Velocidade tangencial [cm/s]
 float Vel_Anterior = 0.0;             // Velocidade vel anterior
 float Vel_X = 0.0;                  // Velocidade em X [cm/s]
@@ -50,7 +50,7 @@ float Teta =  0.0;                   // Ângulo do robô
 float Pos_X = 0.0;                   // Pos em X
 float Pos_Y = 0.0;                  // Pos em Y
 float Acel = 0.0;                   // Aceleração [cm/s2]
-int Dist_Dif_Enc = 0;               // DistÂncia diferencial dos encoders [cm]
+float Dist_Dif_Enc = 0;               // DistÂncia diferencial dos encoders [cm]
 
 float A_ACS712 =0;
 float P_ACS712 =0;
@@ -90,12 +90,9 @@ void setup() {
 
   // O robô só começará a andar quando recebero char R por Serial
   uint8_t n =0;
-  //Serial.println('Envie R');
-  /*while(n < 1){
-    if(Serial.read()== 'R'){n=1;}
-  }*/
-    analogWrite(M1,velb_Esq);
-    analogWrite(M2,velb_Dir);
+
+  analogWrite(M1,velb_Esq);
+  analogWrite(M2,velb_Dir);
 
 
 }
@@ -123,7 +120,6 @@ void Erro_C(void){
   else if((sensor[0]==LOW) && (sensor[3]==HIGH)){ Erro = 1;}
   else if((sensor[0]==HIGH) && (sensor[3]==LOW)) {Erro = -1;}
   else if((sensor[0]==HIGH) && (sensor[1]==HIGH) && (sensor[2]==HIGH) && (sensor[3]==HIGH)) {Parada();}
-  //Serial.println(Erro);
   Controle();
 
 }
@@ -133,7 +129,8 @@ void Inc_EncE(void){
   detachInterrupt(digitalPinToInterrupt(EncE));
   if(Count_INCE){
     Enc_Esq = Enc_Esq+1;    // Para cada pulso somo os encoders
-    Count_INCE = false;
+    //Count_INCE = false;
+    Count_INCE = true;
   }
   else{
     Count_INCE = true;
@@ -145,7 +142,8 @@ void Inc_EncD(void){
   detachInterrupt(digitalPinToInterrupt(EncD));
   if(Count_INCD){
     Enc_Dir = Enc_Dir +1;    // Para cada pulso somo os encoders
-    Count_INCD = false;
+    //Count_INCD = false;
+    Count_INCD = true;
   }
   else{
     Count_INCD = true;
@@ -157,21 +155,26 @@ void Inc_EncD(void){
 
 void Int_500(void){
   // Valores absolutos
-  Dist =  ((Enc_Dir+Enc_Esq)/2)*Dist_Furos/10;               // Calculando a distância percorrida em cm
+  Dist =  ((Enc_Dir+Enc_Esq)/2)*Dist_Furos;               // Calculando a distância percorrida em cm
   Vel =   Dist/2;                                                      // Calculando a velocidade tangencial a 2000 ms em cm/s
   Dist_Anterior = Dist + Dist_Anterior;                                        // DistÂncia total
   Acel = (Vel-Vel_Anterior)/2;            
   Vel_Anterior = Vel;  
-  jsonDoc["distTotal"] = Dist_Anterior;
+
+  //Valores da cinemática
+  Dist_Dif_Enc = (Enc_Dir-Enc_Esq)*Dist_Furos;                // Agora se obtem a distÂncia percorrida na diferençaa das rodas, pode ser positivo ou negativo
+  Dist_Dif_Enc = Dist_Dif_Enc * Dist_Dif_Enc;          // faço a distância diferencial ao quadrado para obter o valor do cateto adjacente de acordo com pitágoras 
+
+  Teta = atan2f(Dist_Dif_Enc,76.56-Dist_Dif_Enc);
+
+  Vel_X = cos(Teta) * Vel;                                              // Calcula-se a componente da velocidade no eixo X              
+  Vel_Y = sin(Teta) * Vel;                                              // Calcula-se a componente da velocidade no eixo Y
+
+  jsonDoc["distTotal"] = Dist;
   jsonDoc["velocidade"] =  Vel;
   jsonDoc["aceleracao"] = Acel;
 
-
-  //Valores da cinemática
-  Dist_Dif_Enc= (Enc_Dir-Enc_Esq)*Dist_Furos/10;                // Agora se obtem a distÂncia percorrida na diferençaa das rodas, pode ser positivo ou negativo
-  Teta = atan2(Dist_Dif_Enc,Met_L);
-  Vel_X = cos(Teta) * Vel;                                              // Calcula-se a componente da velocidade no eixo X              
-  Vel_Y = sin(Teta) * Vel;                                              // Calcula-se a componente da velocidade no eixo Y
+  Dist_Dif_Enc = 0;
 
   Pos_X = Pos_X + (Vel_X*2);                                          // Calcula-se a posição total no eixo X  
   Pos_Y = Pos_Y + (Vel_Y*2);                                          // Calcula-se a posição total no eixo Y
