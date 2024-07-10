@@ -48,7 +48,7 @@ Resistência à Tração: 5,92x10⁷ Pa. Esta resistência à tração máxima m
 Para garantir a proteção do ovo, ele será colocado em uma caixa cujas laterais estarão revestidas com isopor e espuma. Esta proteção é considerada suficiente, pois o carrinho seguirá uma linha pré-determinada e não estará sujeito a impactos significativos que possam causar danos ao ovo.
 
 ##### 7.2.5 Precisão e Acurácia das Medidas 
-- Tivemos um erro ao imprimir a peça 3D, pois a base superior deveria se encaixar na base inferior, mas erramos na medida e ela não encaixou corretamente. Para solucionar, improvisamos lixando a peça, o que permitiu um encaixe perfeito.
+- Para impressões 3D, é necessário adicionar um espaçamento para os encaixes, mas a empresa não recomendou essa alteração. A base superior deveria se encaixar na base inferior; no entanto, por causa disso, ela não encaixou corretamente. Para solucionar, improvisamos lixando a peça, o que permitiu um encaixe perfeito.
 
 ### 7.3 Experimentos de Hardware
 
