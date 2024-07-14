@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>4. Projeto Conceitual - KATIAU</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Projeto Conceitual";
+        var mkdocs_page_input_path = "Documentacao/4_Conceitual.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> KATIAU
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">K.A.T.I.A.U ⚡</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../como_documentar/">Como Documentar</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Projeto Conceitual</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../2_Tap/">2. Termo de Abertura do Projeto</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Projeto Conceitual</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#41-caracteristicas-gerais">4.1 Características Gerais</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#42-estrutura">4.2 Estrutura</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#421-decisoes-de-projeto">4.2.1 Decisões de projeto</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#422-desenho-tecnico">4.2.2 Desenho técnico</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#423-modelo-3d">4.2.3 Modelo 3D</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#43-descricao-de-hardware">4.3 Descrição de hardware</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#431-diagrama-de-blocos">4.3.1 Diagrama de blocos</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#observacoes">Observações</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#432-lista-de-materiais">4.3.2 Lista de Materiais</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#433-esquematico">4.3.3 Esquemático</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#434-descricao-dos-componentes">4.3.4 Descrição dos componentes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#placa-arduino-uno-r3">Placa Arduino Uno R3</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sensores-opticos-reflexivos-tcrt-5000">Sensores Ópticos Reflexivos TCRT-5000</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#modulo-bluetooth-serial-rs232-escravo-hc-06">Módulo Bluetooth Serial RS232 Escravo HC-06</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sensor-de-velocidade-modulo-encoder">Sensor de Velocidade Módulo Encoder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#discos-encoder-para-medicao-com-modulo-encoder">Discos Encoder para Medição com Módulo Encoder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#medidor-de-corrente-acs-712">Medidor de Corrente ACS 712</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#regulador-de-tensao-lm317">Regulador de Tensão LM317</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#motores-de-6v-com-redutor-e-rodas">Motores de 6V com Redutor e Rodas</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#baterias-recarregaveis-de-37v-18650">Baterias Recarregáveis de 3.7V 18650</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#componentes-complementares">Componentes Complementares</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resistores">Resistores</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#transistor-e-diodo">Transistor e Diodo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#suporte-para-baterias-e-placa-perfurada">Suporte para Baterias e Placa Perfurada</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#chavesinterruptores">Chaves/Interruptores</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#firmwares">Firmwares</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#software">Software</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#44-analise-de-consumo-energetico">4.4 Análise de consumo energético</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#45-descricao-de-software">4.5 Descrição de Software</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#451-diagrama-do-processo-de-negocio-bpnm">4.5.1 Diagrama do Processo de Negócio (BPNM)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#452-lista-de-casos-de-uso">4.5.2 Lista de Casos de uso</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#exibir-a-distancia-percorrida">Exibir a Distância Percorrida</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exibir-a-trajetoria-percorrida">Exibir a Trajetória Percorrida</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exibir-a-aceleracao">Exibir a Aceleração</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exibir-o-consumo-de-energia">Exibir o Consumo de Energia</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exibir-a-velocidade">Exibir a Velocidade</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exibir-historico-de-percursos">Exibir Histórico de Percursos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#temas">Temas</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#criterios-de-avaliacao">Critérios de Avaliação</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#backlog-de-casos-de-uso">Backlog de Casos de Uso</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#453-lista-de-requisitos-nao-funcionais">4.5.3 Lista de Requisitos Não-Funcionais</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#454-diagrama-de-classes">4.5.4 Diagrama de Classes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#455-arquitetura-do-software">4.5.5 Arquitetura do software</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#456-descricao-e-roteiro-dos-testes">4.5.6 Descrição e Roteiro dos testes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#testes-de-unidade">Testes de unidade</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#testes-de-integracao">Testes de integração</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#roteiro-de-testes">Roteiro de Testes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#testes-de-unidade_1">Testes de unidade:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#testes-de-integracao_1">Testes de integração:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#componentes-a-serem-aprofundados">Componentes a serem aprofundados</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#eap-estrutura-analitica-de-projeto">EAP - Estrutura Analítica de Projeto</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../5_Or%C3%A7amento/">5 Orçamento</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../6_Cronograma/">6. Cronograma do Projeto</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../7_Resultados%20Experimentais/">7 Resultados Experimentais</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Atas</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Gerais</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_0/">Reunião de Projeto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_1/">Reunião Geral - (24/04/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_10/">Reunião Geral - (17/06/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_11/">Reunião Geral (19/06/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_12/">Reunião Geral - (26/06/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_2/">Reunião Geral - (08/05/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_3/">Reunião Geral - (13/05/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_4/">Reunião Geral - (20/05/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_5/">Reunião Geral - (22/05/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_6/">Reunião Geral - (27/05/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_7/">Reunião Geral - (03/06/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_8/">Reunião Geral - (03/06/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Gerais/Reuniao_Geral_9/">Reunião Geral - (10/06/2024)</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Reuniões Aeroespacial e Automotiva</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Reuni%C3%B5es%20Aeroespacial%20e%20Automotiva/Reuniao_Aero_0/">Reuniões de Aero e Automotiva</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Reuniões Eletrônica</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Reuni%C3%B5es%20Eletr%C3%B4nica/Reuniao_Eletro_0/">Reuniões de Projeto</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Reuniões Energia</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Reuni%C3%B5es%20Energia/Reuniao_Energia_0/">Reuniões de Projeto</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Reuniões Software</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Reuni%C3%B5es%20Software/Reuniao_Software_0/">Reuniões de Projeto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Reuni%C3%B5es%20Software/Reuniao_Software_1/">Reunião Software - (23/04/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Reuni%C3%B5es%20Software/Reuniao_Software_2/">Reunião Software - (14/05/2024)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Atas/Reuni%C3%B5es%20Software/Reuniao_Software_3/">Reunião Software - (21/05/2024)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Eletrônica</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Pontos de Controle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Eletronica/Pontos%20de%20Controle/Ponto%20de%20Controle%202/">Ponto de Controle 2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Proposta de projeto estrutural</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Eletronica/Proposta%20de%20projeto%20estrutural/proposta/">Proposta</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Sistemas</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Eletronica/Sistemas/Sistemas%20Eletr%C3%B4nicos%20do%20rob%C3%B4/">Informações sobre os sistemas eletrônicos do robô</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">KATIAU</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Projeto Conceitual</li>
+      <li class="breadcrumb-item active">4. Projeto Conceitual</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="4-projeto-conceitual">4. Projeto Conceitual</h1>
+<hr />
+<h2 id="41-caracteristicas-gerais">4.1 Características Gerais</h2>
+<p>O projeto visa o desenvolvimento de um carrinho seguidor de linha que percorra
+três trilhas marcadas no chão, transportando um ovo de galinha ao longo desses trajetos
+sem danificá-lo.<br> 
+Com o objetivo de minimizar o tempo de percurso, é necessário criar
+um carrinho totalmente autônomo, equipado com todos os componentes necessários embarcados.<br>
+O carrinho incluirá um design mecânico robusto, priorizando materiais leves e
+duráveis para suportar os desafios da corrida sem comprometer a segurança do ovo.<br>
+Além disso, o carrinho será projetado com um conjunto de sensores, capaz de interpretar os dados
+dos sensores de linha e ajustar sua direção e velocidade de maneira eficiente.<br> 
+Com isso, será possível processar essas informações e mostrando os dados em tempo real em uma
+aplicação web, de cada corrida.<br> 
+Um sistema de propulsão adequado será essencial para otimizar o desempenho do carrinho, 
+enquanto uma fonte de energia confiável garantirá sua autonomia ao longo das trilhas.<br>
+Combinando as áreas da engenharia e testes rigorosos, o objetivo é criar um carrinho seguidor
+de linha que não apenas complete as trilhas no menor tempo possível, mas
+também transporte o ovo com segurança, demonstrando a eficácia da autonomia robótica
+em ambientes desafiadores.</p>
+<h2 id="42-estrutura">4.2 Estrutura</h2>
+<h3 id="421-decisoes-de-projeto">4.2.1 Decisões de projeto</h3>
+<p>Foi decidido que o ideal seria o menor CAD possível, por isso foi escolhido ter duas bases, uma em cima da principal. O tamanho menor serve para ele ter mais mobilidade. O ovo e a bateria foram escolhidos para ficar na base superior, enquanto os componentes eletrônicos ficarão na base principal, embaixo. Os sensores foram colocados na frente, o mais próximo possível do chão. Serão utilizadas apenas duas rodas, pois é um sistema mais fácil e prático, onde o movimento de virar será realizado através da diferença de velocidade entre as rodas. Os materiais serão impressos em 3D, utilizando PLA. O ovo será colocado numa caixa, onde todos os lados serão protegidos com isopor e espuma, garantindo proteção suficiente, já que o carrinho apenas seguirá uma linha e não sofrerá impactos que possam quebrar o ovo.</p>
+<h3 id="422-desenho-tecnico">4.2.2 Desenho técnico</h3>
+<p><img alt="Pag 1" src="https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/1664e3de-048a-4515-bc3e-177e2305cf93" /></p>
+<h6 align = "center"> Imagem 1: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+<p><img alt="Pag 2" src="https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/f1d4ec9a-c5bb-4117-9435-a8f367c0535f" /></p>
+<h6 align = "center"> Imagem 2: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+<p><img alt="Pag 3" src="https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/1254b565-e3c9-409e-88d8-3bf9f8b883c9" /></p>
+<h6 align = "center"> Imagem 3: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+<p><img alt="Pag 4" src="https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/b745ab31-8313-4e54-838b-8175e6e88327" /></p>
+<h6 align = "center"> Imagem 4: Desenho técnico.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+<h3 id="423-modelo-3d">4.2.3 Modelo 3D</h3>
+<p><img alt="WhatsApp Image 2024-05-28 at 11 33 32 AM" src="https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/123188031/6c5cfeb6-6d9c-48e0-bc13-084545b6966e" /></p>
+<h6 align = "center"> Imagem 1: Modelo 3D.
+<br> Autor: Cauan Victor Martins
+<br>Fonte: Autor(es)</h6>
+
+<h2 id="43-descricao-de-hardware">4.3 Descrição de hardware</h2>
+<h3 id="431-diagrama-de-blocos">4.3.1 Diagrama de blocos</h3>
+<p><img alt="Diagrama de blocos" src="https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/main/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Diagrama%20de%20Blocos%20-%20Eletrônica.png" /></p>
+<h4 id="observacoes">Observações</h4>
+<ul>
+<li>Pode ser utilizado qualquer formato, se atentando à posição dos <a href="https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/TCRT5000.PDF">sensores infravermelhos</a> na parte dianteira, e dos sensores <a href="https://github.com/PI1-2024-1/PI1-2024-1/blob/main/Repo%20-%20Eletronica/Datasheets/Encoder.pdf">encoder</a> que devem estar juntos aos eixos de rotação dos motores;</li>
+</ul>
+<h3 id="432-lista-de-materiais">4.3.2 Lista de Materiais</h3>
+<table>
+<thead>
+<tr>
+<th>Quantidade</th>
+<th>Material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Chassi</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Placa arduino uno R3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sensores Ópticos Reflexivos TCRT-5000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Módulo Bluetooth Serial Rs232 Escravo Hc-06</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sensor de velocidade módulo encoder</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Discos módulo encoder</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Medidor de Corrente ACS 712 (5A)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Módulo DC-DC (LM317)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Motores de 6V com redutor</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Rodas</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Baterias Recarregáveis de 3.7 V 18650</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Resistor 100 ohm 1/4W</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Resistor 1k ohm 1/4W</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Resistor 3k3 ohm 1/4W</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Resistor 5k ohm 1/4W</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Transistor BC547</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Diodo 1N4007</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Suporte para 2 Baterias 18650</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Placa Perfurada</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Chaves/Interruptores</td>
+</tr>
+</tbody>
+</table>
+<h3 id="433-esquematico">4.3.3 Esquemático</h3>
+<p><img alt="Diagrama de blocos" src="https://raw.githubusercontent.com/PI1-2024-1/PI1-KATIAU-docs/docDescricaoHardware/docs/Eletronica/Ponto%20de%20Controle%202/Diagramas/Esquemático%20K.A.T.I.A.U_page-0001.jpg" /></p>
+<h6 align = "center"> Imagem 1: Diagrama de blocos.
+<br>Autor: Pedro Zago
+<br>Fonte: Autor(es)</h6>
+
+<h3 id="434-descricao-dos-componentes">4.3.4 Descrição dos componentes</h3>
+<p>Este subtópico visa descrever os componentes com uma breve justificativa de sua utilização no projeto:</p>
+<h4 id="placa-arduino-uno-r3">Placa Arduino Uno R3</h4>
+<p>Optamos por utilizar a placa Arduino Uno R3 devido à sua ampla utilização em projetos de robótica simplificados e sua facilidade de uso. A vasta documentação disponível e a grande comunidade de suporte tornam esta placa ideal para iniciantes, permitindo uma curva de aprendizado mais suave e uma implementação mais eficiente.</p>
+<h4 id="sensores-opticos-reflexivos-tcrt-5000">Sensores Ópticos Reflexivos TCRT-5000</h4>
+<p>Os sensores ópticos reflexivos TCRT-5000 foram escolhidos para detecção de objetos e medição de distâncias curtas. Eles são ideais para sistemas de posicionamento e contagem de rotações, proporcionando precisão e confiabilidade nas medições necessárias para o controle do robô.</p>
+<h4 id="modulo-bluetooth-serial-rs232-escravo-hc-06">Módulo Bluetooth Serial RS232 Escravo HC-06</h4>
+<p>O módulo Bluetooth HC-06 é essencial para a transmissão dos dados de medições do Arduino via Bluetooth. Esta capacidade facilita a criação e atualização de bancos de dados, permitindo o monitoramento remoto e a análise dos dados coletados pelo robô.</p>
+<h4 id="sensor-de-velocidade-modulo-encoder">Sensor de Velocidade Módulo Encoder</h4>
+<p>O módulo encoder, que atua como um desacoplador óptico, é crucial para calcular a distância, velocidade e aceleração de objetos em movimento. Este componente é indispensável para o monitoramento preciso do movimento do robô, garantindo um controle eficiente.</p>
+<h4 id="discos-encoder-para-medicao-com-modulo-encoder">Discos Encoder para Medição com Módulo Encoder</h4>
+<p>Utilizamos discos encoder em conjunto com o módulo encoder para medir a rotação das rodas. Estes discos proporcionam dados precisos de movimento, essenciais para a navegação e o controle do robô, permitindo cálculos exatos de deslocamento.</p>
+<h4 id="medidor-de-corrente-acs-712">Medidor de Corrente ACS 712</h4>
+<p>O sensor de corrente ACS 712 foi escolhido por sua simplicidade de instalação, medindo a corrente elétrica sem a necessidade de circuitos adicionais complexos. Este sensor garante a monitorização eficaz do consumo de energia do robô.</p>
+<h4 id="regulador-de-tensao-lm317">Regulador de Tensão LM317</h4>
+<p>O regulador de tensão LM317 ajusta a tensão de entrada de 7.4V para um nível estável de até 6V, protegendo os componentes eletrônicos do projeto. Esta regulação é essencial para a estabilidade e segurança do sistema.</p>
+<h4 id="motores-de-6v-com-redutor-e-rodas">Motores de 6V com Redutor e Rodas</h4>
+<p>Os motores de 6V com redutores são responsáveis pela movimentação do robô, oferecendo torque e controle adequados. Estes motores garantem que o robô possa se mover com precisão e eficiência.</p>
+<h4 id="baterias-recarregaveis-de-37v-18650">Baterias Recarregáveis de 3.7V 18650</h4>
+<p>Optamos pelas baterias recarregáveis de 3.7V 18650 devido à sua alta capacidade e durabilidade. Estas baterias fornecem energia confiável ao robô, permitindo longas operações sem necessidade de recarga frequente.</p>
+<h4 id="componentes-complementares">Componentes Complementares</h4>
+<h4 id="resistores">Resistores</h4>
+<ul>
+<li><strong>Resistor 100 ohm</strong> - Utilizados nos sensores.</li>
+<li><strong>Resistor 1k ohm</strong> - Utilizados nos sensores.</li>
+<li><strong>Resistor 3k3 ohm</strong> - Utilizados na comunicação.</li>
+<li><strong>Resistor 5k1 ohm</strong> - Utilizados na comunicação.</li>
+</ul>
+<h4 id="transistor-e-diodo">Transistor e Diodo</h4>
+<ul>
+<li><strong>Transistor BC547</strong> - Utilizado para o controle de movimento.</li>
+<li><strong>Diodo 1N4007</strong> - Utilizado para proteger o circuito de picos de tensão durante a operação dos motores.</li>
+</ul>
+<h4 id="suporte-para-baterias-e-placa-perfurada">Suporte para Baterias e Placa Perfurada</h4>
+<ul>
+<li><strong>Suporte para 2 Baterias 18650</strong> - Fornece suporte físico e conexões elétricas seguras para as baterias.</li>
+<li><strong>Placa Perfurada</strong> - Utilizada para a montagem e fixação dos componentes eletrônicos.</li>
+</ul>
+<h4 id="chavesinterruptores">Chaves/Interruptores</h4>
+<ul>
+<li><strong>Chaves/Interruptores</strong> - Garantem a segurança do circuito, permitindo a ligação e desligamento seguro do sistema.</li>
+</ul>
+<h4 id="firmwares">Firmwares</h4>
+<h5 id="sensores-tcrt-5000">Sensores TCRT-5000</h5>
+<p>Os sensores TCRT-5000 entregam tensões de 0 a 5V. É necessário calibrar uma variável que indique se o sensor está detectando a linha ou não, garantindo a precisão das leituras.</p>
+<h5 id="modulo-bluetooth-hc-06">Módulo Bluetooth HC-06</h5>
+<p>A comunicação com o módulo Bluetooth HC-06 é realizada através da porta serial, simplificando a transmissão dos dados coletados pelo Arduino.</p>
+<h5 id="sensores-de-velocidade-modulo-encoder">Sensores de Velocidade Módulo Encoder</h5>
+<p>Os sensores de velocidade enviam um pulso quando passam por um buraco no disco encoder, permitindo a contagem precisa das rotações.</p>
+<h5 id="discos-encoder-de-20-furos">Discos Encoder de 20 Furos</h5>
+<p>Cada furo do disco encoder corresponde a 3.92 mm de deslocamento, proporcionando medições detalhadas e precisas do movimento do robô.</p>
+<h5 id="motor-6v-com-redutor">Motor 6V com Redutor</h5>
+<p>O movimento do motor é controlado através de sinais PWM enviados pelas saídas definidas no esquemático, garantindo controle preciso da velocidade e direção.</p>
+<h5 id="medidor-de-corrente-acs712">Medidor de Corrente ACS712</h5>
+<p>O medidor de corrente ACS712 entrega uma tensão proporcional à corrente medida. Para calcular a corrente, uma variável calibrada é necessária. Correntes negativas também geram tensões positivas, exigindo uma consideração especial no cálculo.</p>
+<h4 id="software">Software</h4>
+<p>Os dados são recebidos pelo software em forma de vetor <code>dados = [Enc direito; Enc esquerdo; velocidade; aceleração]</code>. O cálculo da posição relativa do robô é mais facilmente realizado no software do que no firmware. A cada período de comunicação, os valores do encoder são enviados, por exemplo:
+* <strong>Enc direito = 2</strong>
+* <strong>Enc esquerdo = 4</strong></p>
+<p>Isso indica que o carrinho andou uma distância em linha reta e outra para a direita, permitindo o cálculo preciso do movimento e posição do robô.</p>
+<h2 id="44-analise-de-consumo-energetico">4.4 Análise de consumo energético</h2>
+<p>Para a análise do consumo energético do projeto foram identificados os itens eletrônicos  escolhidos para o carrinho, consultando as especificações técnicas dos componentes (corrente de operação e a tensão de funcionamento) que estão disponíveis nos datasheets de seus fabricantes, foi determinado o consumo de energia de cada peça durante sua operação. Os elementos e suas características elétricas foram listados na tabela abaixo:</p>
+<h6 align = "center"> Características elétricas dos componentes eletrônicos.</h6>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Componentes</strong></th>
+<th style="text-align: center;"><strong>Tensão (V)</strong></th>
+<th style="text-align: center;"><strong>Corrente (A)</strong></th>
+<th style="text-align: center;"><strong>Potência (W)</strong></th>
+<th style="text-align: center;"><strong>Quantidade</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Placa arduino uno R3</td>
+<td style="text-align: center;">7,4</td>
+<td style="text-align: center;">0,05</td>
+<td style="text-align: center;">0,37</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sensores Ópticos Reflexivos TCRT-5000</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0,06</td>
+<td style="text-align: center;">0,3</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Módulo Bluetooth Serial Rs232 Escravo Hc-06</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0,035</td>
+<td style="text-align: center;">0,175</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sensor de velocidade módulo encoder</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0,015</td>
+<td style="text-align: center;">0,075</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">Medidor de Corrente ACS 712</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0,008</td>
+<td style="text-align: center;">0,04</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Regulador de Tensão LM 317</td>
+<td style="text-align: center;">7,4</td>
+<td style="text-align: center;">0,01</td>
+<td style="text-align: center;">0,074</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Motores de 6V com redutor e rodas</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0,2</td>
+<td style="text-align: center;">1,2</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<p>Multiplicou-se a corrente de operação pela tensão da fonte de alimentação, obtendo a potência de cada componente em watts (W), utilizando a fórmula:  <span class="arithmatex">\(P = V \times i\)</span>, onde  <span class="arithmatex">\(P\)</span>  é a potência em watts,  <span class="arithmatex">\(V\)</span>  é a tensão em volts e  <span class="arithmatex">\(i\)</span>  é a corrente em amperes. </p>
+<p>Tendo os valores das potências de cada peça, podemos saber o consumo de energia total do carrinho fazendo a soma das potências de todas as peças, com a soma obteve-se o valor de 
+ <span class="arithmatex">\(4,409\)</span>  watts. Este valor serve como uma referência importante para dimensionar a fonte de alimentação necessária e garantir um funcionamento eficiente do carrinho.</p>
+<p>Para o cálculo da corrente requerida pelo carrinho, utilizamos a tensão de  <span class="arithmatex">\(7,4 V\)</span>, que atende todos os componentes, e a soma das potências obtida no cálculo anterior na seguinte relação matemática:</p>
+<div class="arithmatex">\[P = v \times i \to i = \frac {4,409} {7,4} \simeq 0,6 A\]</div>
+<p>Com os dados de consumo de energia total do carrinho e a capacidade da bateria, podemos calcular o tempo estimado de duração da bateria escolhida para o projeto. Estamos usando duas baterias recarregáveis 18650 de 3,7 V, totalizando 7,4 V, cada bateria tem capacidade de 2200 mAh, portanto com as duas baterias temos capacidade de 4400 mAh ( 4,4 Ah).
+O tempo de duração da bateria pode ser calculado dividindo a energia total da bateria pelo consumo de energia total do carrinho: </p>
+<div class="arithmatex">\[Tempo = \frac{C_{bateria}}{i} \to Tempo = \frac{4,4}{0,6} \simeq 7,3h\]</div>
+<p>Portanto, o tempo estimado de duração da bateria para este projeto do carrinho seguidor de linha é de aproximadamente 7,3 horas. Essa é uma estimativa do tempo de operação contínua do carrinho antes que a bateria precise ser recarregada.</p>
+<h2 id="45-descricao-de-software">4.5 Descrição de Software</h2>
+<h3 id="451-diagrama-do-processo-de-negocio-bpnm">4.5.1 Diagrama do Processo de Negócio (BPNM)</h3>
+<p><img alt="Diagrama BPMN" src="../img/BPMN%20PI1.png" /></p>
+<h6 align = "center"> Imagem 1: Diagrama de classes.
+<br> Autor: Samuel Nogueira e Thales Duarte
+<br>Fonte: Autor(es)</h6>
+
+<h3 id="452-lista-de-casos-de-uso">4.5.2 Lista de Casos de uso</h3>
+<p>A documentação de casos de uso fornece uma visão abrangente das diferentes interações entre usuários e sistema em um determinado contexto. A lista de casos de uso é uma parte essencial dessa documentação, pois descreve as principais funcionalidades que o sistema deve oferecer e os fluxos de eventos associados a cada uma delas.
+No caso do projeto, a lista de casos de uso descreve as principais operações que o usuário pode realizar e como o sistema deve responder a essas operações, cada caso de uso é composto por um conjunto de etapas que descrevem o fluxo principal de eventos, bem como possíveis fluxos alternativos em caso de condições excepcionais.</p>
+<h4 id="exibir-a-distancia-percorrida">Exibir a Distância Percorrida</h4>
+<p><strong>Fluxo Principal:</strong></p>
+<ol>
+<li>O usuário acessa a aplicação de análise de dados.</li>
+<li>O sistema solicita os dados do carrinho seguidor de linha.</li>
+<li>O sistema processa e calcula a distância percorrida.</li>
+<li>O sistema exibe a distância percorrida na interface do usuário.</li>
+</ol>
+<p><strong>Fluxo Alternativo:</strong></p>
+<ul>
+<li>Falha na comunicação com o carrinho:</li>
+<li>O sistema tenta acessar os dados do carrinho.</li>
+<li>O sistema não consegue se comunicar com o carrinho.</li>
+<li>O sistema exibe uma mensagem de erro informando que não foi possível obter os dados do carrinho.</li>
+</ul>
+<h4 id="exibir-a-trajetoria-percorrida">Exibir a Trajetória Percorrida</h4>
+<p><strong>Fluxo Principal:</strong></p>
+<ol>
+<li>O usuário acessa a aplicação de análise de dados.</li>
+<li>O sistema solicita os dados do carrinho seguidor de linha.</li>
+<li>O sistema processa os dados e gera a trajetória percorrida.</li>
+<li>O sistema exibe a trajetória percorrida na interface do usuário.</li>
+</ol>
+<p><strong>Fluxo Alternativo:</strong></p>
+<ul>
+<li>Falha no processamento dos dados:</li>
+<li>O sistema tenta processar os dados para gerar a trajetória.</li>
+<li>O sistema detecta um erro nos dados recebidos.</li>
+<li>O sistema exibe uma mensagem de erro informando que não foi possível processar a trajetória.</li>
+</ul>
+<h4 id="exibir-a-aceleracao">Exibir a Aceleração</h4>
+<p><strong>Fluxo Principal:</strong></p>
+<ol>
+<li>O usuário acessa a aplicação de análise de dados.</li>
+<li>O sistema solicita os dados de aceleração do carrinho seguidor de linha.</li>
+<li>O sistema processa e calcula a aceleração.</li>
+<li>O sistema exibe a aceleração na interface do usuário.</li>
+</ol>
+<p><strong>Fluxo Alternativo:</strong></p>
+<ul>
+<li>Dados de aceleração não disponíveis:</li>
+<li>O sistema tenta acessar os dados de aceleração.</li>
+<li>O sistema verifica que os dados de aceleração não estão disponíveis.</li>
+<li>O sistema exibe uma mensagem de erro informando que os dados de aceleração não estão disponíveis.</li>
+</ul>
+<h4 id="exibir-o-consumo-de-energia">Exibir o Consumo de Energia</h4>
+<p><strong>Fluxo Principal:</strong></p>
+<ol>
+<li>O usuário acessa a aplicação de análise de dados.</li>
+<li>O sistema solicita os dados de consumo de energia do carrinho seguidor de linha.</li>
+<li>O sistema processa e calcula o consumo de energia.</li>
+<li>O sistema exibe o consumo de energia na interface do usuário.</li>
+</ol>
+<p><strong>Fluxo Alternativo:</strong></p>
+<ul>
+<li>Erro no cálculo do consumo de energia:</li>
+<li>O sistema tenta processar os dados de consumo de energia.</li>
+<li>O sistema detecta um erro nos dados ou no cálculo.</li>
+<li>O sistema exibe uma mensagem de erro informando que não foi possível calcular o consumo de energia.</li>
+</ul>
+<h4 id="exibir-a-velocidade">Exibir a Velocidade</h4>
+<p><strong>Fluxo Principal:</strong></p>
+<ol>
+<li>O usuário acessa a aplicação de análise de dados.</li>
+<li>O sistema solicita os dados de velocidade do carrinho seguidor de linha.</li>
+<li>O sistema processa e calcula a velocidade.</li>
+<li>O sistema exibe a velocidade na interface do usuário.</li>
+</ol>
+<p><strong>Fluxo Alternativo:</strong></p>
+<ul>
+<li>Dados de velocidade inconsistentes:</li>
+<li>O sistema tenta acessar os dados de velocidade.</li>
+<li>O sistema verifica que os dados de velocidade estão inconsistentes ou incompletos.</li>
+<li>O sistema exibe uma mensagem de erro informando que os dados de velocidade são inconsistentes.</li>
+</ul>
+<h4 id="exibir-historico-de-percursos">Exibir Histórico de Percursos</h4>
+<p><strong>Fluxo Principal:</strong></p>
+<ol>
+<li>O usuário acessa a aplicação de análise de dados.</li>
+<li>O usuário seleciona a opção para visualizar o histórico de percursos.</li>
+<li>O sistema recupera o histórico de percursos do banco de dados.</li>
+<li>O sistema exibe o histórico de percursos na interface do usuário.</li>
+</ol>
+<p><strong>Fluxo Alternativo:</strong></p>
+<ul>
+<li>Histórico de percursos indisponível:</li>
+<li>O sistema tenta recuperar o histórico de percursos.</li>
+<li>O sistema verifica que o histórico de percursos não está disponível.</li>
+<li>O sistema exibe uma mensagem de erro informando que o histórico de percursos não pode ser exibido.</li>
+</ul>
+<h4 id="temas">Temas</h4>
+<h5 id="calculos-dos-dados">Cálculos dos Dados</h5>
+<p>Este tema inclui todas as features relacionadas ao processamento e cálculo dos dados do carrinho.</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Processamento da distância percorrida</li>
+<li>Cálculo da trajetória</li>
+<li>Cálculo da velocidade</li>
+<li>Cálculo da aceleração</li>
+<li>Cálculo do consumo de bateria</li>
+</ul>
+<h5 id="dashboard-e-exibicao">Dashboard e Exibição</h5>
+<p>Este tema abrange todas as features relacionadas à visualização e exibição dos dados processados na interface do usuário.</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Exibição da distância percorrida</li>
+<li>Exibição da trajetória percorrida</li>
+<li>Exibição da velocidade em tempo real</li>
+<li>Exibição da aceleração em tempo real</li>
+<li>Exibição do consumo de bateria em tempo real</li>
+<li>Exibição dos dados de percursos anteriores</li>
+</ul>
+<h4 id="criterios-de-avaliacao">Critérios de Avaliação</h4>
+<p>Os critérios de avaliação devem ser claros e verificáveis para cada User Story. Eles determinam se a User Story foi implementada corretamente.</p>
+<h5 id="exibir-trajetoria-percorrida-us01">Exibir Trajetória Percorrida (US01)</h5>
+<ul>
+<li>Deve ser exibido em um gráfico com precisão de até 1 metro.</li>
+<li>O gráfico deve atualizar automaticamente conforme novos dados são recebidos.</li>
+<li>A trajetória deve ser claramente distinguível com linhas contínuas.</li>
+</ul>
+<h5 id="exibir-distancia-percorrida-us02">Exibir Distância Percorrida (US02)</h5>
+<ul>
+<li>A distância deve ser exibida em um gráfico.</li>
+<li>Deve mostrar a distância total percorrida.</li>
+<li>O gráfico deve permitir a visualização de distâncias de percursos anteriores para comparação.</li>
+</ul>
+<h5 id="exibir-tempo-de-percurso-us03">Exibir Tempo de Percurso (US03)</h5>
+<ul>
+<li>O tempo de percurso deve ser exibido em um gráfico.</li>
+<li>Deve mostrar o tempo total de cada percurso.</li>
+<li>O gráfico deve permitir a comparação do tempo de diferentes percursos.</li>
+</ul>
+<h5 id="exibir-velocidade-em-tempo-real-us04">Exibir Velocidade em Tempo Real (US04)</h5>
+<ul>
+<li>A velocidade deve ser exibida em um gráfico em tempo real.</li>
+<li>A atualização deve ocorrer a cada segundo.</li>
+<li>Deve permitir a comparação da velocidade ao longo do percurso.</li>
+</ul>
+<h5 id="exibir-aceleracao-em-tempo-real-us05">Exibir Aceleração em Tempo Real (US05)</h5>
+<ul>
+<li>A aceleração deve ser exibida em um gráfico em tempo real.</li>
+<li>A atualização deve ocorrer a cada segundo.</li>
+<li>Deve permitir a comparação da aceleração ao longo do percurso.</li>
+</ul>
+<h5 id="exibir-consumo-de-bateria-em-tempo-real-us06">Exibir Consumo de Bateria em Tempo Real (US06)</h5>
+<ul>
+<li>O consumo de bateria deve ser exibido em vários gráficos como um dashboard.</li>
+<li>Deve mostrar o consumo instantâneo e acumulado.</li>
+<li>O dashboard deve permitir a visualização do consumo de bateria em diferentes percursos.</li>
+</ul>
+<h5 id="exibir-dados-de-percursos-anteriores-us07">Exibir Dados de Percursos Anteriores (US07)</h5>
+<ul>
+<li>Os dados de percursos anteriores devem ser exibidos em um gráfico.</li>
+<li>Deve permitir a seleção e comparação de múltiplos percursos.</li>
+<li>O gráfico deve mostrar detalhes como distância, tempo, velocidade e aceleração de percursos anteriores.</li>
+</ul>
+<p><img alt="diagrama katiau" src="https://github.com/PI1-2024-1/PI1-KATIAU-docs/assets/140026699/22cf04af-cdcc-4bed-a4e6-2b97daf92b11" /></p>
+<h4 id="backlog-de-casos-de-uso">Backlog de Casos de Uso</h4>
+<table>
+<thead>
+<tr>
+<th>Épico</th>
+<th>Temas</th>
+<th>Numero da US</th>
+<th>Título da US</th>
+<th>Critérios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EP01: Gestão de dados</td>
+<td>Visualização de dados do percurso</td>
+<td>US01</td>
+<td>Exibir Trajetória Percorrida</td>
+<td>Deve ser exibido em um gráfico com precisão de até 1 metro. O gráfico deve atualizar automaticamente conforme novos dados são recebidos. A trajetória deve ser claramente distinguível com linhas contínuas.</td>
+</tr>
+<tr>
+<td>EP01: Gestão de dados</td>
+<td>Visualização de dados do percurso</td>
+<td>US02</td>
+<td>Exibir Distância Percorrida</td>
+<td>Deve ser exibido em um gráfico. Deve mostrar a distância total percorrida. O gráfico deve permitir a visualização de distâncias de percursos anteriores para comparação.</td>
+</tr>
+<tr>
+<td>EP01: Gestão de dados</td>
+<td>Visualização de dados do percurso</td>
+<td>US03</td>
+<td>Exibir Tempo de Percurso</td>
+<td>Deve ser exibido em um gráfico. Deve mostrar o tempo total de cada percurso. O gráfico deve permitir a comparação do tempo de diferentes percursos.</td>
+</tr>
+<tr>
+<td>EP01: Gestão de dados</td>
+<td>Visualização de dados do percurso</td>
+<td>US04</td>
+<td>Exibir Velocidade em Tempo Real</td>
+<td>Deve ser exibido em um gráfico em tempo real. A atualização deve ocorrer a cada segundo. Deve permitir a comparação da velocidade ao longo do percurso.</td>
+</tr>
+<tr>
+<td>EP01: Gestão de dados</td>
+<td>Visualização de dados do percurso</td>
+<td>US05</td>
+<td>Exibir Aceleração em Tempo Real</td>
+<td>Deve ser exibido em um gráfico em tempo real. A atualização deve ocorrer a cada segundo. Deve permitir a comparação da aceleração ao longo do percurso.</td>
+</tr>
+<tr>
+<td>EP01: Gestão de dados</td>
+<td>Visualização de dados do percurso</td>
+<td>US06</td>
+<td>Exibir Consumo de Bateria em Tempo Real</td>
+<td>Deve ser exibido em vários gráficos como um dashboard. Deve mostrar o consumo instantâneo e acumulado. O dashboard deve permitir a visualização do consumo de bateria em diferentes percursos.</td>
+</tr>
+<tr>
+<td>EP01: Gestão de dados</td>
+<td>Visualização de dados do percurso</td>
+<td>US07</td>
+<td>Exibir Dados de Percursos Anteriores</td>
+<td>Deve ser exibido em um gráfico. Deve permitir a seleção e comparação de múltiplos percursos. O gráfico deve mostrar detalhes como distância, tempo, velocidade e aceleração de percursos anteriores.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="453-lista-de-requisitos-nao-funcionais">4.5.3 Lista de Requisitos Não-Funcionais</h3>
+<p>Disponível em <a href="https://pi1-2024-1.github.io/PI1-KATIAU-docs/Documentacao/2_Tap/">TAP</a></p>
+<h3 id="454-diagrama-de-classes">4.5.4 Diagrama de Classes</h3>
+<p>A imagem 2 abaixo exibe o diagrama de classes proposto para o desenvolvimento da aplicação de análise de dados.<br></p>
+<p><img alt="Diagrama de Classes" src="../img/diagrama_classes.png" /></p>
+<h6 align = "center"> Imagem 2: Diagrama de classes.
+<br> Autor: Brunna Louise
+<br>Fonte: Autor(es)</h6>
+
+<h3 id="455-arquitetura-do-software">4.5.5 Arquitetura do software</h3>
+<p>A arquitetura do software é o elemento que define a organização e a comunicação
+entre as entidades a serem desenvolvidas. Por meio do esquema abaixo, é possível
+visualizar os componentes e os relacionamentos entre eles em um sistema de software.</p>
+<p><img alt="Diagrama da arquitetura" src="../img/diagrama_arquitetura.png" /></p>
+<h6 align = "center"> Imagem 3: Diagrama da arquitetura.
+<br> Autor: Gabriel Avelino
+<br>Fonte: Autor(es)</h6>
+
+<p>Os componentes podem ser divididos em:</p>
+<ul>
+<li>
+<p><strong>Front-end</strong>: O ViteJs é um framework utilizado para criação de aplicações WEB de maneira ágil. Vai ser o responsável por mostrar
+os dados no dashboard para o usuário.</p>
+</li>
+<li>
+<p><strong>Back-end</strong>: Vai ser construído utilizando o web framework FastAPI para a manipulação dos dados e o banco de dados PostgresSQL para a persistência
+dos dados enviados pelo arduíno.</p>
+</li>
+<li>
+<p><strong>Comunicação bluetooth</strong>: Um script python vai ser utilizado para conectar com o módulo bluetooth do arduíno e enviar os dados dos sensores que foram lidos para o backend.</p>
+</li>
+</ul>
+<h3 id="456-descricao-e-roteiro-dos-testes">4.5.6 Descrição e Roteiro dos testes</h3>
+<h4 id="testes-de-unidade">Testes de unidade</h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Caso de teste</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API</td>
+<td>Cálculo de velocidade</td>
+<td>Deve calcular a velocidade em um momento</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Cálculo de aceleração</td>
+<td>Deve calcular a aceleração em um momento</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Cálculo de consumo de bateria</td>
+<td>Deve calcular o consumo de bateria em um momento</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Cálculo de distância</td>
+<td>Deve calcular a distância total percorrida</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Cálculo de trajetória</td>
+<td>Deve calcular a trajetória total percorrida</td>
+</tr>
+<tr>
+<td>Front-end</td>
+<td>Visualização dos dados</td>
+<td>Deve ser possível visualizar os dados no dashboard.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="testes-de-integracao">Testes de integração</h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Caso de teste</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Módulo de conexão bluetooth</td>
+<td>Certificar se dados estão sendo recebidos</td>
+<td>Deve receber um JSON com informações enviadas pelo carrinho</td>
+</tr>
+<tr>
+<td>Modulo de conexão bluetooth</td>
+<td>Certificar se dados estão sendo enviados para API</td>
+<td>Deve enviar um JSON recebido via requisição HTTP para a API.</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Certificar o recebimento e salvamento de dados</td>
+<td>Ao receber uma requisição HTTP de dados enviada pelo Módulo de conexão bluetooth, deve poder salvar os dados no banco de dados</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Certificar a disponibilização dos dados</td>
+<td>Testar a disponibilização dos dados</td>
+</tr>
+<tr>
+<td>Front-end</td>
+<td>Verificar a visualização dos dados</td>
+<td>Deve ser possível visualizar os dados recebidos da requisição à API</td>
+</tr>
+</tbody>
+</table>
+<h4 id="roteiro-de-testes">Roteiro de Testes</h4>
+<p>Pré - Requisito: Aplicação em funcionamento e com acesso disponível para realização dos testes. Também a instaçação no Carrinho dos componentes e sensores que enviaráo dados para a aplicação</p>
+<h4 id="testes-de-unidade_1">Testes de unidade:</h4>
+<ul>
+<li>Teste de velocidade</li>
+<li>Verifica-se o recebimento dos dados e cálculo da velocidade no sistema</li>
+<li>Teste de Aceleração</li>
+<li>Verifica-se o recebimento dos dados e cálculo da aceleração no sistema</li>
+<li>Teste do consumo de bateria</li>
+<li>Deve-se visualizar o dado de consumo no banco de dados</li>
+<li>Deve-se visualizar o consumo de bateria no dashboard</li>
+<li>Teste da distância</li>
+<li>Verifica-se o recebimento dos dados e o cálculo da distância percorrida</li>
+<li>Teste de trajetória</li>
+<li>Verifica-se o recebimento dos dados de coordenadas e cálculo da trajetória no espaçotempo</li>
+<li>Teste de visualização</li>
+<li>Verifica-se a exibição de todos os dados já citados no Dashboard do projeto e com atualizações constantes</li>
+</ul>
+<h4 id="testes-de-integracao_1">Testes de integração:</h4>
+<ul>
+<li>Teste de módulo bluetooth</li>
+<li>Certificar se os dados estão sendo recebidos em um JSON com informações do carrinho</li>
+<li>Teste de API</li>
+<li>Certificar o recebimento dos dados do carrinho por meio de uma requisição HTTP e um arquivo JSO</li>
+<li>Teste de disponibilidade de dados</li>
+<li>certificar que os dados recebidos estão sendo disponibilizados para posterior trabalho do front-end</li>
+<li>Teste de Front-end</li>
+<li>Verificar a visualização de dados para o usuário após recebimento dos dados via requisição da API</li>
+</ul>
+<hr />
+<h3 id="componentes-a-serem-aprofundados">Componentes a serem aprofundados</h3>
+<ul>
+<li>
+<p>Estruturas:</p>
+<ul>
+<li>O carrinho deve ser construído com materiais leves, mas robustos,
+capazes de suportar os rigores da corrida sem comprometer a integridade do ovo.<br></li>
+</ul>
+</li>
+<li>
+<p>Coleta e Transmissão de Dados: </p>
+<ul>
+<li>É fundamental garantir a transmissão de
+dados pelos sensores e exatidão na coleta de informações eficiente para o banco de dados.<br></li>
+</ul>
+</li>
+<li>Análise de Consumo Energético: <ul>
+<li>A principal preocupação energética é o consumo da bateria que alimenta os componentes eletrônicos.<br> 
+Esta análise busca compreender e otimizar o consumo da bateria, assegurando a operação contínua dos sensores e sistemas
+embarcados durante todo o percuso do carrinho.<br></li>
+</ul>
+</li>
+<li>Construção de Software: <ul>
+<li>Abordará as melhores estratégias para o desenvolvi-
+mento, armazenamento e exibição dos dados coletados.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="eap-estrutura-analitica-de-projeto">EAP - Estrutura Analítica de Projeto</h2>
+<p>Estrutura Análitica do Projeto (EAP) é um diagrama que tem a finalidade de
+organizar e decompor o escopo do projeto em pequenas partes, facilitando o entendimento
+e a visualização do projeto como um todo.<br>
+A EAP é uma ferramenta muito utilizada no gerenciamento de projetos, pois ela permite que
+tenha uma visão geral do projeto, podendo assim, identificar os principais entregáveis e
+as atividades necessárias para a conclusão do projeto.<br>
+Assim, as etapas que foram definidas são:<br></p>
+<ul>
+<li>Documentação: Fase que envolve a pesquisa teórica e documentação do projeto,
+definindo escopo, custo e tempo.<br></li>
+<li>Estruturas: Fase de desenvolvimento do projeto de estruturas do carrinho. Com
+pesquisas teóricas, escolha de materiais e construção da estrutura do projeto.<br></li>
+<li>Energia: Fase de desenvolvimento do projeto energético, com pesquisas teoricas
+sobre consumo energético e escolha dos componentes para o consumo de energia do
+carrinho.<br></li>
+<li>Eletrônica: Fase de desenvolvimento do projeto de eletrônica, com pesquisa de sen-
+sores e esquemáticos dos componentes e desenvolvimento dos códigos e calibrações
+dos sensores.<br></li>
+<li>Software: Fase de desenvolvimento do projeto de software, com criação de diagra-
+mas e fluxos de usuários, bem como também o desenvolvimento da aplicação que
+receberá os dados do carrinho em tempo real.<br></li>
+<li>Integração: Etapa que corresponde a integração de todos as partes do projeto e
+testes de integração para a conclusão do produto.</li>
+</ul>
+<hr />
+<p><img alt="EAP" src="../img/EAP_PI1.png" /></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../2_Tap/" class="btn btn-neutral float-left" title="2. Termo de Abertura do Projeto"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../5_Or%C3%A7amento/" class="btn btn-neutral float-right" title="5 Orçamento">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../2_Tap/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../5_Or%C3%A7amento/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
