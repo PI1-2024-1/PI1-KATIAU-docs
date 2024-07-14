@@ -159,9 +159,14 @@ $$Ac=  \frac{( V_i-V_(i-1) )}{T}   [cm/s^2 ]$$
 - Colocar os componentes eletrônicos na base principal, abaixo da superior, para facilitar a organização e a manutenção dos circuitos necessários para o funcionamento do carrinho, além de proteger o hardware da luz solar.
 - Posicionar os sensores na parte frontal do carrinho, o mais próximo possível do chão, para otimizar a função de seguir a linha.
 
-#### 7.2.2 Condições de Contorno
+##### 7.2.2 Condições de Contorno
+- Por não possuir uma roda dianteira, provavelmente o carrinho perca velocidade devido ao atrito.
+- Posicionamos os sensores em locais onde não houvesse influência do sol e afete a leitura.
 
-#### 7.2.3 Resultados Esperados
+##### 7.2.3 Resultados Esperados
+- Imprimimos o carrinho com o PLA e esta estrutura cuidadosamente planejada visa otimizar a funcionalidade e a proteção dos componentes do carrinho seguidor de linha, garantindo um desempenho eficiente e seguro. As propriedades do PLA tornam-no um material adequado para impressão 3D, oferecendo a combinação certa de rigidez, resistência, preço e leveza para o projeto.
+- Esperamos que o carrinho faça o percuso da forma mais rápida devido ao seu tamanho.
+- Ao imprimir, a base superior se encaixasse na base inferior. No entanto, antes de colocar os componentes, percebemos que não ocorreria o encaixe. Portanto, lixamos a peça para que se ajustasse perfeitamente à base inferior, facilitando assim as manutenções caso necessário.
 
 #### 7.2.4 Materiais e Métodos
 
@@ -179,7 +184,8 @@ Para garantir a proteção do ovo, ele será colocado em uma caixa cujas laterai
 
 Esta estrutura cuidadosamente planejada visa otimizar a funcionalidade e a proteção dos componentes do carrinho seguidor de linha, garantindo um desempenho eficiente e seguro. As propriedades do PLA tornam-no um material adequado para impressão 3D, oferecendo a combinação certa de rigidez, resistência, preço e leveza para o projeto.
 
-#### 7.2.5 Precisão e Acurácia das Medidas 
+ ##### 7.2.5 Precisão e Acurácia das Medidas 
+- Para impressões 3D, é necessário adicionar um espaçamento para os encaixes, mas a empresa não recomendou essa alteração. A base superior deveria se encaixar na base inferior; no entanto, por causa disso, ela não encaixou corretamente. Para solucionar, improvisamos lixando a peça, o que permitiu um encaixe perfeito.
 
 ### 7.3 Experimentos de Hardware
 
